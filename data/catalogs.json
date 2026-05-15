@@ -1,0 +1,349 @@
+[
+  {
+    "label": "Rubin DP1",
+    "catalogs": [
+      {
+        "label": "object_collection",
+        "dir": "Rubin_DP1/object_collection"
+      },
+      {
+        "label": "object_collection (lite)",
+        "dir": "Rubin_DP1/object_collection_(lite)"
+      },
+      {
+        "label": "object_photoz",
+        "dir": "Rubin_DP1/object_photoz"
+      },
+      {
+        "label": "object_photoz (lite)",
+        "dir": "Rubin_DP1/object_photoz_(lite)"
+      },
+      {
+        "label": "dia_object_collection",
+        "dir": "Rubin_DP1/dia_object_collection"
+      },
+      {
+        "label": "CCD visit table",
+        "dir": "Rubin_DP1/CCD_visit_table"
+      },
+      {
+        "label": "crossmatches",
+        "catalogs": [
+          {
+            "label": "dia_object_x_euclid_q1",
+            "dir": "Rubin_DP1/crossmatches/dia_object_x_euclid_q1"
+          },
+          {
+            "label": "dia_object_x_ps1",
+            "dir": "Rubin_DP1/crossmatches/dia_object_x_ps1"
+          },
+          {
+            "label": "dia_object_x_ztf_dr23_lc",
+            "dir": "Rubin_DP1/crossmatches/dia_object_x_ztf_dr23_lc"
+          },
+          {
+            "label": "dia_object_x_ztf_dr23_objects",
+            "dir": "Rubin_DP1/crossmatches/dia_object_x_ztf_dr23_objects"
+          },
+          {
+            "label": "object_x_euclid_q1",
+            "dir": "Rubin_DP1/crossmatches/object_x_euclid_q1"
+          },
+          {
+            "label": "object_x_ps1",
+            "dir": "Rubin_DP1/crossmatches/object_x_ps1"
+          },
+          {
+            "label": "object_x_ztf_dr23_lc",
+            "dir": "Rubin_DP1/crossmatches/object_x_ztf_dr23_lc"
+          },
+          {
+            "label": "object_x_ztf_dr23_objects",
+            "dir": "Rubin_DP1/crossmatches/object_x_ztf_dr23_objects"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "label": "2MASS (PSC)",
+    "catalogs": [
+      {
+        "label": "2MASS (PSC)",
+        "dir": "2MASS_(PSC)/2MASS_(PSC)"
+      }
+    ]
+  },
+  {
+    "label": "DELVE",
+    "catalogs": [
+      {
+        "label": "DELVE DR2",
+        "dir": "DELVE/DELVE_DR2"
+      },
+      {
+        "label": "DELVE DR3 Gold",
+        "dir": "DELVE/DELVE_DR3_Gold"
+      }
+    ]
+  },
+  {
+    "label": "DES",
+    "catalogs": [
+      {
+        "label": "DES DR2 (US-East, S3)",
+        "dir": "DES/DES_DR2_(US-East,_S3)"
+      },
+      {
+        "label": "DES DR2 (US-West, HTTP)",
+        "dir": "DES/DES_DR2_(US-West,_HTTP)"
+      },
+      {
+        "label": "DES Y6 Gold (US-East, S3)",
+        "dir": "DES/DES_Y6_Gold_(US-East,_S3)"
+      },
+      {
+        "label": "DES Y6 Gold (US-West, HTTP)",
+        "dir": "DES/DES_Y6_Gold_(US-West,_HTTP)"
+      }
+    ]
+  },
+  {
+    "label": "DESI",
+    "catalogs": [
+      {
+        "label": "DESI DR1 z-catalog (US-East, S3)",
+        "dir": "DESI/DESI_DR1_z-catalog_(US-East,_S3)"
+      },
+      {
+        "label": "DESI DR1 z-catalog (US-West, HTTP)",
+        "dir": "DESI/DESI_DR1_z-catalog_(US-West,_HTTP)"
+      },
+      {
+        "label": "Legacy Survey DR10.1",
+        "dir": "DESI/Legacy_Survey_DR10.1"
+      }
+    ]
+  },
+  {
+    "label": "Euclid Q1",
+    "catalogs": [
+      {
+        "label": "Euclid Q1 (IPAC)",
+        "dir": "Euclid_Q1/Euclid_Q1_(IPAC)"
+      },
+      {
+        "label": "Euclid Q1 (UW)",
+        "dir": "Euclid_Q1/Euclid_Q1_(UW)"
+      }
+    ]
+  },
+  {
+    "label": "Gaia",
+    "catalogs": [
+      {
+        "label": "Bailer-Jones+20",
+        "dir": "Gaia/Bailer-Jones+20"
+      },
+      {
+        "label": "Gaia DR3 (Europe, HTTP)",
+        "dir": "Gaia/Gaia_DR3_(Europe,_HTTP)"
+      },
+      {
+        "label": "Gaia DR3 (US-East, S3)",
+        "dir": "Gaia/Gaia_DR3_(US-East,_S3)"
+      },
+      {
+        "label": "Gaia DR3 (US-West, HTTP)",
+        "dir": "Gaia/Gaia_DR3_(US-West,_HTTP)"
+      },
+      {
+        "label": "Gaia DR3 Epoch Photometry",
+        "dir": "Gaia/Gaia_DR3_Epoch_Photometry"
+      }
+    ]
+  },
+  {
+    "label": "HSC",
+    "catalogs": [
+      {
+        "label": "HSC PDR3 g",
+        "dir": "HSC/HSC_PDR3_g"
+      },
+      {
+        "label": "HSC PDR3 i",
+        "dir": "HSC/HSC_PDR3_i"
+      },
+      {
+        "label": "HSC PDR3 r",
+        "dir": "HSC/HSC_PDR3_r"
+      },
+      {
+        "label": "HSC PDR3 y",
+        "dir": "HSC/HSC_PDR3_y"
+      },
+      {
+        "label": "HSC PDR3 z",
+        "dir": "HSC/HSC_PDR3_z"
+      }
+    ]
+  },
+  {
+    "label": "Pan-STARRS",
+    "catalogs": [
+      {
+        "label": "Pan-STARRS1 (detection)",
+        "dir": "Pan-STARRS/Pan-STARRS1_(detection)"
+      },
+      {
+        "label": "Pan-STARRS1 (forced mean object)",
+        "dir": "Pan-STARRS/Pan-STARRS1_(forced_mean_object)"
+      },
+      {
+        "label": "Pan-STARRS1 (objects)",
+        "dir": "Pan-STARRS/Pan-STARRS1_(objects)"
+      },
+      {
+        "label": "Pan-STARRS1 (stack object)",
+        "dir": "Pan-STARRS/Pan-STARRS1_(stack_object)"
+      }
+    ]
+  },
+  {
+    "label": "S-PLUS",
+    "catalogs": [
+      {
+        "label": "S-PLUS DR4 (dual)",
+        "dir": "S-PLUS/S-PLUS_DR4_(dual)"
+      },
+      {
+        "label": "S-PLUS DR4 (photozs)",
+        "dir": "S-PLUS/S-PLUS_DR4_(photozs)"
+      },
+      {
+        "label": "S-PLUS DR4 (psf)",
+        "dir": "S-PLUS/S-PLUS_DR4_(psf)"
+      },
+      {
+        "label": "S-PLUS DR4 (sqg)",
+        "dir": "S-PLUS/S-PLUS_DR4_(sqg)"
+      }
+    ]
+  },
+  {
+    "label": "SDSS",
+    "catalogs": [
+      {
+        "label": "SDSS DR7 (spectra)",
+        "dir": "SDSS/SDSS_DR7_(spectra)"
+      }
+    ]
+  },
+  {
+    "label": "SkyMapper",
+    "catalogs": [
+      {
+        "label": "SkyMapper DR4",
+        "dir": "SkyMapper/SkyMapper_DR4"
+      },
+      {
+        "label": "SkyMapper Photometry",
+        "dir": "SkyMapper/SkyMapper_Photometry"
+      }
+    ]
+  },
+  {
+    "label": "TESS",
+    "catalogs": [
+      {
+        "label": "TESS Lightcurve",
+        "dir": "TESS/TESS_Lightcurve"
+      },
+      {
+        "label": "TIC (US-East, S3)",
+        "dir": "TESS/TIC_(US-East,_S3)"
+      },
+      {
+        "label": "TIC (US-West, HTTP)",
+        "dir": "TESS/TIC_(US-West,_HTTP)"
+      }
+    ]
+  },
+  {
+    "label": "TNS",
+    "catalogs": [
+      {
+        "label": "TNS",
+        "dir": "TNS/TNS"
+      }
+    ]
+  },
+  {
+    "label": "VSX",
+    "catalogs": [
+      {
+        "label": "VSX",
+        "dir": "VSX/VSX"
+      }
+    ]
+  },
+  {
+    "label": "WISE",
+    "catalogs": [
+      {
+        "label": "AllWISE",
+        "dir": "WISE/AllWISE"
+      },
+      {
+        "label": "NEOWISE (Year 8)",
+        "dir": "WISE/NEOWISE_(Year_8)"
+      }
+    ]
+  },
+  {
+    "label": "ZTF",
+    "catalogs": [
+      {
+        "label": "ZTF DR14 (objects)",
+        "dir": "ZTF/ZTF_DR14_(objects)"
+      },
+      {
+        "label": "ZTF DR14 (sources)",
+        "dir": "ZTF/ZTF_DR14_(sources)"
+      },
+      {
+        "label": "ZTF DR22",
+        "dir": "ZTF/ZTF_DR22"
+      },
+      {
+        "label": "ZTF DR23 (lightcurves)",
+        "dir": "ZTF/ZTF_DR23_(lightcurves)"
+      },
+      {
+        "label": "ZTF DR23 (objects)",
+        "dir": "ZTF/ZTF_DR23_(objects)"
+      },
+      {
+        "label": "ZTF alerts \u2265 20 detections",
+        "dir": "ZTF/ZTF_alerts_gte_20_detections"
+      },
+      {
+        "label": "Zubercal DR16",
+        "dir": "ZTF/Zubercal_DR16"
+      },
+      {
+        "label": "Zubercal DR20",
+        "dir": "ZTF/Zubercal_DR20"
+      }
+    ]
+  },
+  {
+    "label": "eRASS1 Main",
+    "catalogs": [
+      {
+        "label": "eRASS1 Main",
+        "dir": "eRASS1_Main/eRASS1_Main"
+      }
+    ]
+  }
+]

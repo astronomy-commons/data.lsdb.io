@@ -1,0 +1,102 @@
+[
+  {
+    "label": "DP1",
+    "catalogs": [
+      {
+        "label": "dia_object_collection",
+        "dir": "DP1/dia_object_collection"
+      },
+      {
+        "label": "object_collection",
+        "dir": "DP1/object_collection"
+      },
+      {
+        "label": "object_collection (lite)",
+        "dir": "DP1/object_collection_(lite)"
+      }
+    ]
+  },
+  {
+    "label": "DP2 HATS V1",
+    "catalogs": [
+      {
+        "label": "dia_object_collection",
+        "dir": "DP2_HATS_V1/dia_object_collection"
+      },
+      {
+        "label": "object_collection",
+        "dir": "DP2_HATS_V1/object_collection"
+      }
+    ]
+  },
+  {
+    "label": "DP2 Pilot",
+    "catalogs": [
+      {
+        "label": "dia_object_collection",
+        "dir": "DP2_Pilot/dia_object_collection"
+      },
+      {
+        "label": "object_collection",
+        "dir": "DP2_Pilot/object_collection"
+      }
+    ]
+  },
+  {
+    "label": "DP2_rc2",
+    "catalogs": [
+      {
+        "label": "dia_object_collection",
+        "dir": "DP2_rc2/dia_object_collection"
+      },
+      {
+        "label": "object_collection",
+        "dir": "DP2_rc2/object_collection"
+      }
+    ]
+  },
+  {
+    "label": "PPDB",
+    "catalogs": [
+      {
+        "label": "PPDB",
+        "dir": "PPDB/PPDB"
+      }
+    ]
+  },
+  {
+    "label": "v30_0_4_rc1",
+    "catalogs": [
+      {
+        "label": "dia_object_collection",
+        "dir": "v30_0_4_rc1/dia_object_collection"
+      },
+      {
+        "label": "object_collection",
+        "dir": "v30_0_4_rc1/object_collection"
+      }
+    ]
+  },
+  {
+    "label": "v30_0_6_rc1",
+    "catalogs": [
+      {
+        "label": "object",
+        "dir": "v30_0_6_rc1/object"
+      }
+    ]
+  },
+  {
+    "label": "w_2025_49",
+    "catalogs": [
+      {
+        "label": "dia_object_collection",
+        "dir": "w_2025_49/dia_object_collection"
+      },
+      {
+        "label": "object_collection",
+        "dir": "w_2025_49/object_collection"
+      }
+    ]
+  }
+]

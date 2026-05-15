@@ -1,0 +1,485 @@
+/*
+ * Site header
+ */
+
+.site-header {
+  background-color: #fff;
+  box-shadow: 0 2px 12px rgba(1, 41, 112, 0.08);
+}
+
+.site-header .nav-link,
+.site-header .btn {
+  font-family: "Outfit", sans-serif;
+  color: #012970;
+  font-size: 1rem;
+}
+
+.site-header .btn-primary {
+  background-color: #012970;
+  border-color: #012970;
+  color: #fff;
+}
+
+.site-header .btn-primary:hover {
+  background-color: #01348f;
+  border-color: #01348f;
+}
+
+.lsdb-brand span {
+  font-size: 1.8rem;
+  font-weight: 600;
+  font-family: "Nunito", sans-serif;
+  letter-spacing: 0.5px;
+  color: #012970;
+}
+
+.lsdb-brand img {
+  height: 40px;
+  margin-right: 6px;
+}
+
+/* Mirrors dropdown */
+.mirrors-nav-item {
+  position: relative;
+}
+
+#mirrors-trigger::after {
+  display: none;
+}
+
+#mirrors-trigger {
+  display: inline-flex;
+  align-items: center;
+  font-size: 1.1rem;
+  margin-right: 1rem;
+}
+
+.mirrors-chevron {
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: rotate(45deg);
+  margin-left: 10px;
+  margin-bottom: 3px;
+  transition: transform 0.2s ease, margin-bottom 0.2s ease;
+}
+
+#mirrors-trigger[aria-expanded="true"] .mirrors-chevron {
+  transform: rotate(-135deg);
+  margin-bottom: -3px;
+}
+
+.mirrors-card {
+  width: 360px;
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 12px 48px rgba(1, 41, 112, 0.14), 0 2px 8px rgba(1, 41, 112, 0.07);
+  border: 1px solid rgba(65, 84, 241, 0.1);
+  overflow: hidden;
+  z-index: 9999;
+  padding: 0;
+}
+
+.mirrors-card.show {
+  animation: mirrors-in 0.18s cubic-bezier(0.4, 0, 0.2, 1);
+  margin-top: 1rem;
+}
+
+@keyframes mirrors-in {
+  from { opacity: 0; transform: translateY(-6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.mirrors-card-desc {
+  font-size: 12px;
+  color: #7a82a8;
+  padding: 11px 18px 4px;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.mirrors-list {
+  padding: 6px 10px 10px;
+}
+
+.mirror-item {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  padding: 9px 10px;
+  border-radius: 9px;
+  text-decoration: none;
+  color: inherit;
+  transition: background 0.13s;
+}
+
+.mirror-item:hover {
+  background: #f2f4ff;
+  color: inherit;
+}
+
+.mirror-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.mirror-name {
+  font-family: "Outfit", sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  color: #012970;
+}
+
+.mirror-desc {
+  font-size: 11.5px;
+  color: #9099b8;
+  margin-top: 1px;
+}
+
+.mirrors-divider {
+  height: 1px;
+  background: #f0f2fa;
+  margin: 2px 10px;
+}
+
+.mirror-logo {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  border-radius: 6px;
+  flex-shrink: 0;
+}
+
+
+/*MY STUFF*/
+
+:root {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+html {
+  background-color: #ffffff;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  color: #444444;
+  display: flex;
+  flex-direction: column;
+  background-color: transparent;
+}
+
+main {
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
+}
+
+#hero {
+  height: 100%;
+}
+
+#catalog-section {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+a {
+  color: #4154f1;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #717ff5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Outfit", sans-serif;
+  font-weight: 500;
+}
+
+/* ---------------------------------------------------------------
+   Catalog detail — airy layout
+--------------------------------------------------------------- */
+
+.catalog-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  max-width: 70em;
+  margin: 0 auto;
+  padding-bottom: 48px;
+}
+
+#catalog-title {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.catalog-title {
+  font-family: "Outfit", sans-serif;
+  font-size: 2rem;
+  font-weight: 300;
+  line-height: 1.15;
+  margin: 0;
+  color: #012970;
+}
+
+.catalog-title a {
+  color: #012970;
+  text-decoration: none;
+}
+
+.catalog-title a:hover {
+  color: #1976d2;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* Description + density map — side by side */
+.desc-density-row {
+  display: flex;
+  gap: 28px;
+  align-items: flex-start;
+}
+
+.desc-density-row .catalog-description {
+  flex: 1;
+  min-width: 0;
+}
+
+.desc-density-row .density-hero {
+  flex: 0 0 70%;
+}
+
+.catalog-description {
+  font-size: 1rem;
+  color: #555c67;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* Skymap page images */
+.skymap-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  cursor: zoom-in;
+}
+
+/* Density map */
+.density-hero img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.density-hero-caption {
+  margin-top: 4px;
+  font-size: 11px;
+  color: #999;
+  font-family: monospace;
+  letter-spacing: 0.02em;
+}
+
+@media (max-width: 680px) {
+  .desc-density-row { flex-direction: column; }
+  .desc-density-row .density-hero { flex: none; max-width: 100%; }
+}
+
+@media (max-width: 900px) {
+  .catalog-detail { max-width: 100%; }
+  .catalog-footer { max-width: 100%; }
+  #badges { flex-wrap: wrap; }
+  .code-tabs { flex-wrap: wrap; }
+}
+
+/* Inline badge labels (location, protocol, etc.) */
+.catalog-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.75rem;
+  color: #6b7280;
+  font-weight: 400;
+  white-space: nowrap;
+}
+
+.catalog-badge svg {
+  color: #9ca3af;
+  flex-shrink: 0;
+}
+
+.catalog-badge--warning {
+  color: #b45309;
+  background: rgba(180, 83, 9, 0.08);
+  border: 1px solid rgba(180, 83, 9, 0.25);
+  border-radius: 4px;
+  padding: 2px 7px 2px 5px;
+  font-weight: 600;
+}
+
+.catalog-badge--warning svg {
+  color: #b45309;
+}
+
+
+/* Load data section */
+#load-data-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+/* Tab switcher above code views */
+.code-tabs {
+  display: flex;
+  gap: 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+  margin-bottom: 0;
+}
+
+.code-tab {
+  padding: 8px 16px;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px;
+  font-family: "Outfit", sans-serif;
+  font-size: 0.83rem;
+  font-weight: 300;
+  color: rgb(180, 182, 185);
+  cursor: pointer;
+  transition: color 0.15s, border-color 0.15s;
+  line-height: 1.4;
+}
+
+.code-tab:hover { color: #1976d2; }
+
+.code-tab.active {
+  color: #012970;
+  border-bottom-color: #1976d2;
+}
+
+.code-tab-content {
+  padding-top: 14px;
+}
+
+/* Code block */
+.code-block-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 51px;
+  align-items: stretch;
+  gap: 8px;
+}
+
+.code-block {
+  min-width: 0;
+  background: #f6f8fa;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 8px;
+  padding: 14px 16px;
+  overflow-x: auto;
+}
+
+.code-block code {
+  display: block;
+  white-space: pre;
+  font-family: "Courier New", SFMono-Regular, Consolas, monospace;
+  font-size: 13px;
+  line-height: 1.6;
+  color: #374151;
+}
+
+/* Syntax token colors */
+.tk-prompt { color: #9ca3af; user-select: none; }
+.tk-kw     { color: #1d4ed8; }          /* Python keywords — blue */
+.tk-fn     { color: #7c3aed; }          /* Function/method names — purple */
+.tk-str    { color: #b45309; }          /* String literals — amber */
+.tk-cmd    { color: #065f46; font-weight: 600; }  /* Shell command — dark green */
+.tk-flag   { color: #6b7280; }          /* Shell flags — muted grey */
+
+.copy-btn.MuiIconButton-root {
+  padding: 4px;
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(0, 0, 0, 0.14);
+  color: #888;
+  transition: border-color 0.15s, color 0.15s;
+}
+
+.copy-btn.MuiIconButton-root:hover {
+  border-color: rgba(0, 0, 0, 0.3);
+  color: #333;
+  background: #fff;
+}
+
+/* Notes */
+.notes {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.s3-info,
+.s3-warning {
+  margin-bottom: 8px;
+}
+
+
+/* Footer — lives inside the right-panel scroll area */
+.catalog-footer {
+  padding-top: 20px;
+  border-top: 1px solid rgba(0, 0, 0, 0.07);
+  font-size: 0.78rem;
+  color: #9ca3af;
+  line-height: 1.65;
+  max-width: 70rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.catalog-footer img {
+  height: 32px;
+  display: block;
+  margin-bottom: 10px;
+  opacity: 0.6;
+}
+
+.catalog-footer p {
+  margin: 0;
+}
+
+@keyframes star-float {
+  0%, 100% { opacity: 0;    transform: scale(0.7); }
+  45%, 55% { opacity: 0.28; transform: scale(1.2); }
+}
+
+/* Gaia DR3 galactic bulge density mask — high density = light blue, sparse = white */
+#gaia-bg {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background-color: rgb(25 118 210 / 0.12);
+  mask-image: url('/assets/img/gaia-mask.png');
+  mask-size: cover;
+  mask-position: center;
+  -webkit-mask-image: url('/assets/img/gaia-mask.png');
+  -webkit-mask-size: cover;
+  -webkit-mask-position: center;
+}

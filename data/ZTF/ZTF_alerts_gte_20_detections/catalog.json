@@ -1,0 +1,52 @@
+{
+  "label": "ZTF/ZTF alerts \u2265 20 detections",
+  "name": "ZTF alerts \u2265 20 detections",
+  "description": "Zwicky Transient Facility alert data. This dataset includes alerts produced from the beginning of the survey until September 13, 2023, with at least 20 detections across all bands. The data was provided by the ALeRCE alert broker.",
+  "urls": {
+    "catalog": "https://data.lsdb.io/hats/alerce",
+    "point_density_map": "data/ZTF/ZTF_alerts_gte_20_detections/point_density.webp"
+  },
+  "metadata": {
+    "numRows": 1825339,
+    "numColumns": 6,
+    "numPartitions": 113,
+    "sizeOnDisk": "20.7 GiB",
+    "hatsBuilder": "lsdb v0.7.3, hats v0.7.3"
+  },
+  "other_urls": [
+    {
+      "label": "Official release",
+      "url": "https://www.ztf.caltech.edu"
+    },
+    {
+      "label": "Column descriptions",
+      "url": "https://zwickytransientfacility.github.io/ztf-avro-alert/schema.html"
+    },
+    {
+      "label": "Research paper",
+      "url": "https://ui.adsabs.harvard.edu/abs/2019PASP..131a8002B/abstract"
+    }
+  ],
+  "badges": [
+    {
+      "title": "US-West"
+    },
+    {
+      "title": "HTTP"
+    }
+  ],
+  "column_mean_maps": [
+    "lc_dec",
+    "lc_magap",
+    "lc_magpsf",
+    "lc_magpsf_corr",
+    "lc_ra",
+    "lc_sigmagap",
+    "lc_sigmapsf",
+    "lc_sigmapsf_corr",
+    "lc_sigmapsf_corr_ext",
+    "mean_dec",
+    "mean_ra"
+  ],
+  "dir": "ZTF/ZTF_alerts_gte_20_detections"
+}

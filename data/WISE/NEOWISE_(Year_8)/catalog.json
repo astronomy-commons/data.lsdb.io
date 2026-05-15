@@ -1,0 +1,51 @@
+{
+  "label": "WISE/NEOWISE (Year 8)",
+  "name": "NEOWISE (Year 8)",
+  "description": "NEOWISE is a joint mission of the Jet Propulsion Laboratory/California Institute of Technology and the University of Arizona, funded by the National Aeronautics and Space Administration. It brought the WISE spacecraft out of hibernation in September 2013 to detect, track, and characterize near-Earth asteroids and comets. It scanned the sky nearly sixteen complete times during the first eight years of survey operations, with six months separating survey passes. Twelve or more independent exposures are made on each point on the sky during each survey epoch. Therefore, the NEOWISE archive is a time-domain resource for extracting multiple thermal flux and position measurements of solar system small bodies, as well as background stars and galaxies.",
+  "urls": {
+    "catalog": "https://data.lsdb.io/hats/wise/neowise",
+    "point_density_map": "data/WISE/NEOWISE_(Year_8)/point_density.webp"
+  },
+  "metadata": {
+    "numRows": 18668416994,
+    "numColumns": 143,
+    "numPartitions": 39774,
+    "sizeOnDisk": "3.3 TiB",
+    "hatsBuilder": "hats-import v0.7.1.dev4+g91d6b7dc5, hats v0.7.1"
+  },
+  "other_urls": [
+    {
+      "label": "Official release",
+      "url": "https://wise2.ipac.caltech.edu/docs/release/neowise/neowise_2022_release_intro.html"
+    },
+    {
+      "label": "Column descriptions",
+      "url": "https://wise2.ipac.caltech.edu/docs/release/neowise/expsup/sec2_1a.html"
+    },
+    {
+      "label": "Research paper",
+      "url": "https://ui.adsabs.harvard.edu/abs/2014ApJ...792...30M%2F/abstract"
+    }
+  ],
+  "badges": [
+    {
+      "title": "US-West"
+    },
+    {
+      "title": "HTTP"
+    }
+  ],
+  "column_mean_maps": [
+    "DEC",
+    "ELAT",
+    "ELON",
+    "GLAT",
+    "GLON",
+    "RA",
+    "SIGDEC",
+    "SIGRA",
+    "SIGRADEC",
+    "SRC"
+  ],
+  "dir": "WISE/NEOWISE_(Year_8)"
+}

@@ -1,0 +1,49 @@
+{
+  "label": "S-PLUS/S-PLUS DR4 (dual)",
+  "name": "S-PLUS DR4 (dual)",
+  "description": "The Southern Photometric Local Universe Survey (S-PLUS) is imaging ~9300 deg2 of the celestial sphere in 12 optical bands using a dedicated 0.8 m robotic telescope, the T80-South, at the Cerro Tololo Inter-american Observatory, Chile. The telescope is equipped with a 9.2k x 9.2k e2v detector with 10 (µ m) pixels, resulting in a field of view of 2 deg2 with a plate scale of 0.55 arcsec pixel-1. This data release includes 1629 fields, covering about 3000 square degrees of the southern sky, with the regions from previous DRs (1, 2 and 3) as well as new data from the Magellanic clouds, the disk of the Galaxy and some additional high galactic latitude fields. The data in this catalog is related to the dual mode photometry.",
+  "urls": {
+    "catalog": "https://splus.cloud/HIPS/catalogs/dr4/dual",
+    "margin_catalog": "https://splus.cloud/HIPS/catalogs/dr4/dual_2arcsec",
+    "point_density_map": "data/S-PLUS/S-PLUS_DR4_(dual)/point_density.webp"
+  },
+  "skip_connectivity_check": "Experiencing a prolonged outage and are unavailable at this time",
+  "metadata": {
+    "numRows": 80155547,
+    "numColumns": 368,
+    "numPartitions": 971,
+    "sizeOnDisk": "976 GB"
+  },
+  "badges": [
+    {
+      "title": "supports lsdb-server"
+    },
+    {
+      "title": "South America"
+    },
+    {
+      "title": "HTTP"
+    }
+  ],
+  "notes": [
+    {
+      "content": "SPLUS HATS catalogs are currently experiencing a prolonged outage and are unavailable at this time.",
+      "type": "warning"
+    }
+  ],
+  "other_urls": [
+    {
+      "label": "Official release",
+      "url": "https://splus.cloud/documentation/DR4"
+    },
+    {
+      "label": "Column descriptions",
+      "url": "https://splus.cloud/documentation/DR4?Schemas,_tables_and_columns"
+    },
+    {
+      "label": "Research paper",
+      "url": "https://www.aanda.org/articles/aa/full_html/2024/09/aa49725-24/aa49725-24.html"
+    }
+  ],
+  "dir": "S-PLUS/S-PLUS_DR4_(dual)"
+}

@@ -1,0 +1,55 @@
+{
+  "label": "TESS/TIC (US-West, HTTP)",
+  "name": "TESS Input Catalog v8.2",
+  "description": "The TESS Input Catalog (TIC) is a compiled catalog of stellar parameters for every optically persistent, stationary object in the sky. The TIC is used to help identify two-minute cadence target selection for the TESS mission, and to calculate physical and observational properties of planet candidates. It is for use by both the TESS science team and the public, and it is periodically updated---the current version is TIC-8.2. TIC-8.2 uses the GAIA DR2 catalog as a base and merges a large number of other photometric catalogs, including 2MASS, UCAC4, APASS, SDSS, WISE, etc. There are roughly 1.7 billion stellar and extended sources in the TIC, containing compiled magnitudes including B, V, u, g, r, i, z, J, H, K, W1-W4, and G. This version was released in 2021.",
+  "urls": {
+    "collection": "https://data.lsdb.io/hats/tess/tic",
+    "point_density_map": "data/TESS/TIC_(US-West,_HTTP)/point_density.webp"
+  },
+  "metadata": {
+    "numRows": 1727987580,
+    "numColumns": 125,
+    "numPartitions": 1578,
+    "sizeOnDisk": "396.6 GiB",
+    "hatsBuilder": "hats-import v0.7.1.dev4+g91d6b7dc5, hats v0.7.1"
+  },
+  "other_urls": [
+    {
+      "label": "Official release",
+      "url": "https://tess.mit.edu/science/tess-input-catalogue/"
+    },
+    {
+      "label": "Column descriptions",
+      "url": "https://outerspace.stsci.edu/display/TESS/TIC+v8.2+and+CTL+v8.xx+Data+Release+Notes"
+    },
+    {
+      "label": "Research paper",
+      "url": "https://ui.adsabs.harvard.edu/abs/2021arXiv210804778P/abstract"
+    }
+  ],
+  "badges": [
+    {
+      "title": "US-West"
+    },
+    {
+      "title": "HTTP"
+    }
+  ],
+  "column_mean_maps": [
+    "Dec_orig",
+    "RA_orig",
+    "dec",
+    "e_Dec",
+    "e_Dec_orig",
+    "e_RA",
+    "e_RA_orig",
+    "e_plx",
+    "e_pmDEC",
+    "e_pmRA",
+    "plx",
+    "pmDEC",
+    "pmRA",
+    "ra"
+  ],
+  "dir": "TESS/TIC_(US-West,_HTTP)"
+}

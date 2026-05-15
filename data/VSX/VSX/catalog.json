@@ -1,0 +1,28 @@
+{
+  "label": "VSX/VSX",
+  "name": "AAVSO International Variable Star Index (VSX)",
+  "description": "The International Variable Star Index (VSX) is a comprehensive catalog of over 10.2 million variable stars maintained by the American Association of Variable Star Observers (AAVSO). This catalog is updated monthly.",
+  "urls": {
+    "collection": "https://data.lsdb.io/hats/vsx"
+  },
+  "other_urls": [
+    {
+      "label": "Official release",
+      "url": "https://vsx.aavso.org/index.php?view=about.top"
+    },
+    {
+      "label": "Column descriptions",
+      "url": "https://vizier.cds.unistra.fr/viz-bin/VizieR-3?-source=B/vsx/vsx"
+    }
+  ],
+  "badges": [
+    {
+      "title": "US-West"
+    },
+    {
+      "title": "HTTP"
+    }
+  ],
+  "column_mean_maps": ["DEdeg", "Epoch", "MagMax", "MagMin", "OID", "Period", "RAdeg", "VarFlag"],
+  "dir": "VSX/VSX"
+}

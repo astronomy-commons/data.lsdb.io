@@ -1,0 +1,59 @@
+{
+  "label": "HSC/HSC PDR3 y",
+  "name": "Hyper Supreme Camera Public Data Release 3 y-band",
+  "description": "Hyper Suprime-Cam is a wide-field imaging camera mounted on the 8.2-meter Subaru Telescope. This catalog represents Public Data Release 3 forced photometry table for Wide survey fields in y passband. It covers ~670 square degrees with the depth of ~26 mag.",
+  "urls": {
+    "catalog": "https://data.lsdb.io/hats/hsc_pdr3/hsc_pdr3-forced-Y",
+    "margin_catalog": "https://data.lsdb.io/hats/hsc_pdr3/hsc_pdr3-forced-Y_10arcs",
+    "point_density_map": "data/HSC/HSC_PDR3_y/point_density.webp"
+  },
+  "other_urls": [
+    {
+      "label": "Official release",
+      "url": "https://hsc-release.mtk.nao.ac.jp/doc/index.php/available-data__pdr3"
+    },
+    {
+      "label": "Column descriptions",
+      "url": "https://hsc-release.mtk.nao.ac.jp/schema/#pdr3.pdr3_wide.forced"
+    },
+    {
+      "label": "Research paper",
+      "url": "https://ui.adsabs.harvard.edu/abs/2022PASJ...74..247A/abstract"
+    }
+  ],
+  "metadata": {
+    "numRows": 731099731,
+    "numColumns": 241,
+    "numPartitions": 1538,
+    "sizeOnDisk": "1.1 TiB",
+    "hatsBuilder": "hats-import v0.4.4"
+  },
+  "badges": [
+    {
+      "title": "US-West"
+    },
+    {
+      "title": "HTTP"
+    }
+  ],
+  "column_mean_maps": [
+    "base_InputCount_value",
+    "base_SdssCentroid_x",
+    "base_SdssCentroid_xErr",
+    "base_SdssCentroid_y",
+    "base_SdssCentroid_yErr",
+    "coord_dec",
+    "coord_ra",
+    "deblend_nChild",
+    "modelfit_CModel_apCorr",
+    "modelfit_CModel_apCorrErr",
+    "modelfit_CModel_dev_apCorr",
+    "modelfit_CModel_dev_apCorrErr",
+    "modelfit_CModel_exp_apCorr",
+    "modelfit_CModel_exp_apCorrErr",
+    "modelfit_CModel_initial_apCorr",
+    "modelfit_CModel_initial_apCorrErr",
+    "parent"
+  ],
+  "dir": "HSC/HSC_PDR3_y"
+}

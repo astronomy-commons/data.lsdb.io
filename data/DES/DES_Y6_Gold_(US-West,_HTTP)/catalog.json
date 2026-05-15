@@ -1,0 +1,63 @@
+{
+  "label": "DES/DES Y6 Gold (US-West, HTTP)",
+  "name": "Dark Energy Survey Y6 Gold",
+  "description": "The Y6 Gold catalog is derived from Dark Energy Survey Data Release 2 (DES DR2) and includes all six years of g,r,i,z,Y imaging measurements. Y6 Gold was formulated for the DES final cosmological analyses, but it has very general applicability. Y6 Gold contains 669 million objects to i-band of 23.4 (S/N = 10 for extended objects).",
+  "urls": {
+    "catalog": "https://data.lsdb.io/hats/des/des_y6_gold",
+    "point_density_map": "data/DES/DES_Y6_Gold_(US-West,_HTTP)/point_density.webp"
+  },
+  "metadata": {
+    "numRows": 691483608,
+    "numColumns": 336,
+    "numPartitions": 1633,
+    "sizeOnDisk": "1.3 TiB",
+    "hatsBuilder": "hats-import v0.7.1 reimport hats-import v0.4.4"
+  },
+  "other_urls": [
+    {
+      "label": "Official release",
+      "url": "https://des.ncsa.illinois.edu/releases/y6a2/Y6gold"
+    },
+    {
+      "label": "Column descriptions",
+      "url": "https://des.ncsa.illinois.edu/releases/y6a2/Y6gold"
+    },
+    {
+      "label": "Research paper",
+      "url": "https://arxiv.org/abs/2501.05739"
+    }
+  ],
+  "badges": [
+    {
+      "title": "US-West"
+    },
+    {
+      "title": "HTTP"
+    }
+  ],
+  "column_mean_maps": [
+    "DEC",
+    "FLUX_RADIUS_G",
+    "FLUX_RADIUS_I",
+    "FLUX_RADIUS_R",
+    "FLUX_RADIUS_Y",
+    "FLUX_RADIUS_Z",
+    "NEPOCHS_G",
+    "NEPOCHS_I",
+    "NEPOCHS_R",
+    "NEPOCHS_Y",
+    "NEPOCHS_Z",
+    "RA",
+    "WAVG_MAGERR_PSF_G",
+    "WAVG_MAGERR_PSF_I",
+    "WAVG_MAGERR_PSF_R",
+    "WAVG_MAGERR_PSF_Y",
+    "WAVG_MAGERR_PSF_Z",
+    "WAVG_MAG_PSF_G",
+    "WAVG_MAG_PSF_I",
+    "WAVG_MAG_PSF_R",
+    "WAVG_MAG_PSF_Y",
+    "WAVG_MAG_PSF_Z"
+  ],
+  "dir": "DES/DES_Y6_Gold_(US-West,_HTTP)"
+}

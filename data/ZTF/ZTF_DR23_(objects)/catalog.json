@@ -1,0 +1,40 @@
+{
+  "label": "ZTF/ZTF DR23 (objects)",
+  "name": "Zwicky Transient Facility Data Release 23 (objects)",
+  "description": "Comprehensive catalog released by the Zwicky Transient Facility with objects detected in the northern sky.",
+  "urls": {
+    "collection": "s3://ipac-irsa-ztf/contributed/dr23/objects/hats",
+    "point_density_map": "data/ZTF/ZTF_DR23_(objects)/point_density.webp"
+  },
+  "metadata": {
+    "numRows": 7568652529,
+    "numColumns": 76,
+    "numPartitions": 1791,
+    "sizeOnDisk": "1.4 TiB",
+    "hatsBuilder": "irsa-parquet 20250629"
+  },
+  "other_urls": [
+    {
+      "label": "Official release",
+      "url": "https://www.ztf.caltech.edu/ztf-public-releases.html"
+    },
+    {
+      "label": "Column descriptions",
+      "url": "https://irsa.ipac.caltech.edu/data/ZTF/docs/releases/dr23/ztf_release_notes_dr23.pdf"
+    },
+    {
+      "label": "Research paper",
+      "url": "https://ui.adsabs.harvard.edu/abs/2019PASP..131a8002B/abstract"
+    }
+  ],
+  "badges": [
+    {
+      "title": "US-West"
+    },
+    {
+      "title": "S3"
+    }
+  ],
+  "column_mean_maps": ["dec", "medianmag", "medmagerr", "oid", "ra"],
+  "dir": "ZTF/ZTF_DR23_(objects)"
+}

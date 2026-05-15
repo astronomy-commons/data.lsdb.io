@@ -1,0 +1,51 @@
+{
+  "label": "ZTF/ZTF DR22",
+  "name": "Zwicky Transient Facility Data Release 22 (light curves)",
+  "description": "Metadata and light curves for ZTF DR22. Light curves are packed into list-arrays following the original schema.",
+  "urls": {
+    "collection": "https://data.lsdb.io/hats/ztf_dr22",
+    "point_density_map": "data/ZTF/ZTF_DR22/point_density.webp"
+  },
+  "metadata": {
+    "numRows": 4916380933,
+    "numColumns": 15,
+    "numPartitions": 10839,
+    "sizeOnDisk": "7.2 TiB",
+    "hatsBuilder": "hats-import v0.4.2"
+  },
+  "other_urls": [
+    {
+      "label": "Official release",
+      "url": "https://www.ztf.caltech.edu/ztf-public-releases.html"
+    },
+    {
+      "label": "Column descriptions",
+      "url": "https://irsa.ipac.caltech.edu/data/ZTF/docs/releases/dr22/ztf_release_notes_dr22.pdf"
+    },
+    {
+      "label": "Research paper",
+      "url": "https://ui.adsabs.harvard.edu/abs/2019PASP..131a8002B/abstract"
+    }
+  ],
+  "badges": [
+    {
+      "title": "US-West"
+    },
+    {
+      "title": "HTTP"
+    }
+  ],
+  "column_mean_maps": [
+    "catflags",
+    "clrcoeff",
+    "filterid",
+    "hmjd",
+    "mag",
+    "magerr",
+    "nepochs",
+    "objdec",
+    "objectid",
+    "objra"
+  ],
+  "dir": "ZTF/ZTF_DR22"
+}

@@ -1,0 +1,48 @@
+{
+  "label": "Euclid Q1/Euclid Q1 (IPAC)",
+  "name": "Euclid Quick Data Release 1",
+  "description": "Euclid is a space-based survey observatory launched by the European Space Agency (ESA) in July 2023, which aims to map the large-scale structure of the Universe to better understand dark energy and dark matter. The first Quick Data Release (Q1) covers 63 square degrees of the sky and including observations of 26 million galaxies.",
+  "urls": {
+    "collection": "s3://nasa-irsa-euclid-q1/contributed/q1/merged_objects/hats",
+    "point_density_map": "data/Euclid_Q1/Euclid_Q1_(IPAC)/point_density.webp"
+  },
+  "other_urls": [
+    {
+      "label": "Official release",
+      "url": "https://www.cosmos.esa.int/en/web/euclid/euclid-q1-data-release"
+    },
+    {
+      "label": "Column descriptions",
+      "url": "https://euclid.esac.esa.int/dr/q1/dpdd/merdpd/dpcards/mer_finalcatalog.html#detailed-description-of-the-data-product"
+    },
+    {
+      "label": "Research paper",
+      "url": "https://ui.adsabs.harvard.edu/abs/2025arXiv250315302E/abstract"
+    }
+  ],
+  "metadata": {
+    "numRows": 29953430,
+    "numColumns": 1593,
+    "numPartitions": 114,
+    "sizeOnDisk": "400.0 GiB",
+    "hatsBuilder": "irsa-parquet 20250629"
+  },
+  "badges": [
+    {
+      "title": "US-West"
+    },
+    {
+      "title": "S3"
+    }
+  ],
+  "column_mean_maps": [
+    "class_phz_classification",
+    "dec",
+    "mer_flux_h_templfit",
+    "mer_fluxerr_h_templfit",
+    "object_id",
+    "phz_phz_median",
+    "ra"
+  ],
+  "dir": "Euclid_Q1/Euclid_Q1_(IPAC)"
+}

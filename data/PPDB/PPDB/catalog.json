@@ -1,0 +1,26 @@
+{
+  "label": "PPDB/PPDB",
+  "name": "PPDB 2025/07/22/v6_0_0 dia_object_collection",
+  "description": "Prompt Products database DIA objects with nested sources and forced sources.",
+  "urls": {
+    "catalog": "/sdf/data/rubin/shared/lsdb_commissioning/hats/PPDB/dia_object_collection"
+  },
+  "other_urls": [
+    {
+      "label": "Column descriptions",
+      "url": "https://sdm-schemas.lsst.io/apdb.html"
+    },
+    {
+      "label": "PPDB pipeline",
+      "url": "https://github.com/lsst-sitcom/linccf/tree/main/ppdb"
+    }
+  ],
+  "metadata": {
+    "numRows": 2457711,
+    "numColumns": 204,
+    "numPartitions": 361,
+    "sizeOnDisk": "13 GiB",
+    "hatsBuilder": "lsdb v0.6.4, hats v0.6.4"
+  },
+  "dir": "PPDB/PPDB"
+}

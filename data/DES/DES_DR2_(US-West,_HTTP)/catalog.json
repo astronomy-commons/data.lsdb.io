@@ -1,0 +1,78 @@
+{
+  "label": "DES/DES DR2 (US-West, HTTP)",
+  "name": "Dark Energy Survey Data Release 2",
+  "description": "The Dark Energy Survey Data Release 2 (DES DR2) is a comprehensive catalog performed with DECam. Published in January 2021, DES DR2 includes data collected from six years of observations, covering about 5,000 square degrees of the southern sky. This release provides highly detailed and precise information on over 690 million astronomical objects, including stars, galaxies, and quasars.",
+  "urls": {
+    "collection": "https://data.lsdb.io/hats/des/des_dr2",
+    "point_density_map": "data/DES/DES_DR2_(US-West,_HTTP)/point_density.webp"
+  },
+  "metadata": {
+    "numRows": 691483608,
+    "numColumns": 215,
+    "numPartitions": 1582,
+    "sizeOnDisk": "665.6 GiB",
+    "hatsBuilder": "hats-import v0.9.0, hats v0.9.0"
+  },
+  "other_urls": [
+    {
+      "label": "Official release",
+      "url": "https://des.ncsa.illinois.edu/releases/dr2/dr2-docs"
+    },
+    {
+      "label": "Column descriptions",
+      "url": "https://des.ncsa.illinois.edu/releases/dr2/dr2-products/dr2-schema"
+    },
+    {
+      "label": "Research paper",
+      "url": "https://ui.adsabs.harvard.edu/abs/2021ApJS..255...20A/abstract"
+    }
+  ],
+  "badges": [
+    {
+      "title": "US-West"
+    },
+    {
+      "title": "HTTP"
+    }
+  ],
+  "column_mean_maps": [
+    "DEC",
+    "FLUX_RADIUS_G",
+    "FLUX_RADIUS_I",
+    "FLUX_RADIUS_R",
+    "FLUX_RADIUS_Y",
+    "FLUX_RADIUS_Z",
+    "KRON_RADIUS_G",
+    "KRON_RADIUS_I",
+    "KRON_RADIUS_R",
+    "KRON_RADIUS_Y",
+    "KRON_RADIUS_Z",
+    "MAGERR_AUTO_G",
+    "MAGERR_AUTO_I",
+    "MAGERR_AUTO_R",
+    "MAGERR_AUTO_Y",
+    "MAGERR_AUTO_Z",
+    "MAG_AUTO_G",
+    "MAG_AUTO_I",
+    "MAG_AUTO_R",
+    "MAG_AUTO_Y",
+    "MAG_AUTO_Z",
+    "NEPOCHS_G",
+    "NEPOCHS_I",
+    "NEPOCHS_R",
+    "NEPOCHS_Y",
+    "NEPOCHS_Z",
+    "RA",
+    "WAVG_MAGERR_PSF_G",
+    "WAVG_MAGERR_PSF_I",
+    "WAVG_MAGERR_PSF_R",
+    "WAVG_MAGERR_PSF_Y",
+    "WAVG_MAGERR_PSF_Z",
+    "WAVG_MAG_PSF_G",
+    "WAVG_MAG_PSF_I",
+    "WAVG_MAG_PSF_R",
+    "WAVG_MAG_PSF_Y",
+    "WAVG_MAG_PSF_Z"
+  ],
+  "dir": "DES/DES_DR2_(US-West,_HTTP)"
+}
