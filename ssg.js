@@ -3,7 +3,7 @@ import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'fs';
 import path from 'path';
 
 const require = createRequire(import.meta.url);
-const { render } = require('../dist-server/ssr.cjs');
+const { render } = require('./dist-server/ssr.cjs');
 
 const catalogIndex = JSON.parse(readFileSync('./data/catalogs.json', 'utf-8'));
 const rubinIndex = JSON.parse(readFileSync('./data/rubinCatalogs.json', 'utf-8'));
