@@ -1,0 +1,39 @@
+{
+  "label": "DES/DES DR2 (US-East, S3)",
+  "name": "Dark Energy Survey Data Release 2",
+  "description": "The Dark Energy Survey Data Release 2 (DES DR2) is a comprehensive catalog performed with DECam. Published in January 2021, DES DR2 includes data collected from six years of observations, covering about 5,000 square degrees of the southern sky. This release provides highly detailed and precise information on over 690 million astronomical objects, including stars, galaxies, and quasars.",
+  "urls": {
+    "collection": "s3://stpubdata/mast/public/des/hats/des_dr2/",
+    "point_density_map": "data/DES/DES_DR2_(US-East,_S3)/point_density.webp"
+  },
+  "metadata": {
+    "numRows": 691483608,
+    "numColumns": 215,
+    "numPartitions": 1582,
+    "sizeOnDisk": "665.6 GiB",
+    "hatsBuilder": "hats-import v0.9.0, hats v0.9.0"
+  },
+  "other_urls": [
+    {
+      "label": "Official release",
+      "url": "https://des.ncsa.illinois.edu/releases/dr2/dr2-docs"
+    },
+    {
+      "label": "Column descriptions",
+      "url": "https://des.ncsa.illinois.edu/releases/dr2/dr2-products/dr2-schema"
+    },
+    {
+      "label": "Research paper",
+      "url": "https://ui.adsabs.harvard.edu/abs/2021ApJS..255...20A/abstract"
+    }
+  ],
+  "badges": [
+    {
+      "title": "US-East"
+    },
+    {
+      "title": "S3"
+    }
+  ],
+  "dir": "DES/DES_DR2_(US-East,_S3)"
+}

@@ -1,0 +1,49 @@
+{
+  "label": "S-PLUS/S-PLUS DR4 (photozs)",
+  "name": "S-PLUS DR4 (photozs)",
+  "description": "Value-added catalog containing the single-point estimates (SPEs) of the photometric redshifts and probability distribution functions (PDFs) based on galaxy spectroscopy for all objects. Obtained using a Bayesian Mixture Density Network model.",
+  "urls": {
+    "catalog": "https://splus.cloud/HIPS/catalogs/dr4_vacs/photozs/photozs",
+    "margin_catalog": "https://splus.cloud/HIPS/catalogs/dr4_vacs/photozs/photozs_2arcsec",
+    "point_density_map": "data/S-PLUS/S-PLUS_DR4_(photozs)/point_density.webp"
+  },
+  "skip_connectivity_check": "Experiencing a prolonged outage and are unavailable at this time",
+  "metadata": {
+    "numRows": 80614269,
+    "numColumns": 18,
+    "numPartitions": 2589,
+    "sizeOnDisk": "5.1 TiB"
+  },
+  "badges": [
+    {
+      "title": "supports lsdb-server"
+    },
+    {
+      "title": "South America"
+    },
+    {
+      "title": "HTTP"
+    }
+  ],
+  "notes": [
+    {
+      "content": "SPLUS HATS catalogs are currently experiencing a prolonged outage and are unavailable at this time.",
+      "type": "warning"
+    }
+  ],
+  "other_urls": [
+    {
+      "label": "Official release",
+      "url": "https://splus.cloud/documentation/DR4"
+    },
+    {
+      "label": "Column descriptions",
+      "url": "https://splus.cloud/documentation/DR4?Schemas,_tables_and_columns"
+    },
+    {
+      "label": "Research paper",
+      "url": "https://www.aanda.org/articles/aa/full_html/2024/09/aa49725-24/aa49725-24.html"
+    }
+  ],
+  "dir": "S-PLUS/S-PLUS_DR4_(photozs)"
+}

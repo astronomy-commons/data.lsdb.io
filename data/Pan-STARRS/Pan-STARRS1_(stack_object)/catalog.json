@@ -1,0 +1,39 @@
+{
+  "label": "Pan-STARRS/Pan-STARRS1 (stack object)",
+  "name": "Pan-STARRS1 (stack object)",
+  "description": "Catalog of objects detected in stacked (co-added) images from the Pan-STARRS1 survey. Stacking improves detection of faint sources by combining multiple exposures.",
+  "urls": {
+    "collection": "s3://stpubdata/panstarrs/ps1/public/hats/stack_object",
+    "point_density_map": "data/Pan-STARRS/Pan-STARRS1_(stack_object)/point_density.webp"
+  },
+  "metadata": {
+    "numRows": 3413162543,
+    "numColumns": 307,
+    "numPartitions": 6777,
+    "sizeOnDisk": "4.0 TiB",
+    "hatsBuilder": "hipscat_import v0.3.2 hats-importer conversion v0.4.3"
+  },
+  "other_urls": [
+    {
+      "label": "Official release",
+      "url": "https://outerspace.stsci.edu/display/PANSTARRS/"
+    },
+    {
+      "label": "Column descriptions",
+      "url": "https://outerspace.stsci.edu/spaces/PANSTARRS/pages/298812329/PS1+Stack+objects+and+photometry"
+    },
+    {
+      "label": "Research paper",
+      "url": "https://ui.adsabs.harvard.edu/abs/2016arXiv161205560C/abstract"
+    }
+  ],
+  "badges": [
+    {
+      "title": "US-East"
+    },
+    {
+      "title": "S3"
+    }
+  ],
+  "dir": "Pan-STARRS/Pan-STARRS1_(stack_object)"
+}

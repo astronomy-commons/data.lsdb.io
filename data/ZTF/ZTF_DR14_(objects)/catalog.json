@@ -1,0 +1,53 @@
+{
+  "label": "ZTF/ZTF DR14 (objects)",
+  "name": "Zwicky Transient Facility Data Release 14 (objects)",
+  "description": "Comprehensive catalog released by the Zwicky Transient Facility with objects detected in the northern sky, crossmatched to Pan-STARRS objects. It does not include time-domain data.",
+  "urls": {
+    "collection": "https://data.lsdb.io/hats/ztf_dr14",
+    "point_density_map": "data/ZTF/ZTF_DR14_(objects)/point_density.webp"
+  },
+  "metadata": {
+    "numRows": 1234463018,
+    "numColumns": 15,
+    "numPartitions": 2352,
+    "sizeOnDisk": "61.8 GiB",
+    "hatsBuilder": "hipscat_import v0.0.4.dev16+g04f9a45 hats-importer conversion v0.3.6.dev27+g22796ca"
+  },
+  "other_urls": [
+    {
+      "label": "Official release",
+      "url": "https://www.ztf.caltech.edu/ztf-public-releases.html"
+    },
+    {
+      "label": "Column descriptions",
+      "url": "https://irsa.ipac.caltech.edu/data/ZTF/docs/releases/dr14/ztf_release_notes_dr14.pdf"
+    },
+    {
+      "label": "Research paper",
+      "url": "https://ui.adsabs.harvard.edu/abs/2019PASP..131a8002B/abstract"
+    }
+  ],
+  "badges": [
+    {
+      "title": "US-West"
+    },
+    {
+      "title": "HTTP"
+    }
+  ],
+  "column_mean_maps": [
+    "dec",
+    "mean_mag_g",
+    "mean_mag_i",
+    "mean_mag_r",
+    "nobs_g",
+    "nobs_i",
+    "nobs_r",
+    "ps1_gMeanPSFMag",
+    "ps1_iMeanPSFMag",
+    "ps1_objid",
+    "ps1_rMeanPSFMag",
+    "ra"
+  ],
+  "dir": "ZTF/ZTF_DR14_(objects)"
+}

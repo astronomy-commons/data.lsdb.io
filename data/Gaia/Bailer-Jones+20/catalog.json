@@ -1,0 +1,54 @@
+{
+  "label": "Gaia/Bailer-Jones+20",
+  "name": "Gaia EDR3 Distances (Bailer-Jones+20)",
+  "description": "Bailer-Jones+20 is an auxiliary catalog providing 1.47 billion geometric and 1.35 billion photogeometric distances, together with asymmetric uncertainty measures, for objects in Gaia Early Data Release 3. LINCC Frameworks added ra and dec columns obtained from the Gaia DR3 source catalog.",
+  "urls": {
+    "collection": "https://data.lsdb.io/hats/gaia_edr3_distances",
+    "point_density_map": "data/Gaia/Bailer-Jones+20/point_density.webp"
+  },
+  "metadata": {
+    "numRows": 1467744818,
+    "numColumns": 13,
+    "numPartitions": 3243,
+    "sizeOnDisk": "98.0 GiB",
+    "hatsBuilder": "hipscat_import v0.3.4 hats-importer conversion v0.3.6.dev27+g22796ca"
+  },
+  "other_urls": [
+    {
+      "label": "Official release",
+      "url": "https://www2.mpia-hd.mpg.de/homes/calj/gedr3_distances.html"
+    },
+    {
+      "label": "Column descriptions",
+      "url": "http://dc.g-vo.org/tableinfo/gedr3dist.main"
+    },
+    {
+      "label": "Research paper",
+      "url": "https://ui.adsabs.harvard.edu/abs/2021AJ....161..147B/abstract"
+    }
+  ],
+  "badges": [
+    {
+      "title": "US-West"
+    },
+    {
+      "title": "HTTP"
+    }
+  ],
+  "column_mean_maps": [
+    "Dir",
+    "Norder",
+    "Npix",
+    "dec",
+    "flag",
+    "r_hi_geo",
+    "r_hi_photogeo",
+    "r_lo_geo",
+    "r_lo_photogeo",
+    "r_med_geo",
+    "r_med_photogeo",
+    "ra",
+    "source_id"
+  ],
+  "dir": "Gaia/Bailer-Jones+20"
+}

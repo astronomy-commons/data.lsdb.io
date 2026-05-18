@@ -1,0 +1,53 @@
+{
+  "label": "SDSS/SDSS DR7 (spectra)",
+  "name": "Sloan Digital Sky Survey Data Release 7 (spectra)",
+  "description": "The Sloan Digital Sky Survey (SDSS) Data Release 7 (DR7) provides imaging over 11,663 deg^2, with five-band photometry for 357 million objects. It includes regions in the Northern and Southern Galactic Caps, as well as areas at low Galactic latitude. The survey has completed spectroscopy over 9,380 deg^2, collecting over 1.6 million spectra in total from galaxies, quasars, and stars.",
+  "urls": {
+    "catalog": "https://data.lsdb.io/hats/sdss_dr7_spectra",
+    "point_density_map": "data/SDSS/SDSS_DR7_(spectra)/point_density.webp"
+  },
+  "metadata": {
+    "numRows": 1640953,
+    "numColumns": 23,
+    "numPartitions": 231,
+    "sizeOnDisk": "85.1 GiB",
+    "hatsBuilder": "hats-import v0.9.0, hats v0.9.0"
+  },
+  "other_urls": [
+    {
+      "label": "Official release",
+      "url": "https://classic.sdss.org/dr7"
+    },
+    {
+      "label": "Research paper",
+      "url": "https://ui.adsabs.harvard.edu/abs/2009ApJS..182..543A/abstract"
+    }
+  ],
+  "badges": [
+    {
+      "title": "US-West"
+    },
+    {
+      "title": "HTTP"
+    }
+  ],
+  "column_mean_maps": [
+    "DEC",
+    "DEVAUCL",
+    "EXPL",
+    "FIBERID",
+    "OFFSETID",
+    "PRIMTARGET",
+    "RA",
+    "SCI_EXPTIME",
+    "SECTARGET",
+    "SFD_EBV",
+    "SPECTROGRAPHID",
+    "STARL",
+    "THROUGHPUT",
+    "XFOCAL",
+    "YFOCAL",
+    "__index_level_0__"
+  ],
+  "dir": "SDSS/SDSS_DR7_(spectra)"
+}

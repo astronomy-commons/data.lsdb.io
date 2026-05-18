@@ -1,0 +1,31 @@
+{
+  "label": "DP2 Pilot/dia_object_collection",
+  "name": "DP2-pilot v30_0_4 dia_object_collection",
+  "description": "DRP/v30_0_4/DM-54249 dia_object_collection",
+  "urls": {
+    "catalog": "/sdf/data/rubin/shared/lsdb_commissioning/hats/v30_0_4/dia_object_collection"
+  },
+  "other_urls": [
+    {
+      "label": "Column descriptions",
+      "url": "https://sdm-schemas.lsst.io/imsim.html"
+    },
+    {
+      "label": "Jira Ticket",
+      "url": "https://rubinobs.atlassian.net/browse/DM-54249"
+    }
+  ],
+  "metadata": {
+    "numRows": 1663387,
+    "numColumns": 67,
+    "numPartitions": 275,
+    "sizeOnDisk": "22 GiB",
+    "hatsBuilder": "hats-import v0.9.0, hats v0.9.0"
+  },
+  "badges": [
+    {
+      "title": "Available only on USDF"
+    }
+  ],
+  "dir": "DP2_Pilot/dia_object_collection"
+}

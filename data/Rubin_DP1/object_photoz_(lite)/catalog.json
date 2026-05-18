@@ -1,0 +1,36 @@
+{
+  "label": "Rubin DP1/object_photoz (lite)",
+  "name": "Rubin Data Preview 1 (DP1) Object photoz (lite)",
+  "description": "Photometric redshifts for Rubin Data Preview 1 Objects. This is a trimmed version of the object_photoz catalog, in a single parquet file. It contains no coordinates or magnitudes so it is allowed to be public, as clarified in the community forum post below.",
+  "urls": {
+    "catalog": "https://data.lsdb.io/hats/dp1/object_photoz.parquet"
+  },
+  "other_urls": [
+    {
+      "label": "RAIL research paper",
+      "url": "https://arxiv.org/abs/2505.02928"
+    },
+    {
+      "label": "RAIL projects",
+      "url": "https://github.com/LSSTDESC/rail_projects"
+    },
+    {
+      "label": "SITCOMTN-154",
+      "url": "https://github.com/lsst-sitcom/sitcomtn-154"
+    },
+    {
+      "label": "Community forum post",
+      "url": "https://community.lsst.org/t/catalog-from-proprietary-data/10258/3"
+    },
+    {
+      "label": "How to cite",
+      "url": "https://docs.lsdb.io/en/latest/citation.html"
+    }
+  ],
+  "metadata": {
+    "numRows": 544644,
+    "numColumns": 66,
+    "sizeOnDisk": "4.5 GiB"
+  },
+  "dir": "Rubin_DP1/object_photoz_(lite)"
+}

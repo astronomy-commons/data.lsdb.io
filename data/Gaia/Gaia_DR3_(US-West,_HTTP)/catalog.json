@@ -1,0 +1,67 @@
+{
+  "label": "Gaia/Gaia DR3 (US-West, HTTP)",
+  "name": "Gaia Data Release 3",
+  "description": "Gaia Data Release 3 (GAIA_SOURCE table) is a comprehensive catalog released by the European Space Agency (ESA) as part of the Gaia mission, which aims to create a detailed three-dimensional map of our galaxy, the Milky Way. Released in June 2022, Gaia DR3 provides highly precise astrometric data (positions, distances, and motions) for nearly 1.8 billion stars, along with detailed photometric and spectroscopic information.",
+  "urls": {
+    "collection": "https://data.lsdb.io/hats/gaia_dr3",
+    "point_density_map": "data/Gaia/Gaia_DR3_(US-West,_HTTP)/point_density.webp"
+  },
+  "other_urls": [
+    {
+      "label": "Official release",
+      "url": "https://www.cosmos.esa.int/web/gaia/dr3"
+    },
+    {
+      "label": "Column descriptions",
+      "url": "https://gea.esac.esa.int/archive/documentation/GDR3/Gaia_archive/chap_datamodel/sec_dm_main_source_catalogue/ssec_dm_gaia_source.html"
+    },
+    {
+      "label": "Research paper",
+      "url": "https://ui.adsabs.harvard.edu/abs/2023A%26A...674A...1G/abstract"
+    }
+  ],
+  "metadata": {
+    "numRows": 1812731847,
+    "numColumns": 152,
+    "numPartitions": 2016,
+    "sizeOnDisk": "712.8 GiB",
+    "hatsBuilder": "hats-import v0.6.0"
+  },
+  "badges": [
+    {
+      "title": "US-West"
+    },
+    {
+      "title": "HTTP"
+    }
+  ],
+  "column_mean_maps": [
+    "dec",
+    "dec_error",
+    "parallax",
+    "parallax_error",
+    "phot_bp_mean_flux",
+    "phot_bp_mean_flux_error",
+    "phot_bp_mean_mag",
+    "phot_bp_n_obs",
+    "phot_g_mean_flux",
+    "phot_g_mean_flux_error",
+    "phot_g_mean_mag",
+    "phot_g_n_obs",
+    "phot_rp_mean_flux",
+    "phot_rp_mean_flux_error",
+    "phot_rp_mean_mag",
+    "phot_rp_n_obs",
+    "pm",
+    "pmdec",
+    "pmdec_error",
+    "pmra",
+    "pmra_error",
+    "ra",
+    "ra_error",
+    "ref_epoch",
+    "solution_id",
+    "source_id"
+  ],
+  "dir": "Gaia/Gaia_DR3_(US-West,_HTTP)"
+}

@@ -1,0 +1,63 @@
+{
+  "label": "Pan-STARRS/Pan-STARRS1 (objects)",
+  "name": "Pan-STARRS1 (objects)",
+  "description": "Pan-STARRS is a system for wide-field astronomical imaging developed and operated by the Institute for Astronomy at the University of Hawaii. Pan-STARRS1 (PS1) is the first part of Pan-STARRS to be completed. The survey used a 1.8 meter telescope and its 1.4 Gigapixel camera to image the sky in five broadband filters (g, r, i, z, y). This catalog is a view over that survey and it includes over 10 billion objects.",
+  "urls": {
+    "collection": "s3://stpubdata/panstarrs/ps1/public/hats/otmo",
+    "point_density_map": "data/Pan-STARRS/Pan-STARRS1_(objects)/point_density.webp"
+  },
+  "metadata": {
+    "numRows": 10560724292,
+    "numColumns": 134,
+    "numPartitions": 27161,
+    "sizeOnDisk": "2.7 TiB",
+    "hatsBuilder": "hipscat_import v0.2.5 hats-importer conversion v0.4.3"
+  },
+  "other_urls": [
+    {
+      "label": "Official release",
+      "url": "https://outerspace.stsci.edu/display/PANSTARRS/"
+    },
+    {
+      "label": "Column descriptions",
+      "url": "https://outerspace.stsci.edu/display/PANSTARRS/PS1+Database+object+and+detection+tables"
+    },
+    {
+      "label": "Research paper",
+      "url": "https://ui.adsabs.harvard.edu/abs/2016arXiv161205560C/abstract"
+    }
+  ],
+  "badges": [
+    {
+      "title": "US-East"
+    },
+    {
+      "title": "S3"
+    }
+  ],
+  "column_mean_maps": [
+    "decMean",
+    "decMeanErr",
+    "epochMean",
+    "gMeanPSFMag",
+    "iMeanPSFMag",
+    "nDetections",
+    "ng",
+    "ni",
+    "nr",
+    "ny",
+    "nz",
+    "objID",
+    "pmdec",
+    "pmdecErr",
+    "pmra",
+    "pmraErr",
+    "qualityFlag",
+    "rMeanPSFMag",
+    "raMean",
+    "raMeanErr",
+    "yMeanPSFMag",
+    "zMeanPSFMag"
+  ],
+  "dir": "Pan-STARRS/Pan-STARRS1_(objects)"
+}

@@ -1,0 +1,31 @@
+{
+  "label": "w_2025_49/object_collection",
+  "name": "20250417_20250921 w_2025_49 object_collection",
+  "description": "DRP/20250417_20250921/w_2025_49/DM-53545 object_collection",
+  "urls": {
+    "catalog": "/sdf/data/rubin/shared/lsdb_commissioning/hats/w_2025_49/object_collection"
+  },
+  "other_urls": [
+    {
+      "label": "Column descriptions",
+      "url": "https://sdm-schemas.lsst.io/imsim.html"
+    },
+    {
+      "label": "Jira Ticket",
+      "url": "https://rubinobs.atlassian.net/browse/DM-53545"
+    }
+  ],
+  "metadata": {
+    "numRows": 35226784,
+    "numColumns": 69,
+    "numPartitions": 6301,
+    "sizeOnDisk": "378 GiB",
+    "hatsBuilder": "hats-import v0.7.3, hats v0.7.3"
+  },
+  "badges": [
+    {
+      "title": "Available only on USDF"
+    }
+  ],
+  "dir": "w_2025_49/object_collection"
+}

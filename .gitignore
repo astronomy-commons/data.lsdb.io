@@ -1,0 +1,6 @@
+.venv/
+**/.DS_Store
+__pycache__/
+dist/
+dist-server/
+node_modules/

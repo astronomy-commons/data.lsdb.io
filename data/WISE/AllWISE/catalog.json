@@ -1,0 +1,55 @@
+{
+  "label": "WISE/AllWISE",
+  "name": "AllWISE",
+  "description": "AllWISE is an all-sky survey by the Palomar Observatory Schmidt, the European Southern Observatory Schmidt, and the United Kingdom Schmidt, the InfraRed Astronomical Satellite, and the Two Micron All Sky Survey. It contains accurate positions, apparent motion measurements, four-band fluxes and flux variability statistics for over 747 million objects detected on the coadded Atlas Images.",
+  "urls": {
+    "catalog": "https://data.lsdb.io/hats/wise/allwise",
+    "point_density_map": "data/WISE/AllWISE/point_density.webp"
+  },
+  "metadata": {
+    "numRows": 747634026,
+    "numColumns": 299,
+    "numPartitions": 768,
+    "sizeOnDisk": "258.0 GiB",
+    "hatsBuilder": "hats-import v0.7.1.dev4+g91d6b7dc5, hats v0.7.1"
+  },
+  "other_urls": [
+    {
+      "label": "Official release",
+      "url": "https://wise2.ipac.caltech.edu/docs/release/allwise/"
+    },
+    {
+      "label": "Column descriptions",
+      "url": "https://wise2.ipac.caltech.edu/docs/release/allwise/expsup/sec2_1a.html"
+    },
+    {
+      "label": "Research paper",
+      "url": "https://ui.adsabs.harvard.edu/abs/2010AJ....140.1868W/abstract"
+    }
+  ],
+  "badges": [
+    {
+      "title": "US-West"
+    },
+    {
+      "title": "HTTP"
+    }
+  ],
+  "column_mean_maps": [
+    "dec",
+    "dec_pm",
+    "pmdec",
+    "pmra",
+    "ra",
+    "ra_pm",
+    "sigdec",
+    "sigdec_pm",
+    "sigpmdec",
+    "sigpmra",
+    "sigra",
+    "sigra_pm",
+    "sigradec",
+    "sigradec_pm"
+  ],
+  "dir": "WISE/AllWISE"
+}

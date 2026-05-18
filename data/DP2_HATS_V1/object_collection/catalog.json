@@ -1,0 +1,31 @@
+{
+  "label": "DP2 HATS V1/object_collection",
+  "name": "DP2 v30_0_6 object_collection",
+  "description": "DRP/DP2/v30_0_6/DM-53881/stage4 object_collection",
+  "urls": {
+    "catalog": "/sdf/data/rubin/shared/lsdb_commissioning/hats/v30_0_6/object_collection"
+  },
+  "other_urls": [
+    {
+      "label": "Column descriptions",
+      "url": "https://sdm-schemas.lsst.io/imsim.html"
+    },
+    {
+      "label": "Jira Ticket",
+      "url": "https://rubinobs.atlassian.net/browse/DM-53881/stage4"
+    }
+  ],
+  "metadata": {
+    "numRows": 791185272,
+    "numColumns": 1249,
+    "numPartitions": 110123,
+    "sizeOnDisk": "3.0 TiB",
+    "hatsBuilder": "hats-import v0.9.0, hats v0.9.1.dev9+g00539cb06"
+  },
+  "badges": [
+    {
+      "title": "Available only on USDF"
+    }
+  ],
+  "dir": "DP2_HATS_V1/object_collection"
+}

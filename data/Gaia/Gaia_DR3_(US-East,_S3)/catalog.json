@@ -1,0 +1,43 @@
+{
+  "label": "Gaia/Gaia DR3 (US-East, S3)",
+  "name": "Gaia Data Release 3",
+  "description": "Gaia Data Release 3 (GAIA_SOURCE table) is a comprehensive catalog released by the European Space Agency (ESA) as part of the Gaia mission, which aims to create a detailed three-dimensional map of our galaxy, the Milky Way. Released in June 2022, Gaia DR3 provides highly precise astrometric data (positions, distances, and motions) for nearly 1.8 billion stars, along with detailed photometric and spectroscopic information.",
+  "urls": {
+    "collection": "s3://stpubdata/gaia/gaia_dr3/public/hats",
+    "point_density_map": "data/Gaia/Gaia_DR3_(US-East,_S3)/point_density.webp"
+  },
+  "other_urls": [
+    {
+      "label": "Official release",
+      "url": "https://www.cosmos.esa.int/web/gaia/dr3"
+    },
+    {
+      "label": "Column descriptions",
+      "url": "https://gea.esac.esa.int/archive/documentation/GDR3/Gaia_archive/chap_datamodel/sec_dm_main_source_catalogue/ssec_dm_gaia_source.html"
+    },
+    {
+      "label": "Research paper",
+      "url": "https://ui.adsabs.harvard.edu/abs/2023A%26A...674A...1G/abstract"
+    }
+  ],
+  "metadata": {
+    "numRows": 1812731847,
+    "numColumns": 152,
+    "numPartitions": 2016,
+    "sizeOnDisk": "712.8 GiB",
+    "hatsBuilder": "hats-import v0.6.0"
+  },
+  "badges": [
+    {
+      "title": "Recommended version",
+      "color": "tertiary"
+    },
+    {
+      "title": "US-East"
+    },
+    {
+      "title": "S3"
+    }
+  ],
+  "dir": "Gaia/Gaia_DR3_(US-East,_S3)"
+}

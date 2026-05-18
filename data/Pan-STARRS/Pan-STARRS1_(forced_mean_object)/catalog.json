@@ -1,0 +1,39 @@
+{
+  "label": "Pan-STARRS/Pan-STARRS1 (forced mean object)",
+  "name": "Pan-STARRS1 (forced mean object)",
+  "description": "Catalog of mean photometry forced at the position of detected objects in the Pan-STARRS1 survey. This table contains mean forced photometric measurements for objects detected in the PS1 survey.",
+  "urls": {
+    "collection": "s3://stpubdata/panstarrs/ps1/public/hats/forced_mean_object",
+    "point_density_map": "data/Pan-STARRS/Pan-STARRS1_(forced_mean_object)/point_density.webp"
+  },
+  "metadata": {
+    "numRows": 2865190635,
+    "numColumns": 275,
+    "numPartitions": 11699,
+    "sizeOnDisk": "3.8 TiB",
+    "hatsBuilder": "hipscat_import v0.3.2 hats-importer conversion v0.4.3"
+  },
+  "other_urls": [
+    {
+      "label": "Official release",
+      "url": "https://outerspace.stsci.edu/display/PANSTARRS/"
+    },
+    {
+      "label": "Column descriptions",
+      "url": "https://outerspace.stsci.edu/display/PANSTARRS/PS1+ForcedMeanObject+table+fields"
+    },
+    {
+      "label": "Research paper",
+      "url": "https://ui.adsabs.harvard.edu/abs/2016arXiv161205560C/abstract"
+    }
+  ],
+  "badges": [
+    {
+      "title": "US-East"
+    },
+    {
+      "title": "S3"
+    }
+  ],
+  "dir": "Pan-STARRS/Pan-STARRS1_(forced_mean_object)"
+}

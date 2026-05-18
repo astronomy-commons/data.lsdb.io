@@ -1,0 +1,38 @@
+{
+  "label": "TNS/TNS",
+  "name": "Transient Name Server (TNS)",
+  "description": "The Transient Name Server (TNS) is the International Astronomical Union (IAU) official registry for newly discovered astronomical transients. This catalog is updated daily.",
+  "urls": {
+    "collection": "https://data.lsdb.io/hats/tns"
+  },
+  "other_urls": [
+    {
+      "label": "Official release",
+      "url": "https://www.wis-tns.org/content/tns-getting-started"
+    },
+    {
+      "label": "Column descriptions",
+      "url": "https://www.wis-tns.org/content/tns-getting-started#Daily%20CSV%20staging"
+    }
+  ],
+  "badges": [
+    {
+      "title": "US-West"
+    },
+    {
+      "title": "HTTP"
+    }
+  ],
+  "column_mean_maps": [
+    "declination",
+    "discmagfilter",
+    "discoverymag",
+    "objid",
+    "ra",
+    "redshift",
+    "reporting_groupid",
+    "source_groupid",
+    "typeid"
+  ],
+  "dir": "TNS/TNS"
+}

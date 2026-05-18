@@ -1,0 +1,31 @@
+{
+  "label": "DP1/object_collection (lite)",
+  "name": "DP1 v29_0_0 object_collection (lite)",
+  "description": "DRP/DP1/v29_0_0/DM-50260 object_collection (lite)",
+  "urls": {
+    "catalog": "/sdf/data/rubin/shared/lsdb_commissioning/hats/v29_0_0/object_collection_lite"
+  },
+  "other_urls": [
+    {
+      "label": "Column descriptions",
+      "url": "https://sdm-schemas.lsst.io/imsim.html"
+    },
+    {
+      "label": "Jira Ticket",
+      "url": "https://rubinobs.atlassian.net/browse/DM-50260"
+    }
+  ],
+  "metadata": {
+    "numRows": 2299726,
+    "numColumns": 74,
+    "numPartitions": 389,
+    "sizeOnDisk": "11 GiB",
+    "hatsBuilder": "hats-import v0.6.0"
+  },
+  "badges": [
+    {
+      "title": "Available only on USDF"
+    }
+  ],
+  "dir": "DP1/object_collection_(lite)"
+}

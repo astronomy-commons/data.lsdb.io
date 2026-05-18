@@ -1,0 +1,54 @@
+{
+  "label": "Gaia/Gaia DR3 (Europe, HTTP)",
+  "name": "Gaia Data Release 3",
+  "description": "Gaia Data Release 3 (GAIA_SOURCE table) is a comprehensive catalog released by the European Space Agency (ESA) as part of the Gaia mission, which aims to create a detailed three-dimensional map of our galaxy, the Milky Way. Released in June 2022, Gaia DR3 provides highly precise astrometric data (positions, distances, and motions) for nearly 1.8 billion stars, along with detailed photometric and spectroscopic information.",
+  "urls": {
+    "collection": "https://vizcat.cds.unistra.fr/hats:n=1000000/gaia_dr3/",
+    "point_density_map": "data/Gaia/Gaia_DR3_(Europe,_HTTP)/point_density.webp",
+    "displayDownload": false
+  },
+  "metadata": {
+    "numRows": 1811709771,
+    "numColumns": 225,
+    "numPartitions": 3933,
+    "hatsBuilder": "cds_qat2s v0.0.1",
+    "sizeOnDisk": "1.5 TiB"
+  },
+  "badges": [
+    {
+      "title": "Proof-of-concept version",
+      "color": "tertiary"
+    },
+    {
+      "title": "Europe"
+    },
+    {
+      "title": "HTTP"
+    }
+  ],
+  "other_urls": [
+    {
+      "label": "Official release",
+      "url": "https://www.cosmos.esa.int/web/gaia/dr3"
+    },
+    {
+      "label": "Original column descriptions",
+      "url": "https://gea.esac.esa.int/archive/documentation/GDR3/Gaia_archive/chap_datamodel/sec_dm_main_source_catalogue/ssec_dm_gaia_source.html"
+    },
+    {
+      "label": "Vizier column descriptions",
+      "url": "https://vizier.cds.unistra.fr/viz-bin/VizieR-3?-source=I/355/gaiadr3"
+    },
+    {
+      "label": "Research paper",
+      "url": "https://ui.adsabs.harvard.edu/abs/2023A%26A...674A...1G/abstract"
+    }
+  ],
+  "notes": [
+    {
+      "content": "This is still a proof-of-concept version, in beta testing, requiring systematic testing for all added catalogues. <b>If you plan to harvest complete catalogs through HATS, please contact CDS staff</b>.",
+      "type": "warning"
+    }
+  ],
+  "dir": "Gaia/Gaia_DR3_(Europe,_HTTP)"
+}

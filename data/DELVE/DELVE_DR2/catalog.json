@@ -1,0 +1,71 @@
+{
+  "label": "DELVE/DELVE DR2",
+  "name": "DELVE DR2",
+  "description": "The DECam Local Volume Exploration Survey Data Release 2 (DELVE DR2) combines new DECam observations with archival DECam data from the Dark Energy Survey, the DECam Legacy Survey, and other DECam community programs to study dwarf satellite galaxies over a wide range of luminosities and environments. It consists of ~160,000 exposures that cover >21,000 deg^2 of the high Galactic latitude (|b| > 10 deg) sky in four broadband optical/near-infrared filters (g, r, i, z), with point-source and automatic aperture photometry for ~2.5 billion astronomical sources.",
+  "urls": {
+    "catalog": "https://data.lsdb.io/hats/delve/delve_dr2",
+    "point_density_map": "data/DELVE/DELVE_DR2/point_density.webp"
+  },
+  "metadata": {
+    "numRows": 2500247752,
+    "numColumns": 120,
+    "numPartitions": 2129,
+    "sizeOnDisk": "835.2 GiB",
+    "hatsBuilder": "hats-import v0.7.1 reimport hats-import v0.4.4"
+  },
+  "other_urls": [
+    {
+      "label": "Official release",
+      "url": "https://datalab.noirlab.edu/delve/index.php"
+    },
+    {
+      "label": "Column descriptions",
+      "url": "https://datalab.noirlab.edu/delve/index.php"
+    },
+    {
+      "label": "Research paper",
+      "url": "https://arxiv.org/abs/2203.16565"
+    }
+  ],
+  "badges": [
+    {
+      "title": "US-West"
+    },
+    {
+      "title": "HTTP"
+    }
+  ],
+  "column_mean_maps": [
+    "DEC",
+    "MAGERR_PSF_G",
+    "MAGERR_PSF_I",
+    "MAGERR_PSF_R",
+    "MAGERR_PSF_Z",
+    "MAG_PSF_G",
+    "MAG_PSF_I",
+    "MAG_PSF_R",
+    "MAG_PSF_Z",
+    "NEPOCHS_G",
+    "NEPOCHS_I",
+    "NEPOCHS_R",
+    "NEPOCHS_Z",
+    "RA",
+    "SPREADERR_MODEL_G",
+    "SPREADERR_MODEL_I",
+    "SPREADERR_MODEL_R",
+    "SPREADERR_MODEL_Z",
+    "SPREAD_MODEL_G",
+    "SPREAD_MODEL_I",
+    "SPREAD_MODEL_R",
+    "SPREAD_MODEL_Z",
+    "WAVG_MAGERR_PSF_G",
+    "WAVG_MAGERR_PSF_I",
+    "WAVG_MAGERR_PSF_R",
+    "WAVG_MAGERR_PSF_Z",
+    "WAVG_MAG_PSF_G",
+    "WAVG_MAG_PSF_I",
+    "WAVG_MAG_PSF_R",
+    "WAVG_MAG_PSF_Z"
+  ],
+  "dir": "DELVE/DELVE_DR2"
+}

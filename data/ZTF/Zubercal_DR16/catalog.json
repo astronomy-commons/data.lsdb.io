@@ -1,0 +1,35 @@
+{
+  "label": "ZTF/Zubercal DR16",
+  "name": "ZTF Ubercalibration Data Release 16",
+  "description": "Zubercal is a completely new set of photometry based on a detailed recalibration of ZTF science image-based PSF photometry.",
+  "urls": {
+    "catalog": "https://data.lsdb.io/hats/ztf_dr16/zubercal",
+    "point_density_map": "data/ZTF/Zubercal_DR16/point_density.webp"
+  },
+  "metadata": {
+    "numRows": 646029117258,
+    "numColumns": 14,
+    "numPartitions": 70853,
+    "sizeOnDisk": "10.6 TiB",
+    "hatsBuilder": "hipscat_import v0.0.4.dev123+g32f8d9b hats-importer conversion v0.3.6.dev27+g22796ca"
+  },
+  "other_urls": [
+    {
+      "label": "Official release",
+      "url": "http://nesssi.cacr.caltech.edu/ZTF/Web/Zuber.html"
+    },
+    {
+      "label": "Research paper",
+      "url": "https://ui.adsabs.harvard.edu/abs/2019PASP..131a8002B/abstract"
+    }
+  ],
+  "badges": [
+    {
+      "title": "US-West"
+    },
+    {
+      "title": "HTTP"
+    }
+  ],
+  "dir": "ZTF/Zubercal_DR16"
+}
