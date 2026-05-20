@@ -2,19 +2,13 @@ import * as React from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import Box from '@mui/material/Box';
 import Breadcrumbs from '@mui/material/Breadcrumbs';
-import Chip from '@mui/material/Chip';
-import Drawer from '@mui/material/Drawer';
 import IconButton from '@mui/material/IconButton';
-import List from '@mui/material/List';
-import ListItemButton from '@mui/material/ListItemButton';
-import ListItemIcon from '@mui/material/ListItemIcon';
-import ListItemText from '@mui/material/ListItemText';
 import Typography from '@mui/material/Typography';
 import useMediaQuery from '@mui/material/useMediaQuery';
-import ChevronRightIcon from '@mui/icons-material/ChevronRight';
-import FolderOutlinedIcon from '@mui/icons-material/FolderOutlined';
 import MenuIcon from '@mui/icons-material/Menu';
 import CatalogTab from '../components/CatalogTab';
+import { CatalogSidebar } from '../components/CatalogSidebar';
+import { StarField } from '../components/StarField';
 import SkymapPage from './SkymapPage';
 import NotFoundPage from './NotFoundPage';
 
@@ -41,11 +35,6 @@ const findFirstLeaf = (items) => {
   return null;
 };
 
-const countLeaves = (item) => {
-  if (!('catalogs' in item)) return 1;
-  return item.catalogs.reduce((n, child) => n + countLeaves(child), 0);
-};
-
 const resolve = (items, path, breadcrumbs = []) => {
   if (!path) return { selectedLeaf: findFirstLeaf(items), breadcrumbs };
 
@@ -64,136 +53,6 @@ const resolve = (items, path, breadcrumbs = []) => {
 };
 
 const encodePath = (hash) => hash.split('/').map(encodeURIComponent).join('/');
-
-// ---------------------------------------------------------------------------
-// Star field (Easter egg — activated on LINCC logo hover)
-// ---------------------------------------------------------------------------
-
-const det = (n) => Math.sin(n) * 0.5 + 0.5;
-
-const STAR_DATA = Array.from({ length: 45 }, (_, i) => ({
-  id: i,
-  left: `${det(i * 13.7) * 100}%`,
-  top: `${det(i * 7.3 + 1) * 100}%`,
-  size: `${7 + det(i * 5.1) * 11}px`,
-  color: i % 3 === 0 ? '#e37534' : '#1976D2',
-  duration: `${2 + det(i * 3.7) * 4}s`,
-  delay: `-${det(i * 11.3) * 8}s`,
-}));
-
-const StarField = () => (
-  <Box
-    aria-hidden
-    sx={{ position: 'absolute', inset: 0, overflow: 'hidden', pointerEvents: 'none', zIndex: 0 }}
-  >
-    {STAR_DATA.map(({ id, left, top, size, color, duration, delay }) => (
-      <Box
-        key={id}
-        component='span'
-        sx={{
-          position: 'absolute',
-          left,
-          top,
-          fontSize: size,
-          lineHeight: 1,
-          color,
-          userSelect: 'none',
-          animation: `star-float ${duration} ${delay} ease-in-out infinite`,
-        }}
-      >
-        ✦
-      </Box>
-    ))}
-  </Box>
-);
-
-const expandedGroupsFor = (items, targetHash, result = new Set()) => {
-  if (!targetHash) return result;
-  for (const item of items) {
-    if (!('catalogs' in item)) continue;
-    if (targetHash.startsWith(item.hash + '/')) {
-      result.add(item.hash);
-      expandedGroupsFor(item.catalogs, targetHash, result);
-    }
-  }
-  return result;
-};
-
-// ---------------------------------------------------------------------------
-// Left panel
-// ---------------------------------------------------------------------------
-
-const CatalogListPanel = ({ items, selectedLeaf, onNavigate }) => {
-  const [expanded, setExpanded] = React.useState(() =>
-    expandedGroupsFor(items, selectedLeaf?.hash)
-  );
-
-  const selectedHash = selectedLeaf?.hash;
-  React.useEffect(() => {
-    if (selectedHash) {
-      setExpanded((prev) => new Set([...prev, ...expandedGroupsFor(items, selectedHash)]));
-    }
-  }, [selectedHash, items]);
-
-  const toggle = (hash) =>
-    setExpanded((prev) => {
-      const next = new Set(prev);
-      next.has(hash) ? next.delete(hash) : next.add(hash);
-      return next;
-    });
-
-  const renderItems = (nodeItems, depth = 0) =>
-    nodeItems.map((item) => {
-      const isGroup = 'catalogs' in item;
-      const isExpanded = isGroup && expanded.has(item.hash);
-      const isSelected = !isGroup && item.hash === selectedLeaf?.hash;
-
-      return (
-        <React.Fragment key={item.hash}>
-          <ListItemButton
-            selected={isSelected}
-            onClick={() => (isGroup ? toggle(item.hash) : onNavigate(item.hash))}
-            sx={{ py: 1, mx: 0.5, borderRadius: 1, pl: 1 + depth * 2 }}
-          >
-            {isGroup && (
-              <ListItemIcon sx={{ minWidth: 36 }}>
-                <FolderOutlinedIcon fontSize='small' color='primary' />
-              </ListItemIcon>
-            )}
-            <ListItemText
-              primary={item.label}
-              primaryTypographyProps={{ fontWeight: 500, noWrap: true }}
-            />
-            {isGroup && (
-              <>
-                <Chip
-                  label={countLeaves(item)}
-                  size='small'
-                  sx={{ mr: 0.5, height: 18, fontSize: '0.7rem', pointerEvents: 'none' }}
-                />
-                <ChevronRightIcon
-                  fontSize='small'
-                  sx={{
-                    color: 'text.disabled',
-                    flexShrink: 0,
-                    transform: isExpanded ? 'rotate(90deg)' : 'none',
-                    transition: 'transform 0.2s',
-                  }}
-                />
-              </>
-            )}
-          </ListItemButton>
-          {isExpanded && renderItems(item.catalogs, depth + 1)}
-        </React.Fragment>
-      );
-    });
-
-  return (
-    <List disablePadding dense>
-      {renderItems(items)}
-    </List>
-  );
-};
 
 // ---------------------------------------------------------------------------
 // Page
@@ -266,52 +125,17 @@ export default function CatalogPage({ catalogs, basePath }) {
       <Box
         sx={{ display: 'flex', flexDirection: 'row', flex: 1, minHeight: 0, overflow: 'hidden' }}
       >
-        {/* Sidebar — inline on desktop, Drawer on mobile */}
-        {(() => {
-          const sidebarSx = {
-            width: 280,
-            flexShrink: 0,
-            display: 'flex',
-            flexDirection: 'column',
-            borderRight: 1,
-            borderColor: 'divider',
-            overflow: 'hidden',
-            bgcolor: 'rgba(25, 118, 210, 0.0)',
-            height: '100%',
-          };
-          const sidebarContent = (
-            <>
-              <Box sx={{ px: 2, pt: '1rem', pb: '0.1rem', flexShrink: 0 }}>
-                <Typography
-                  sx={{ color: '#1976D2', fontFamily: 'Nunito', fontWeight: 400, fontSize: '1rem' }}
-                >
-                  Catalogs
-                </Typography>
-              </Box>
-              <Box sx={{ overflowY: 'auto', flex: 1, py: 0.5, scrollbarGutter: 'stable' }}>
-                <CatalogListPanel
-                  items={catalogsWithHashes}
-                  selectedLeaf={selectedLeaf}
-                  onNavigate={(hash) => {
-                    navigate(pathTo(hash));
-                    setSidebarOpen(false);
-                  }}
-                />
-              </Box>
-            </>
-          );
-          return isMobile ? (
-            <Drawer
-              open={sidebarOpen}
-              onClose={() => setSidebarOpen(false)}
-              PaperProps={{ sx: { ...sidebarSx, bgcolor: '#eef5fc', height: '100%' } }}
-            >
-              {sidebarContent}
-            </Drawer>
-          ) : (
-            <Box sx={sidebarSx}>{sidebarContent}</Box>
-          );
-        })()}
+        <CatalogSidebar
+          catalogsWithHashes={catalogsWithHashes}
+          selectedLeaf={selectedLeaf}
+          onNavigate={(hash) => {
+            navigate(pathTo(hash));
+            setSidebarOpen(false);
+          }}
+          isMobile={isMobile}
+          sidebarOpen={sidebarOpen}
+          onClose={() => setSidebarOpen(false)}
+        />
 
         {/* Main content */}
         <Box sx={{ flex: 1, overflow: 'hidden', position: 'relative' }}>
