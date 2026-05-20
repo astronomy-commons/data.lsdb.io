@@ -30,6 +30,5 @@
     "numPartitions": 5,
     "sizeOnDisk": "4.4 GiB",
     "hatsBuilder": "lsdb v0.6.3, hats v0.6.2"
-  },
-  "dir": "Rubin_DP1/object_photoz"
+  }
 }

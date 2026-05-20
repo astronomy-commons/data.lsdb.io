@@ -66,6 +66,5 @@
     "WAVG_MAG_PSF_I",
     "WAVG_MAG_PSF_R",
     "WAVG_MAG_PSF_Z"
-  ],
-  "dir": "DELVE/DELVE_DR2"
+  ]
 }

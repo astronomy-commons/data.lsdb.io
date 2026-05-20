@@ -33,6 +33,5 @@
     "reporting_groupid",
     "source_groupid",
     "typeid"
-  ],
-  "dir": "TNS/TNS"
+  ]
 }

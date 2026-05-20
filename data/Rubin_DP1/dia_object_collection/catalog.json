@@ -33,6 +33,5 @@
     "numPartitions": 208,
     "sizeOnDisk": "7.6 GiB",
     "hatsBuilder": "hats-import v0.6.0"
-  },
-  "dir": "Rubin_DP1/dia_object_collection"
+  }
 }

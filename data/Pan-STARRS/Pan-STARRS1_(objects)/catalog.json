@@ -58,6 +58,5 @@
     "raMeanErr",
     "yMeanPSFMag",
     "zMeanPSFMag"
-  ],
-  "dir": "Pan-STARRS/Pan-STARRS1_(objects)"
+  ]
 }

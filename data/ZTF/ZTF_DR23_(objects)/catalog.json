@@ -35,6 +35,11 @@
       "title": "S3"
     }
   ],
-  "column_mean_maps": ["dec", "medianmag", "medmagerr", "oid", "ra"],
-  "dir": "ZTF/ZTF_DR23_(objects)"
+  "column_mean_maps": [
+    "dec",
+    "medianmag",
+    "medmagerr",
+    "oid",
+    "ra"
+  ]
 }

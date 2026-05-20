@@ -26,14 +26,15 @@ const slug = (label) => label.replaceAll(' ', '_').replace('≥', 'gte');
 
 const addHashes = (items, parentHash = '') =>
   items.map((item) => {
-    if ('dir' in item) return { ...item, hash: item.dir };
-    const hash = parentHash ? `${parentHash}/${slug(item.label)}` : slug(item.label);
+    const label = typeof item === 'string' ? item : item.label;
+    const hash = parentHash ? `${parentHash}/${slug(label)}` : slug(label);
+    if (typeof item === 'string' || !('catalogs' in item)) return { label, hash };
     return { ...item, hash, catalogs: addHashes(item.catalogs, hash) };
   });
 
 const findFirstLeaf = (items) => {
   for (const item of items) {
-    if ('dir' in item) return item;
+    if (!('catalogs' in item)) return item;
     const leaf = findFirstLeaf(item.catalogs);
     if (leaf) return leaf;
   }
@@ -41,18 +42,18 @@ const findFirstLeaf = (items) => {
 };
 
 const countLeaves = (item) => {
-  if ('dir' in item) return 1;
+  if (!('catalogs' in item)) return 1;
   return item.catalogs.reduce((n, child) => n + countLeaves(child), 0);
 };
 
 const resolve = (items, path, breadcrumbs = []) => {
   if (!path) return { selectedLeaf: findFirstLeaf(items), breadcrumbs };
 
-  const leaf = items.find((i) => 'dir' in i && i.hash === path);
+  const leaf = items.find((i) => !('catalogs' in i) && i.hash === path);
   if (leaf) return { selectedLeaf: leaf, breadcrumbs };
 
   for (const item of items) {
-    if ('dir' in item) continue;
+    if (!('catalogs' in item)) continue;
     const crumbs = [...breadcrumbs, { label: item.label, hash: item.hash }];
     if (path === item.hash)
       return { selectedLeaf: findFirstLeaf(item.catalogs), breadcrumbs: crumbs };
@@ -109,7 +110,7 @@ const StarField = () => (
 const expandedGroupsFor = (items, targetHash, result = new Set()) => {
   if (!targetHash) return result;
   for (const item of items) {
-    if ('dir' in item) continue;
+    if (!('catalogs' in item)) continue;
     if (targetHash.startsWith(item.hash + '/')) {
       result.add(item.hash);
       expandedGroupsFor(item.catalogs, targetHash, result);
@@ -143,7 +144,7 @@ const CatalogListPanel = ({ items, selectedLeaf, onNavigate }) => {
 
   const renderItems = (nodeItems, depth = 0) =>
     nodeItems.map((item) => {
-      const isGroup = !('dir' in item);
+      const isGroup = 'catalogs' in item;
       const isExpanded = isGroup && expanded.has(item.hash);
       const isSelected = !isGroup && item.hash === selectedLeaf?.hash;
 
@@ -229,7 +230,7 @@ export default function CatalogPage({ catalogs, basePath }) {
   }, [catalogPath, selectedLeaf?.hash, isSkymap, notFound, navigate, pathTo]);
 
   React.useEffect(() => {
-    const dir = selectedLeaf?.dir;
+    const dir = selectedLeaf?.hash;
     if (!dir) return;
     setLoading(true);
     fetch(`/data/${dir}/catalog.json`)
@@ -238,7 +239,7 @@ export default function CatalogPage({ catalogs, basePath }) {
         setCatalogData(data);
         setLoading(false);
       });
-  }, [selectedLeaf?.dir]);
+  }, [selectedLeaf?.hash]);
 
   if (notFound) return <NotFoundPage />;
 
@@ -248,6 +249,7 @@ export default function CatalogPage({ catalogs, basePath }) {
     return (
       <SkymapPage
         catalog={catalogData}
+        hash={selectedLeaf.hash}
         backPath={pathTo(selectedLeaf.hash)}
         label={selectedLeaf.label}
       />

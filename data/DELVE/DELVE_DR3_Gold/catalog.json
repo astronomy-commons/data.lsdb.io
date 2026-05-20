@@ -1,7 +1,7 @@
 {
   "label": "DELVE/DELVE DR3 Gold",
   "name": "DELVE DR3 Gold",
-  "description": "The DELVE DR3 catalog contains data from the DECam All Data Everywhere (DECADE) and DES DR2 processing at NCSA using the DES Data Management (DESDM) pipeline. It contains ~2.6 billion unique objects and covers ~20,000 deg\u00b2 in all four bands (g, r, i, z) simultaneously.",
+  "description": "The DELVE DR3 catalog contains data from the DECam All Data Everywhere (DECADE) and DES DR2 processing at NCSA using the DES Data Management (DESDM) pipeline. It contains ~2.6 billion unique objects and covers ~20,000 deg² in all four bands (g, r, i, z) simultaneously.",
   "urls": {
     "collection": "https://data.lsdb.io/hats/delve/delve_dr3_gold",
     "point_density_map": "data/DELVE/DELVE_DR3_Gold/point_density.webp"
@@ -59,6 +59,5 @@
     "NEPOCHS_R",
     "NEPOCHS_Z",
     "RA"
-  ],
-  "dir": "DELVE/DELVE_DR3_Gold"
+  ]
 }

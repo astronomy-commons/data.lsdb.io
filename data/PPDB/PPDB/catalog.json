@@ -21,6 +21,5 @@
     "numPartitions": 361,
     "sizeOnDisk": "13 GiB",
     "hatsBuilder": "lsdb v0.6.4, hats v0.6.4"
-  },
-  "dir": "PPDB/PPDB"
+  }
 }

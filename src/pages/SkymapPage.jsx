@@ -12,7 +12,7 @@ import useMediaQuery from '@mui/material/useMediaQuery';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import MenuIcon from '@mui/icons-material/Menu';
 
-export default function SkymapPage({ catalog, backPath, label }) {
+export default function SkymapPage({ catalog, hash, backPath, label }) {
   const navigate = useNavigate();
   const isMobile = useMediaQuery('(max-width:900px)');
   const [sidebarOpen, setSidebarOpen] = React.useState(false);
@@ -195,7 +195,7 @@ export default function SkymapPage({ catalog, backPath, label }) {
               }}
             >
               {[...selectedFilters].map((filter) => {
-                const src = `/data/${catalog.dir}/column_means/${filter}.webp`;
+                const src = `/data/${hash}/column_means/${filter}.webp`;
                 return (
                   <Box key={filter}>
                     <ModalImage

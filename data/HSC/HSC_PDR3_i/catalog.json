@@ -54,6 +54,5 @@
     "modelfit_CModel_initial_apCorr",
     "modelfit_CModel_initial_apCorrErr",
     "parent"
-  ],
-  "dir": "HSC/HSC_PDR3_i"
+  ]
 }

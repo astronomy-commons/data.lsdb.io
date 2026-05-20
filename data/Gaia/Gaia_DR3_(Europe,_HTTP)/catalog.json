@@ -49,6 +49,5 @@
       "content": "This is still a proof-of-concept version, in beta testing, requiring systematic testing for all added catalogues. <b>If you plan to harvest complete catalogs through HATS, please contact CDS staff</b>.",
       "type": "warning"
     }
-  ],
-  "dir": "Gaia/Gaia_DR3_(Europe,_HTTP)"
+  ]
 }

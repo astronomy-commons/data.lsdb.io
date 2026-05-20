@@ -58,6 +58,5 @@
     "WAVG_MAG_PSF_R",
     "WAVG_MAG_PSF_Y",
     "WAVG_MAG_PSF_Z"
-  ],
-  "dir": "DES/DES_Y6_Gold_(US-West,_HTTP)"
+  ]
 }

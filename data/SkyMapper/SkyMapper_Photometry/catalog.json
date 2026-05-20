@@ -48,6 +48,5 @@
     "radius_petro",
     "x_img",
     "y_img"
-  ],
-  "dir": "SkyMapper/SkyMapper_Photometry"
+  ]
 }

@@ -23,6 +23,14 @@
       "title": "HTTP"
     }
   ],
-  "column_mean_maps": ["DEdeg", "Epoch", "MagMax", "MagMin", "OID", "Period", "RAdeg", "VarFlag"],
-  "dir": "VSX/VSX"
+  "column_mean_maps": [
+    "DEdeg",
+    "Epoch",
+    "MagMax",
+    "MagMin",
+    "OID",
+    "Period",
+    "RAdeg",
+    "VarFlag"
+  ]
 }

@@ -35,6 +35,12 @@
       "title": "S3"
     }
   ],
-  "column_mean_maps": ["dec", "decErr", "psfFlux", "psfFluxErr", "ra", "raErr"],
-  "dir": "Pan-STARRS/Pan-STARRS1_(detection)"
+  "column_mean_maps": [
+    "dec",
+    "decErr",
+    "psfFlux",
+    "psfFluxErr",
+    "ra",
+    "raErr"
+  ]
 }

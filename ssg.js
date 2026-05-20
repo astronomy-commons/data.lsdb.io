@@ -8,15 +8,18 @@ const { render } = require('./dist-server/ssr.cjs');
 const catalogIndex = JSON.parse(readFileSync('./data/catalogs.json', 'utf-8'));
 const rubinIndex = JSON.parse(readFileSync('./data/rubinCatalogs.json', 'utf-8'));
 
-// Recursively collect all leaf entries (with encoded URL path and raw dir) from a nested catalog tree
-const collectLeaves = (items, basePath) => {
+const slugify = (label) => label.replaceAll(' ', '_').replace('≥', 'gte');
+
+const collectLeaves = (items, basePath, parentHash = '') => {
   const leaves = [];
   for (const item of items) {
-    if ('dir' in item) {
-      const encoded = item.dir.split('/').map(encodeURIComponent).join('/');
-      leaves.push({ urlPath: `${basePath}/${encoded}`, dir: item.dir });
+    const label = typeof item === 'string' ? item : item.label;
+    const hash = parentHash ? `${parentHash}/${slugify(label)}` : slugify(label);
+    if (typeof item === 'string' || !('catalogs' in item)) {
+      const encoded = hash.split('/').map(encodeURIComponent).join('/');
+      leaves.push({ urlPath: `${basePath}/${encoded}`, hash });
     } else {
-      leaves.push(...collectLeaves(item.catalogs, basePath));
+      leaves.push(...collectLeaves(item.catalogs, basePath, hash));
     }
   }
   return leaves;
@@ -84,8 +87,8 @@ for (const { urlPath, description } of rootPages) {
 }
 
 // Leaf catalog pages
-for (const { urlPath, dir } of leaves) {
-  const description = getCatalogDescription(dir);
+for (const { urlPath, hash } of leaves) {
+  const description = getCatalogDescription(hash);
   writePage(urlPath, description);
 }
 

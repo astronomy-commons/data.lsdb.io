@@ -35,6 +35,10 @@
       "title": "S3"
     }
   ],
-  "column_mean_maps": ["filterid", "objdec", "objectid", "objra"],
-  "dir": "ZTF/ZTF_DR23_(lightcurves)"
+  "column_mean_maps": [
+    "filterid",
+    "objdec",
+    "objectid",
+    "objra"
+  ]
 }

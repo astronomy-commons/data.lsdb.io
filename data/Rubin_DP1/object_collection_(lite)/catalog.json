@@ -33,6 +33,5 @@
     "numPartitions": 389,
     "sizeOnDisk": "11 GiB",
     "hatsBuilder": "hats-import v0.6.0"
-  },
-  "dir": "Rubin_DP1/object_collection_(lite)"
+  }
 }
