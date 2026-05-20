@@ -73,7 +73,7 @@ const writePage = (urlPath, description) => {
       `<div id="hero" class="hero d-flex align-items-center">${body}</div>`
     );
 
-  const outDir = path.join('dist', urlPath === '/' ? '' : urlPath);
+  const outDir = path.join('dist', urlPath === '/' ? '' : decodeURIComponent(urlPath));
   mkdirSync(outDir, { recursive: true });
   writeFileSync(path.join(outDir, 'index.html'), html);
 };

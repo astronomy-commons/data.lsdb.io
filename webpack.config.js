@@ -51,6 +51,7 @@ export default {
       patterns: [
         { from: 'assets', to: 'assets' },
         { from: 'data', to: 'data' },
+        { from: 'server_index.html', to: 'server_index.html' },
       ],
     }),
   ],

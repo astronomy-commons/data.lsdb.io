@@ -202,8 +202,9 @@ export default function CatalogPage({ catalogs, basePath }) {
   const { '*': rawPath = '' } = useParams();
   const navigate = useNavigate();
 
-  const isSkymap = rawPath.endsWith('/skymaps');
-  const catalogPath = isSkymap ? rawPath.slice(0, -8) : rawPath;
+  const cleanPath = rawPath.replace(/\/$/, '');
+  const isSkymap = cleanPath.endsWith('/skymaps');
+  const catalogPath = isSkymap ? cleanPath.slice(0, -8) : cleanPath;
 
   const base = basePath === '/' ? '' : basePath;
   const pathTo = React.useCallback(

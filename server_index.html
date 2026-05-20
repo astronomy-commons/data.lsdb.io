@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>LSDB Server</title>
+  </head>
+  <body>
+    <h1>LSDB Server</h1>
+    <p><code>server.lsdb.data.io</code></p>
+    <h2>Introduction</h2>
+    <p>An instance of the server code from <a href="https://github.com/astronomy-commons/lsdb-server">astronomy-commons/lsdb-server</a>.
+    Interprets <code>columns=</code> and <code>filters=</code> arguments from LSDB on the server side so that the filtered-out data is not returned over the link.
+    Useful when accessing catalogs from <a href="https://data.lsdb.io">data.lsdb.io</a> over a slow link.</p>
+    <p>To use it, simply change <code>data.lsdb.io</code> to <code>server.data.lsdb.io</code> in your <code>lsdb.open_catalog</code> calls.
+    </p>
+    <h2>Examples</h2>
+    <dl>
+      <dt>Filtering Gaia DR3, only rows with <code>phot_g_mean_mag</code> less than 20, only columns <code>ra, dec, phot_g_mean_mag</code>.</dt>
+      <dd><code>gaia3 = lsdb.read_hats('https://server.data.lsdb.io/hats/gaia_dr3/gaia', filters=[['phot_g_mean_mag', '<', 20]], columns=['ra','dec','phot_g_mean_mag'])</code></dd>
+    </p>
+    </dl>
+  </body>
+</html>
