@@ -13,6 +13,7 @@ from _utils import (
     print_report,
     read_hats_catalog,
     resolve_catalog_url,
+    slug,
 )
 
 root_dir = Path(__file__).resolve().parent.parent
@@ -27,6 +28,7 @@ def run(dirs=None):
 
     all_leaves = list(iter_leaf_catalogs(catalog_groups))
     if dirs:
+        dirs = {slug(d) for d in dirs}
         all_leaves = [leaf for leaf in all_leaves if leaf["dir"] in dirs]
 
     catalogs_to_update = []

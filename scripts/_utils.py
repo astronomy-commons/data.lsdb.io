@@ -7,17 +7,17 @@ import tabulate as _tabulate
 from hats.catalog.catalog_collection import CatalogCollection
 
 
-def _slug(label):
+def slug(label):
     return label.replace(" ", "_").replace("≥", "gte")
 
 
 def iter_leaf_catalogs(entries, _parent_hash=""):
     for entry in entries:
         if isinstance(entry, str):
-            hash_ = f"{_parent_hash}/{_slug(entry)}" if _parent_hash else _slug(entry)
+            hash_ = f"{_parent_hash}/{slug(entry)}" if _parent_hash else slug(entry)
             yield {"label": entry, "dir": hash_}
         elif "catalogs" in entry:
-            hash_ = f"{_parent_hash}/{_slug(entry['label'])}" if _parent_hash else _slug(entry["label"])
+            hash_ = f"{_parent_hash}/{slug(entry['label'])}" if _parent_hash else slug(entry["label"])
             yield from iter_leaf_catalogs(entry["catalogs"], hash_)
 
 

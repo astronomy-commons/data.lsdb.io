@@ -1,8 +1,8 @@
 #!/bin/bash
 # Update all generated assets for one or more catalogs.
 # With no arguments, updates all catalogs.
-# Usage: ./scripts/update_data.sh [<dir> ...]
-# Example: ./scripts/update_data.sh 'DELVE/DELVE_DR2' 'DES/DES_DR2_(US-East,_S3)'
+# Usage: ./scripts/update_data.sh [<label> ...]
+# Example: ./scripts/update_data.sh 'DELVE/DELVE DR2' 'DES/DES DR2 (US-East, S3)'
 SCRIPTS_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 if [ ! -d ".venv" ]; then

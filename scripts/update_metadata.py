@@ -20,6 +20,7 @@ from _utils import (
     print_report,
     read_hats_catalog,
     resolve_catalog_url,
+    slug,
 )
 
 root_dir = Path(__file__).resolve().parent.parent
@@ -30,6 +31,7 @@ def run(dirs=None):
     with open(data_dir / "catalogs.json", "r", encoding="utf-8") as f:
         all_leaves = list(iter_leaf_catalogs(json.load(f)))
     if dirs:
+        dirs = {slug(d) for d in dirs}
         all_leaves = [leaf for leaf in all_leaves if leaf["dir"] in dirs]
 
     updated = {
