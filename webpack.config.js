@@ -52,6 +52,7 @@ export default {
         { from: 'assets', to: 'assets' },
         { from: 'data', to: 'data' },
         { from: 'server_index.html', to: 'server_index.html' },
+        { from: '.htaccess', to: '.htaccess', toType: 'file' },
       ],
     }),
   ],
