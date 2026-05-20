@@ -3,15 +3,15 @@
   "name": "Dark Energy Spectroscopic Instrument Data Release 1 (z-catalog)",
   "description": "The Dark Energy Spectroscopic Instrument (DESI) is a 5-year spectroscopic redshift survey designed to map the three-dimensional structure of the universe between z=0 and z=4. Data Release 1 includes high-confidence redshifts for 18.7 million objects - 13.1 million galaxies, 1.6 million quasars, and 4 million stars - from observations taken between May 2021 and June 2022.",
   "urls": {
-    "catalog": "s3://stpubdata/desi/public/hats/desi_dr1_zcat",
+    "catalog": "s3://stpubdata/mast/public/desi/hats/desi_dr1_zcat",
     "point_density_map": "data/DESI/DESI_DR1_z-catalog_(US-East,_S3)/point_density.webp"
   },
   "metadata": {
     "numRows": 28425963,
     "numColumns": 136,
     "numPartitions": 75,
-    "sizeOnDisk": "12.4 GiB",
-    "hatsBuilder": "hats-import v0.5.3.dev13+g9e6743f"
+    "sizeOnDisk": "12.5 GiB",
+    "hatsBuilder": "hats-import v0.8.0, hats v0.8.1"
   },
   "other_urls": [
     {
@@ -30,7 +30,7 @@
   "notes": [
     {
       "title": "Acknowledgments",
-      "content": "This research used data obtained with the Dark Energy Spectroscopic Instrument (DESI). DESI construction and operations is managed by the Lawrence Berkeley National Laboratory. This material is based upon work supported by the U.S. Department of Energy, Office of Science, Office of High-Energy Physics, under Contract No. DE–AC02–05CH11231, and by the National Energy Research Scientific Computing Center, a DOE Office of Science User Facility under the same contract. Additional support for DESI was provided by the U.S. National Science Foundation (NSF), Division of Astronomical Sciences under Contract No. AST-0950945 to the NSF’s National Optical-Infrared Astronomy Research Laboratory; the Science and Technology Facilities Council of the United Kingdom; the Gordon and Betty Moore Foundation; the Heising-Simons Foundation; the French Alternative Energies and Atomic Energy Commission (CEA); the National Council of Humanities, Science and Technology of Mexico (CONAHCYT); the Ministry of Science and Innovation of Spain (MICINN), and by the DESI Member Institutions: www.desi.lbl.gov/collaborating-institutions. The DESI collaboration is honored to be permitted to conduct scientific research on I’oligam Du’ag (Kitt Peak), a mountain with particular significance to the Tohono O’odham Nation. Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the U.S. National Science Foundation, the U.S. Department of Energy, or any of the listed funding agencies."
+      "content": "This research used data obtained with the Dark Energy Spectroscopic Instrument (DESI). DESI construction and operations is managed by the Lawrence Berkeley National Laboratory. This material is based upon work supported by the U.S. Department of Energy, Office of Science, Office of High-Energy Physics, under Contract No. DE\u2013AC02\u201305CH11231, and by the National Energy Research Scientific Computing Center, a DOE Office of Science User Facility under the same contract. Additional support for DESI was provided by the U.S. National Science Foundation (NSF), Division of Astronomical Sciences under Contract No. AST-0950945 to the NSF\u2019s National Optical-Infrared Astronomy Research Laboratory; the Science and Technology Facilities Council of the United Kingdom; the Gordon and Betty Moore Foundation; the Heising-Simons Foundation; the French Alternative Energies and Atomic Energy Commission (CEA); the National Council of Humanities, Science and Technology of Mexico (CONAHCYT); the Ministry of Science and Innovation of Spain (MICINN), and by the DESI Member Institutions: www.desi.lbl.gov/collaborating-institutions. The DESI collaboration is honored to be permitted to conduct scientific research on I\u2019oligam Du\u2019ag (Kitt Peak), a mountain with particular significance to the Tohono O\u2019odham Nation. Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the U.S. National Science Foundation, the U.S. Department of Energy, or any of the listed funding agencies."
     }
   ],
   "badges": [
