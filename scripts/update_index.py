@@ -41,18 +41,18 @@ RUBIN_GROUPS = {
 }
 
 
-def insert(group, parts, dir_path):
+def insert(group, parts):
     if len(parts) == 1:
-        group["catalogs"].append({"label": parts[0], "dir": dir_path})
+        group["catalogs"].append(parts[0])
     else:
         sub = next(
-            (c for c in group["catalogs"] if c.get("label") == parts[0] and "catalogs" in c),
+            (c for c in group["catalogs"] if isinstance(c, dict) and c.get("label") == parts[0] and "catalogs" in c),
             None,
         )
         if sub is None:
             sub = {"label": parts[0], "catalogs": []}
             group["catalogs"].append(sub)
-        insert(sub, parts[1:], dir_path)
+        insert(sub, parts[1:])
 
 
 cat_index, rubin_index = {}, {}
@@ -62,16 +62,16 @@ for cat_json in sorted(glob.glob(os.path.join(DATA, "**/catalog.json"), recursiv
         d = json.load(f)
 
     parts = d["label"].split("/")
-    top = d["dir"].split("/")[0]
+    top = os.path.relpath(os.path.dirname(cat_json), DATA).replace("\\", "/").split("/")[0]
     index = rubin_index if top in RUBIN_GROUPS else cat_index
     group = index.setdefault(parts[0], {"label": parts[0], "catalogs": []})
-    insert(group, parts[1:] or parts, d["dir"])
+    insert(group, parts[1:] or parts)
 
 
 for label, order in GROUP_CATALOG_ORDER.items():
     if label in cat_index:
         rank = {lbl: i for i, lbl in enumerate(order)}
-        cat_index[label]["catalogs"].sort(key=lambda c: rank.get(c["label"], len(order)))
+        cat_index[label]["catalogs"].sort(key=lambda c: rank.get(c if isinstance(c, str) else c["label"], len(order)))
 
 pinned = [cat_index[g] for g in PINNED_GROUPS if g in cat_index]
 rest = [v for k, v in cat_index.items() if k not in set(PINNED_GROUPS)]

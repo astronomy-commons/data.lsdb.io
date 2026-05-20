@@ -22,7 +22,6 @@ from _utils import (
 
 root_dir = Path(__file__).resolve().parent.parent
 data_dir = root_dir / "data"
-column_means_dir = root_dir / "assets" / "img" / "maps" / "column_means"
 
 
 def run(dirs=None):
@@ -42,14 +41,14 @@ def run(dirs=None):
         with open(catalog_json_path, "r", encoding="utf-8") as f:
             catalog_data = json.load(f)
 
-        label = leaf["label"].replace(" ", "_")
+        label = leaf["label"]
 
         _, skip_reason = resolve_catalog_url(catalog_data)
         if skip_reason:
             skipped.append([label, skip_reason])
             continue
 
-        column_files = _get_available_column_files(label)
+        column_files = _get_available_column_files(leaf["dir"])
         if column_files:
             catalog_data["column_mean_maps"] = sorted(column_files)
             atomic_json_write(catalog_json_path, catalog_data)
@@ -64,8 +63,8 @@ def run(dirs=None):
     )
 
 
-def _get_available_column_files(catalog_label):
-    pattern = str(column_means_dir / catalog_label / "*.webp")
+def _get_available_column_files(dir_path):
+    pattern = str(data_dir / dir_path / "column_means" / "*.webp")
     return [Path(f).stem for f in glob.glob(pattern)]
 
 

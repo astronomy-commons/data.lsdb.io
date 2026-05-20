@@ -30,22 +30,20 @@ Each catalog lives in `data/<Group>/<Catalog_Name>/catalog.json`. The `data/` di
   ],
   "badges": [{ "title": "US-West" }, { "title": "HTTP" }],
   "notes": [{ "title": "Note title", "content": "Note content.", "type": "info" }],
-  "column_mean_maps": [],
-  "dir": "Group/Catalog_Name",
+  "column_mean_maps": ["pmra", "pmdec"], // Learn how to populate below.
   "skip_connectivity_check": "Reason string — omit this field if not needed"
 }
 ```
 
-| Field                     | Description                                                                                                                                |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| `label`                   | The part before `/` becomes the sidebar group. Use `"Group/Subgroup/Catalog Name"` for three levels.                                       |
-| `name`                    | Display name for the catalog.                                                                                                              |
-| `description`             | Short description shown on the catalog page.                                                                                               |
-| `urls`                    | See schema below. `catalog` or `collection` is required; others are optional.                                                              |
-| `metadata`                | Populated automatically by `update_metadata.py`. Can be set manually.                                                                      |
-| `other_urls`              | Additional links shown in the references section.                                                                                          |
-| `badges`                  | Short tags shown next to the catalog title (e.g. region, protocol).                                                                        |
-| `notes`                   | Info/warning banners shown on the catalog page. `type` can be `"info"` or `"warning"`.                                                     |
-| `column_mean_maps`        | Populated automatically by `update_mean_maps.py`. Place images at `assets/img/maps/column_means/<Catalog_Label>/<column_name>.webp` first. |
-| `dir`                     | Set automatically by `update_index.py`. Do not set manually.                                                                               |
-| `skip_connectivity_check` | Set to a reason string to exclude from connectivity checks and asset generation. Omit if not needed.                                       |
+| Field                     | Description                                                                                                     |
+| ------------------------- | --------------------------------------------------------------------------------------------------------------- |
+| `label`                   | The part before `/` becomes the sidebar group. Use `"Group/Subgroup/Catalog Name"` for three levels.            |
+| `name`                    | Display name for the catalog.                                                                                   |
+| `description`             | Short description shown on the catalog page.                                                                    |
+| `urls`                    | See schema below. `catalog` or `collection` is required; others are optional.                                   |
+| `metadata`                | Populated automatically by `update_metadata.py`. Can be set manually.                                           |
+| `other_urls`              | Additional links shown in the references section.                                                               |
+| `badges`                  | Short tags shown next to the catalog title (e.g. region, protocol).                                             |
+| `notes`                   | Info/warning banners shown on the catalog page. `type` can be `"info"` or `"warning"`.                          |
+| `column_mean_maps`        | Populated automatically by `update_mean_maps.py`. Place WEBP images in `data/{catalog_dir}/column_means` first. |
+| `skip_connectivity_check` | Set to a reason string to exclude from connectivity checks and asset generation. Omit if not needed.            |
