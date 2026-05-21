@@ -1,3 +1,5 @@
+<img src="https://github.com/astronomy-commons/lsdb/blob/main/docs/lincc-logo.png?raw=true" width="300" height="100">
+
 # data.lsdb.io
 
 Source code for the [data.lsdb.io](https://data.lsdb.io) website — a browser for large astronomical catalogs in the [HATS](https://hats.readthedocs.io) format.
@@ -79,3 +81,7 @@ The pre-commit hook lints and formats staged JSX files on each commit:
 npm run lint      # ESLint
 npm run format    # Prettier
 ```
+
+## Acknowledgements
+
+This project is supported by Schmidt Sciences.
