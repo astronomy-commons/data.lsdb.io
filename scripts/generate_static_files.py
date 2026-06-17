@@ -41,7 +41,7 @@ def process_path(catalog_path: str) -> None:
                 write_catalog_summary_file(sub_path, fmt="html")
                 print(f"[done]   {sub_path}")
             except Exception as e:
-                print(f"[skip]   {sub_path}: {e}")
+                print(f"[error]  {sub_path}: {e}")
 
 
 def main():
