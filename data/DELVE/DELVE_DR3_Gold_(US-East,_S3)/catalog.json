@@ -1,0 +1,34 @@
+{
+  "label": "DELVE/DELVE DR3 Gold (US-East, S3)",
+  "name": "DELVE DR3 Gold",
+  "description": "The DELVE DR3 catalog contains data from the DECam All Data Everywhere (DECADE) and DES DR2 processing at NCSA using the DES Data Management (DESDM) pipeline. It contains ~2.6 billion unique objects and covers ~20,000 deg\u00b2 in all four bands (g, r, i, z) simultaneously.",
+  "urls": {
+    "catalog": "s3://stpubdata/mast/public/delve/hats/delve_dr3_gold",
+    "point_density_map": "data/DELVE/DELVE_DR3_Gold_(US-East,_S3)/point_density.webp"
+  },
+  "other_urls": [
+    {
+      "label": "Official release",
+      "url": "https://datalab.noirlab.edu/data/delve#delve-dr3"
+    },
+    {
+      "label": "Column descriptions",
+      "url": "https://datalab.noirlab.edu/data-explorer?showTable=delve_dr3.coadd_objects"
+    }
+  ],
+  "badges": [
+    {
+      "title": "US-East"
+    },
+    {
+      "title": "S3"
+    }
+  ],
+  "metadata": {
+    "numRows": 2588267795,
+    "numColumns": 252,
+    "numPartitions": 6477,
+    "sizeOnDisk": "3.0 TiB",
+    "hatsBuilder": "hats-import v0.6.0"
+  }
+}

@@ -35,8 +35,23 @@ const findFirstLeaf = (items) => {
   return null;
 };
 
-const resolve = (items, path, breadcrumbs = []) => {
-  if (!path) return { selectedLeaf: findFirstLeaf(items), breadcrumbs };
+const findLeafByHash = (items, hash) => {
+  for (const item of items) {
+    if (!('catalogs' in item)) {
+      if (item.hash === hash) return item;
+    } else {
+      const leaf = findLeafByHash(item.catalogs, hash);
+      if (leaf) return leaf;
+    }
+  }
+  return null;
+};
+
+const resolve = (items, path, breadcrumbs = [], defaultHash = null) => {
+  if (!path) {
+    const fallback = (defaultHash && findLeafByHash(items, defaultHash)) || findFirstLeaf(items);
+    return { selectedLeaf: fallback, breadcrumbs };
+  }
 
   const leaf = items.find((i) => !('catalogs' in i) && i.hash === path);
   if (leaf) return { selectedLeaf: leaf, breadcrumbs };
@@ -58,7 +73,7 @@ const encodePath = (hash) => hash.split('/').map(encodeURIComponent).join('/');
 // Page
 // ---------------------------------------------------------------------------
 
-export default function CatalogPage({ catalogs, basePath }) {
+export default function CatalogPage({ catalogs, basePath, defaultHash = null }) {
   const { '*': rawPath = '' } = useParams();
   const navigate = useNavigate();
 
@@ -73,7 +88,12 @@ export default function CatalogPage({ catalogs, basePath }) {
   );
 
   const catalogsWithHashes = React.useMemo(() => addHashes(catalogs), [catalogs]);
-  const { selectedLeaf, notFound, breadcrumbs } = resolve(catalogsWithHashes, catalogPath);
+  const { selectedLeaf, notFound, breadcrumbs } = resolve(
+    catalogsWithHashes,
+    catalogPath,
+    [],
+    defaultHash
+  );
 
   const isMobile = useMediaQuery('(max-width:900px)');
   const [sidebarOpen, setSidebarOpen] = React.useState(false);
