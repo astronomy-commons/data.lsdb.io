@@ -1,5 +1,85 @@
 [
   {
+    "label": "2MASS (PSC)",
+    "catalogs": [
+      "2MASS (PSC)"
+    ]
+  },
+  {
+    "label": "DELVE",
+    "catalogs": [
+      "DELVE DR2 (US-East, S3)",
+      "DELVE DR2 (US-West, HTTP)",
+      "DELVE DR3 Gold (US-East, S3)",
+      "DELVE DR3 Gold (US-West, HTTP)"
+    ]
+  },
+  {
+    "label": "DES",
+    "catalogs": [
+      "DES DR2 (US-East, S3)",
+      "DES DR2 (US-West, HTTP)",
+      "DES Y6 Gold (US-East, S3)",
+      "DES Y6 Gold (US-West, HTTP)"
+    ]
+  },
+  {
+    "label": "DESI",
+    "catalogs": [
+      "DESI DR1 z-catalog (US-East, S3)",
+      "DESI DR1 z-catalog (US-West, HTTP)",
+      "Legacy Survey DR10.1"
+    ]
+  },
+  {
+    "label": "eRASS1 Main",
+    "catalogs": [
+      "eRASS1 Main"
+    ]
+  },
+  {
+    "label": "Euclid Q1",
+    "catalogs": [
+      "Euclid Q1 (IPAC)",
+      "Euclid Q1 (UW)"
+    ]
+  },
+  {
+    "label": "Gaia",
+    "catalogs": [
+      "Bailer-Jones+20",
+      "Gaia DR3 (Europe, HTTP)",
+      "Gaia DR3 (US-East, S3)",
+      "Gaia DR3 (US-West, HTTP)",
+      "Gaia DR3 Epoch Photometry"
+    ]
+  },
+  {
+    "label": "GALEX",
+    "catalogs": [
+      "GALEX MCAT"
+    ]
+  },
+  {
+    "label": "HSC",
+    "catalogs": [
+      "HSC PDR3 g",
+      "HSC PDR3 i",
+      "HSC PDR3 r",
+      "HSC PDR3 y",
+      "HSC PDR3 z"
+    ]
+  },
+  {
+    "label": "Pan-STARRS",
+    "catalogs": [
+      "Pan-STARRS1 (detection)",
+      "Pan-STARRS1 (forced mean object)",
+      "Pan-STARRS1 (objects)",
+      "Pan-STARRS1 (stack object)"
+    ]
+  },
+  {
     "label": "Rubin DP1",
     "catalogs": [
       "object_collection",
@@ -24,72 +104,6 @@
     ]
   },
   {
-    "label": "2MASS (PSC)",
-    "catalogs": [
-      "2MASS (PSC)"
-    ]
-  },
-  {
-    "label": "DELVE",
-    "catalogs": [
-      "DELVE DR2",
-      "DELVE DR3 Gold"
-    ]
-  },
-  {
-    "label": "DES",
-    "catalogs": [
-      "DES DR2 (US-East, S3)",
-      "DES DR2 (US-West, HTTP)",
-      "DES Y6 Gold (US-East, S3)",
-      "DES Y6 Gold (US-West, HTTP)"
-    ]
-  },
-  {
-    "label": "DESI",
-    "catalogs": [
-      "DESI DR1 z-catalog (US-East, S3)",
-      "DESI DR1 z-catalog (US-West, HTTP)",
-      "Legacy Survey DR10.1"
-    ]
-  },
-  {
-    "label": "Euclid Q1",
-    "catalogs": [
-      "Euclid Q1 (IPAC)",
-      "Euclid Q1 (UW)"
-    ]
-  },
-  {
-    "label": "Gaia",
-    "catalogs": [
-      "Bailer-Jones+20",
-      "Gaia DR3 (Europe, HTTP)",
-      "Gaia DR3 (US-East, S3)",
-      "Gaia DR3 (US-West, HTTP)",
-      "Gaia DR3 Epoch Photometry"
-    ]
-  },
-  {
-    "label": "HSC",
-    "catalogs": [
-      "HSC PDR3 g",
-      "HSC PDR3 i",
-      "HSC PDR3 r",
-      "HSC PDR3 y",
-      "HSC PDR3 z"
-    ]
-  },
-  {
-    "label": "Pan-STARRS",
-    "catalogs": [
-      "Pan-STARRS1 (detection)",
-      "Pan-STARRS1 (forced mean object)",
-      "Pan-STARRS1 (objects)",
-      "Pan-STARRS1 (stack object)"
-    ]
-  },
-  {
     "label": "S-PLUS",
     "catalogs": [
       "S-PLUS DR4 (dual)",
@@ -101,7 +115,8 @@
   {
     "label": "SDSS",
     "catalogs": [
-      "SDSS DR7 (spectra)"
+      "SDSS DR7 (spectra, US-East, S3)",
+      "SDSS DR7 (spectra, US-West, HTTP)"
     ]
   },
   {
@@ -141,20 +156,16 @@
   {
     "label": "ZTF",
     "catalogs": [
+      "ZTF alerts \u2265 20 detections",
       "ZTF DR14 (objects)",
       "ZTF DR14 (sources)",
       "ZTF DR22",
       "ZTF DR23 (lightcurves)",
       "ZTF DR23 (objects)",
-      "ZTF alerts \u2265 20 detections",
+      "ZTF DR24 (lightcurves)",
+      "ZTF DR24 (objects)",
       "Zubercal DR16",
       "Zubercal DR20"
-    ]
-  },
-  {
-    "label": "eRASS1 Main",
-    "catalogs": [
-      "eRASS1 Main"
     ]
   }
 ]

@@ -1,10 +1,10 @@
 {
-  "label": "DELVE/DELVE DR2",
+  "label": "DELVE/DELVE DR2 (US-West, HTTP)",
   "name": "DELVE DR2",
   "description": "The DECam Local Volume Exploration Survey Data Release 2 (DELVE DR2) combines new DECam observations with archival DECam data from the Dark Energy Survey, the DECam Legacy Survey, and other DECam community programs to study dwarf satellite galaxies over a wide range of luminosities and environments. It consists of ~160,000 exposures that cover >21,000 deg^2 of the high Galactic latitude (|b| > 10 deg) sky in four broadband optical/near-infrared filters (g, r, i, z), with point-source and automatic aperture photometry for ~2.5 billion astronomical sources.",
   "urls": {
     "catalog": "https://data.lsdb.io/hats/delve/delve_dr2",
-    "point_density_map": "data/DELVE/DELVE_DR2/point_density.webp"
+    "point_density_map": "data/DELVE/DELVE_DR2_(US-West,_HTTP)/point_density.webp"
   },
   "metadata": {
     "numRows": 2500247752,

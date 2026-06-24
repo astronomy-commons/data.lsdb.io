@@ -1,0 +1,38 @@
+{
+  "label": "DELVE/DELVE DR2 (US-East, S3)",
+  "name": "DELVE DR2",
+  "description": "The DECam Local Volume Exploration Survey Data Release 2 (DELVE DR2) combines new DECam observations with archival DECam data from the Dark Energy Survey, the DECam Legacy Survey, and other DECam community programs to study dwarf satellite galaxies over a wide range of luminosities and environments. It consists of ~160,000 exposures that cover >21,000 deg^2 of the high Galactic latitude (|b| > 10 deg) sky in four broadband optical/near-infrared filters (g, r, i, z), with point-source and automatic aperture photometry for ~2.5 billion astronomical sources.",
+  "urls": {
+    "collection": "s3://stpubdata/mast/public/delve/hats/delve_dr2",
+    "point_density_map": "data/DELVE/DELVE_DR2_(US-East,_S3)/point_density.webp"
+  },
+  "other_urls": [
+    {
+      "label": "Official release",
+      "url": "https://datalab.noirlab.edu/delve/index.php"
+    },
+    {
+      "label": "Column descriptions",
+      "url": "https://datalab.noirlab.edu/delve/index.php"
+    },
+    {
+      "label": "Research paper",
+      "url": "https://arxiv.org/abs/2203.16565"
+    }
+  ],
+  "badges": [
+    {
+      "title": "US-East"
+    },
+    {
+      "title": "S3"
+    }
+  ],
+  "metadata": {
+    "numRows": 2500247752,
+    "numColumns": 120,
+    "numPartitions": 2129,
+    "sizeOnDisk": "835.2 GiB",
+    "hatsBuilder": "hats-import v0.7.1 reimport hats-import v0.4.4"
+  }
+}
