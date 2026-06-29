@@ -27,16 +27,7 @@ GROUP_CATALOG_ORDER = {
     ],
 }
 
-RUBIN_GROUPS = {
-    "DP1",
-    "DP2_HATS_V1",
-    "DP2_Pilot",
-    "DP2_rc2",
-    "PPDB",
-    "v30_0_4_rc1",
-    "v30_0_6_rc1",
-    "w_2025_49",
-}
+RUBIN_GROUPS = {"DP1", "DP2", "PPDB"}
 
 
 def insert(group, parts):
@@ -44,7 +35,13 @@ def insert(group, parts):
         group["catalogs"].append(parts[0])
     else:
         sub = next(
-            (c for c in group["catalogs"] if isinstance(c, dict) and c.get("label") == parts[0] and "catalogs" in c),
+            (
+                c
+                for c in group["catalogs"]
+                if isinstance(c, dict)
+                and c.get("label") == parts[0]
+                and "catalogs" in c
+            ),
             None,
         )
         if sub is None:
@@ -55,12 +52,18 @@ def insert(group, parts):
 
 cat_index, rubin_index = {}, {}
 
-for cat_json in sorted(glob.glob(os.path.join(DATA, "**/catalog.json"), recursive=True)):
+for cat_json in sorted(
+    glob.glob(os.path.join(DATA, "**/catalog.json"), recursive=True)
+):
     with open(cat_json, encoding="utf-8") as f:
         d = json.load(f)
 
     parts = d["label"].split("/")
-    top = os.path.relpath(os.path.dirname(cat_json), DATA).replace("\\", "/").split("/")[0]
+    top = (
+        os.path.relpath(os.path.dirname(cat_json), DATA)
+        .replace("\\", "/")
+        .split("/")[0]
+    )
     index = rubin_index if top in RUBIN_GROUPS else cat_index
     group = index.setdefault(parts[0], {"label": parts[0], "catalogs": []})
     insert(group, parts[1:] or parts)
@@ -86,7 +89,9 @@ for index in (cat_index, rubin_index):
 for label, order in GROUP_CATALOG_ORDER.items():
     if label in cat_index:
         rank = {lbl: i for i, lbl in enumerate(order)}
-        cat_index[label]["catalogs"].sort(key=lambda c: rank.get(entry_label(c), len(order)))
+        cat_index[label]["catalogs"].sort(
+            key=lambda c: rank.get(entry_label(c), len(order))
+        )
 
 # Groups are listed alphabetically (case-insensitive), with no special treatment for any group.
 catalogs_index = sorted(cat_index.values(), key=lambda g: g["label"].casefold())
@@ -100,4 +105,6 @@ print(f"Wrote {n_cats} entries in {len(catalogs_index)} groups to data/catalogs.
 with open(os.path.join(DATA, "rubinCatalogs.json"), "w", encoding="utf-8") as f:
     json.dump(rubin_index, f, indent=2, ensure_ascii=True)
 n_rubin = sum(len(g["catalogs"]) for g in rubin_index)
-print(f"Wrote {n_rubin} entries in {len(rubin_index)} groups to data/rubinCatalogs.json")
+print(
+    f"Wrote {n_rubin} entries in {len(rubin_index)} groups to data/rubinCatalogs.json"
+)

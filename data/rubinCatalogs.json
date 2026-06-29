@@ -8,21 +8,7 @@
     ]
   },
   {
-    "label": "DP2 HATS V1",
-    "catalogs": [
-      "dia_object_collection",
-      "object_collection"
-    ]
-  },
-  {
-    "label": "DP2 Pilot",
-    "catalogs": [
-      "dia_object_collection",
-      "object_collection"
-    ]
-  },
-  {
-    "label": "DP2_rc2",
+    "label": "DP2",
     "catalogs": [
       "dia_object_collection",
       "object_collection"
@@ -32,26 +18,6 @@
     "label": "PPDB",
     "catalogs": [
       "PPDB"
-    ]
-  },
-  {
-    "label": "v30_0_4_rc1",
-    "catalogs": [
-      "dia_object_collection",
-      "object_collection"
-    ]
-  },
-  {
-    "label": "v30_0_6_rc1",
-    "catalogs": [
-      "object"
-    ]
-  },
-  {
-    "label": "w_2025_49",
-    "catalogs": [
-      "dia_object_collection",
-      "object_collection"
     ]
   }
 ]

@@ -1,0 +1,17 @@
+{
+  "label": "DP2/object_collection",
+  "name": "DP2 v30_0_8 object_collection",
+  "description": "DRP/DP2 object_collection",
+  "urls": { "catalog": "/sdf/data/rubin/shared/lsdb_commissioning/hats/dp2/object_collection" },
+  "other_urls": [
+    { "label": "Column descriptions", "url": "https://sdm-schemas.lsst.io/imsim.html" }
+  ],
+  "metadata": {
+    "numRows": 782773645,
+    "numColumns": 1261,
+    "numPartitions": 108825,
+    "sizeOnDisk": "3.0 TiB",
+    "hatsBuilder": "hats-import v0.9.2, hats v0.9.2"
+  },
+  "badges": [{ "title": "Available only on USDF" }]
+}
