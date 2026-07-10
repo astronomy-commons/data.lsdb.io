@@ -8,10 +8,10 @@
   },
   "metadata": {
     "numRows": 2865190635,
-    "numColumns": 275,
-    "numPartitions": 11699,
-    "sizeOnDisk": "3.8 TiB",
-    "hatsBuilder": "hipscat_import v0.3.2 hats-importer conversion v0.4.3"
+    "numColumns": 272,
+    "numPartitions": 5710,
+    "sizeOnDisk": "2.9 TiB",
+    "hatsBuilder": "hats-import v0.9.0, hats v0.9.0"
   },
   "other_urls": [
     {
