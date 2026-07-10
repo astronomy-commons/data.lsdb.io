@@ -24,9 +24,9 @@
   "metadata": {
     "numRows": 731099731,
     "numColumns": 241,
-    "numPartitions": 1538,
+    "numPartitions": 2010,
     "sizeOnDisk": "1.1 TiB",
-    "hatsBuilder": "hats-import v0.4.4"
+    "hatsBuilder": "hats-import v0.9.0, hats v0.9.1.dev20+gde92369b4"
   },
   "badges": [
     {
