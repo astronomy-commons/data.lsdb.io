@@ -7,11 +7,11 @@
     "point_density_map": "data/Pan-STARRS/Pan-STARRS1_(detection)/point_density.webp"
   },
   "metadata": {
-    "numRows": 73951333592,
-    "numColumns": 61,
-    "numPartitions": 83004,
-    "sizeOnDisk": "20.8 TiB",
-    "hatsBuilder": "hipscat_import v0.2.5 hats-importer conversion v0.4.3"
+    "numRows": 72338190483,
+    "numColumns": 58,
+    "numPartitions": 45718,
+    "sizeOnDisk": "15.7 TiB",
+    "hatsBuilder": "hats-import v0.9.0, hats v0.9.0"
   },
   "other_urls": [
     {
