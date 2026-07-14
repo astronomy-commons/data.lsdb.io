@@ -35,6 +35,12 @@
       "title": "HTTP"
     }
   ],
+  "notes": [
+    {
+      "content": "This dataset is deprecated and will be removed from data.lsdb.io after 2026-08-15. Please migrate to a newer ZTF release, such as <b>ZTF DR23</b> or <b>ZTF DR24</b>.",
+      "type": "warning"
+    }
+  ],
   "column_mean_maps": [
     "dec",
     "mean_mag_g",
