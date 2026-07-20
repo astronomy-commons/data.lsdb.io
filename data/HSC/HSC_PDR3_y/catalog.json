@@ -4,7 +4,9 @@
   "description": "Hyper Suprime-Cam is a wide-field imaging camera mounted on the 8.2-meter Subaru Telescope. This catalog represents Public Data Release 3 forced photometry table for Wide survey fields in y passband. It covers ~670 square degrees with the depth of ~26 mag.",
   "urls": {
     "catalog": "https://data.lsdb.io/hats/hsc_pdr3/hsc_pdr3-forced-Y",
+    "slac_catalog": "http://slac.data.lsdb.io:1094/lsdb/hsc_pdr3/hsc_pdr3-forced-Y",
     "margin_catalog": "https://data.lsdb.io/hats/hsc_pdr3/hsc_pdr3-forced-Y_10arcs",
+    "slac_margin_catalog": "http://slac.data.lsdb.io:1094/lsdb/hsc_pdr3/hsc_pdr3-forced-Y_10arcs",
     "point_density_map": "data/HSC/HSC_PDR3_y/point_density.webp"
   },
   "other_urls": [

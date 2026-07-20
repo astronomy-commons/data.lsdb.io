@@ -4,6 +4,7 @@
   "description": "NEOWISE is a joint mission of the Jet Propulsion Laboratory/California Institute of Technology and the University of Arizona, funded by the National Aeronautics and Space Administration. It brought the WISE spacecraft out of hibernation in September 2013 to detect, track, and characterize near-Earth asteroids and comets. It scanned the sky nearly sixteen complete times during the first eight years of survey operations, with six months separating survey passes. Twelve or more independent exposures are made on each point on the sky during each survey epoch. Therefore, the NEOWISE archive is a time-domain resource for extracting multiple thermal flux and position measurements of solar system small bodies, as well as background stars and galaxies.",
   "urls": {
     "catalog": "https://data.lsdb.io/hats/wise/neowise",
+    "slac_catalog": "http://slac.data.lsdb.io:1094/lsdb/wise/neowise",
     "point_density_map": "data/WISE/NEOWISE_(Year_8)/point_density.webp"
   },
   "metadata": {

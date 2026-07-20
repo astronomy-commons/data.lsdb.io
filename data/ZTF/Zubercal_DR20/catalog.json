@@ -4,6 +4,7 @@
   "description": "Zubercal is a completely new set of photometry based on a detailed recalibration of ZTF science image-based PSF photometry.",
   "urls": {
     "catalog": "https://data.lsdb.io/hats/ztf_dr20/zubercal",
+    "slac_catalog": "http://slac.data.lsdb.io:1094/lsdb/ztf_dr20/zubercal",
     "point_density_map": "data/ZTF/Zubercal_DR20/point_density.webp"
   },
   "metadata": {

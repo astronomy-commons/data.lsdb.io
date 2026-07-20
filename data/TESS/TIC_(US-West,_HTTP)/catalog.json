@@ -4,6 +4,7 @@
   "description": "The TESS Input Catalog (TIC) is a compiled catalog of stellar parameters for every optically persistent, stationary object in the sky. The TIC is used to help identify two-minute cadence target selection for the TESS mission, and to calculate physical and observational properties of planet candidates. It is for use by both the TESS science team and the public, and it is periodically updated---the current version is TIC-8.2. TIC-8.2 uses the GAIA DR2 catalog as a base and merges a large number of other photometric catalogs, including 2MASS, UCAC4, APASS, SDSS, WISE, etc. There are roughly 1.7 billion stellar and extended sources in the TIC, containing compiled magnitudes including B, V, u, g, r, i, z, J, H, K, W1-W4, and G. This version was released in 2021.",
   "urls": {
     "collection": "https://data.lsdb.io/hats/tess/tic",
+    "slac_catalog": "http://slac.data.lsdb.io:1094/lsdb/tic",
     "point_density_map": "data/TESS/TIC_(US-West,_HTTP)/point_density.webp"
   },
   "metadata": {

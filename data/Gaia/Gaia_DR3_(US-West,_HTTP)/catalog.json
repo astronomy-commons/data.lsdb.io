@@ -4,6 +4,7 @@
   "description": "Gaia Data Release 3 (GAIA_SOURCE table) is a comprehensive catalog released by the European Space Agency (ESA) as part of the Gaia mission, which aims to create a detailed three-dimensional map of our galaxy, the Milky Way. Released in June 2022, Gaia DR3 provides highly precise astrometric data (positions, distances, and motions) for nearly 1.8 billion stars, along with detailed photometric and spectroscopic information.",
   "urls": {
     "collection": "https://data.lsdb.io/hats/gaia_dr3",
+    "slac_catalog": "http://slac.data.lsdb.io:1094/lsdb/gaia_dr3",
     "point_density_map": "data/Gaia/Gaia_DR3_(US-West,_HTTP)/point_density.webp"
   },
   "other_urls": [

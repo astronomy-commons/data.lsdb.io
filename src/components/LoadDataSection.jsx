@@ -121,7 +121,7 @@ const CodeBlock = ({ command, is_python }) => {
 // Exported section components
 // ---------------------------------------------------------------------------
 
-export const ReadHatsSection = ({ protocol, command, hideTitle = false }) => {
+export const ReadHatsSection = ({ protocol, command, slacCommand, hideTitle = false }) => {
   const loader = command.includes('.parquet') ? 'Pandas' : 'LSDB';
   return (
     <div>
@@ -132,6 +132,12 @@ export const ReadHatsSection = ({ protocol, command, hideTitle = false }) => {
       )}
       {getAdditionalReadInfo(protocol)}
       <CodeBlock command={command} is_python={true} />
+      {slacCommand && (
+        <div className='slac-alt'>
+          <p className='code-caption'>Or load the same catalog from SLAC (XRootD):</p>
+          <CodeBlock command={slacCommand} is_python={true} />
+        </div>
+      )}
     </div>
   );
 };

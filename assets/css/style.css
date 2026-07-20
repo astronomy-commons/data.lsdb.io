@@ -441,6 +441,17 @@ h6 {
   margin-bottom: 8px;
 }
 
+/* Alternate (SLAC) load snippet */
+.slac-alt {
+  margin-top: 12px;
+}
+
+.code-caption {
+  margin: 0 0 8px;
+  font-size: 0.82rem;
+  color: #6b7280;
+}
+
 
 /* Footer — lives inside the right-panel scroll area */
 .catalog-footer {

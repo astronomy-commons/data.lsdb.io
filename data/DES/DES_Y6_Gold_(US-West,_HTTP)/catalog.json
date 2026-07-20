@@ -4,6 +4,7 @@
   "description": "The Y6 Gold catalog is derived from Dark Energy Survey Data Release 2 (DES DR2) and includes all six years of g,r,i,z,Y imaging measurements. Y6 Gold was formulated for the DES final cosmological analyses, but it has very general applicability. Y6 Gold contains 669 million objects to i-band of 23.4 (S/N = 10 for extended objects).",
   "urls": {
     "catalog": "https://data.lsdb.io/hats/des/des_y6_gold",
+    "slac_catalog": "http://slac.data.lsdb.io:1094/lsdb/des/des_y6_gold",
     "point_density_map": "data/DES/DES_Y6_Gold_(US-West,_HTTP)/point_density.webp"
   },
   "metadata": {

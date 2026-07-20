@@ -4,6 +4,7 @@
   "description": "Euclid is a space-based survey observatory launched by the European Space Agency (ESA) in July 2023, which aims to map the large-scale structure of the Universe to better understand dark energy and dark matter. The first Quick Data Release (Q1) covers 63 square degrees of the sky and including observations of 26 million galaxies.",
   "urls": {
     "collection": "https://data.lsdb.io/hats/euclid_q1",
+    "slac_catalog": "http://slac.data.lsdb.io:1094/lsdb/euclid_q1",
     "point_density_map": "data/Euclid_Q1/Euclid_Q1_(UW)/point_density.webp"
   },
   "other_urls": [
