@@ -134,7 +134,7 @@ export const ReadHatsSection = ({ protocol, command, slacCommand, hideTitle = fa
       <CodeBlock command={command} is_python={true} />
       {slacCommand && (
         <div className='slac-alt'>
-          <p className='code-caption'>Or load the same catalog from SLAC (XRootD):</p>
+          <p className='code-caption'>Or load the same catalog from SLAC:</p>
           <CodeBlock command={slacCommand} is_python={true} />
         </div>
       )}
