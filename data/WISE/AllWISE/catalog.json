@@ -4,6 +4,7 @@
   "description": "AllWISE is an all-sky survey by the Palomar Observatory Schmidt, the European Southern Observatory Schmidt, and the United Kingdom Schmidt, the InfraRed Astronomical Satellite, and the Two Micron All Sky Survey. It contains accurate positions, apparent motion measurements, four-band fluxes and flux variability statistics for over 747 million objects detected on the coadded Atlas Images.",
   "urls": {
     "catalog": "https://data.lsdb.io/hats/wise/allwise",
+    "slac_catalog": "http://slac.data.lsdb.io:1094/lsdb/wise/allwise",
     "point_density_map": "data/WISE/AllWISE/point_density.webp"
   },
   "metadata": {

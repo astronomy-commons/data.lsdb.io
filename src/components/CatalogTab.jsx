@@ -43,8 +43,16 @@ const getBadgeIcon = (title) => {
 // Tab-switching load/download section (needs useState, must be a component)
 // ---------------------------------------------------------------------------
 
-const LoadingSection = ({ main_url, margin_catalog, protocol, displayDownload }) => {
+const LoadingSection = ({
+  main_url,
+  slac_url,
+  margin_catalog,
+  slac_margin_catalog,
+  protocol,
+  displayDownload,
+}) => {
   const readCommand = getReadCommand(main_url, margin_catalog);
+  const slacReadCommand = getReadCommand(slac_url, slac_margin_catalog);
   const downloadCommand = getDownloadCommand(protocol, main_url);
 
   const loader = readCommand?.includes('.parquet') ? 'Pandas' : 'LSDB';
@@ -67,7 +75,14 @@ const LoadingSection = ({ main_url, margin_catalog, protocol, displayDownload })
           </button>
         </div>
         <div className='code-tab-content'>
-          {hasRead && <ReadHatsSection protocol={protocol} command={readCommand} hideTitle />}
+          {hasRead && (
+            <ReadHatsSection
+              protocol={protocol}
+              command={readCommand}
+              slacCommand={slacReadCommand}
+              hideTitle
+            />
+          )}
           {hasDownload && (
             <DownloadSection protocol={protocol} command={downloadCommand} hideTitle />
           )}
@@ -94,7 +109,12 @@ const LoadingSection = ({ main_url, margin_catalog, protocol, displayDownload })
       </div>
       <div className='code-tab-content'>
         {activeTab === 'load' && (
-          <ReadHatsSection protocol={protocol} command={readCommand} hideTitle />
+          <ReadHatsSection
+            protocol={protocol}
+            command={readCommand}
+            slacCommand={slacReadCommand}
+            hideTitle
+          />
         )}
         {activeTab === 'download' && (
           <DownloadSection protocol={protocol} command={downloadCommand} hideTitle />
@@ -121,7 +141,15 @@ export default function CatalogTab({ catalog_info, skymapPath }) {
     column_mean_maps,
   } = catalog_info;
 
-  const { catalog, margin_catalog, collection, point_density_map, displayDownload = true } = urls;
+  const {
+    catalog,
+    margin_catalog,
+    collection,
+    slac_catalog,
+    slac_margin_catalog,
+    point_density_map,
+    displayDownload = true,
+  } = urls;
   const main_url = catalog || collection;
   const protocol = getProtocol(main_url);
 
@@ -146,7 +174,9 @@ export default function CatalogTab({ catalog_info, skymapPath }) {
       {main_url && (
         <LoadingSection
           main_url={main_url}
+          slac_url={slac_catalog}
           margin_catalog={margin_catalog}
+          slac_margin_catalog={slac_margin_catalog}
           protocol={protocol}
           displayDownload={displayDownload}
         />

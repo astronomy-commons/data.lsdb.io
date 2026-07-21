@@ -4,6 +4,7 @@
   "description": "The Transiting Exoplanet Survey Satellite (TESS) is a NASA space mission designed to survey the sky for transiting exoplanets and variable astrophysical sources. TESS produces time-series photometric light curves, which are released separately for each observing sector. This catalog contains TESS light curve files indexed by their corresponding TESS Input Catalog (TIC) identifiers.",
   "urls": {
     "collection": "https://data.lsdb.io/hats/tess/tess_lightcurve",
+    "slac_catalog": "http://slac.data.lsdb.io:1094/lsdb/tess/tess_lightcurve",
     "point_density_map": "data/TESS/TESS_Lightcurve/point_density.webp"
   },
   "metadata": {

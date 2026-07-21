@@ -4,6 +4,7 @@
   "description": "The Dark Energy Spectroscopic Instrument (DESI) is a 5-year spectroscopic redshift survey designed to map the three-dimensional structure of the universe between z=0 and z=4. Data Release 1 includes high-confidence redshifts for 18.7 million objects - 13.1 million galaxies, 1.6 million quasars, and 4 million stars - from observations taken between May 2021 and June 2022.",
   "urls": {
     "catalog": "https://data.lsdb.io/hats/desi/desi_dr1_zcat",
+    "slac_catalog": "http://slac.data.lsdb.io:1094/lsdb/desi/desi_dr1_zcat",
     "point_density_map": "data/DESI/DESI_DR1_z-catalog_(US-West,_HTTP)/point_density.webp"
   },
   "metadata": {

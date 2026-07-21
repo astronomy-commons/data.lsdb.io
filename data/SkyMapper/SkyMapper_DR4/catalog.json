@@ -4,6 +4,7 @@
   "description": "The Fourth Data Release (DR4) of the SkyMapper Southern Survey (SMSS) covers 26,000 square degrees from over 400,000 images acquired by the 1.3m SkyMapper telescope between 2014-03 and 2021-09. It includes mean astrometric, photometric and shape measurements for ~700 million unique astrophysical objects from magnitude 9 to 22, taken in six optical filters: 'u', 'v', 'g', 'r', 'i', 'z'.",
   "urls": {
     "catalog": "https://data.lsdb.io/hats/skymapper_dr4/catalog",
+    "slac_catalog": "http://slac.data.lsdb.io:1094/lsdb/skymapper/sky_mapper_dr4/catalog",
     "point_density_map": "data/SkyMapper/SkyMapper_DR4/point_density.webp"
   },
   "other_urls": [

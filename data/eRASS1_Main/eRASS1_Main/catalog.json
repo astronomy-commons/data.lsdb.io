@@ -4,6 +4,7 @@
   "description": "The eROSITA space X-ray telescope, operated by the German eROSITA Consortium (eROSITA-DE), has released its first data set (DR1) from the SRG/eROSITA all-sky survey (eRASS1). Covering 20,626.5 square degrees of the Western Galactic Hemisphere, the survey includes a range of exposure times, from ~100 seconds at the Ecliptic equator to over 10,000 seconds near the Ecliptic pole, in the 0.6-2.3 keV energy band. The main catalog band fluxes for ~900k sources detected in the 0.2-2.3 keV band (1B).",
   "urls": {
     "collection": "https://data.lsdb.io/hats/erosita",
+    "slac_catalog": "http://slac.data.lsdb.io:1094/lsdb/erosita/erosita_dr1_erass1",
     "point_density_map": "data/eRASS1_Main/eRASS1_Main/point_density.webp"
   },
   "metadata": {
