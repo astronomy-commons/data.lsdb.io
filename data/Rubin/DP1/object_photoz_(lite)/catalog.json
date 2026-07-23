@@ -1,5 +1,5 @@
 {
-  "label": "Rubin DP1/object_photoz (lite)",
+  "label": "Rubin/DP1/object_photoz (lite)",
   "name": "Rubin Data Preview 1 (DP1) Object photoz (lite)",
   "description": "Photometric redshifts for Rubin Data Preview 1 Objects. This is a trimmed version of the object_photoz catalog, in a single parquet file. It contains no coordinates or magnitudes so it is allowed to be public, as clarified in the community forum post below.",
   "urls": {

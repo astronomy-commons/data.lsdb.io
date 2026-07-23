@@ -80,25 +80,31 @@
     ]
   },
   {
-    "label": "Rubin DP1",
+    "label": "Rubin",
     "catalogs": [
-      "object_collection",
-      "object_collection (lite)",
-      "object_photoz",
-      "object_photoz (lite)",
-      "dia_object_collection",
-      "CCD visit table",
+      "Alert Archive",
       {
-        "label": "crossmatches",
+        "label": "DP1",
         "catalogs": [
-          "dia_object_x_euclid_q1",
-          "dia_object_x_ps1",
-          "dia_object_x_ztf_dr23_lc",
-          "dia_object_x_ztf_dr23_objects",
-          "object_x_euclid_q1",
-          "object_x_ps1",
-          "object_x_ztf_dr23_lc",
-          "object_x_ztf_dr23_objects"
+          "object_collection",
+          "object_collection (lite)",
+          "object_photoz",
+          "object_photoz (lite)",
+          "dia_object_collection",
+          "CCD visit table",
+          {
+            "label": "crossmatches",
+            "catalogs": [
+              "dia_object_x_euclid_q1",
+              "dia_object_x_ps1",
+              "dia_object_x_ztf_dr23_lc",
+              "dia_object_x_ztf_dr23_objects",
+              "object_x_euclid_q1",
+              "object_x_ps1",
+              "object_x_ztf_dr23_lc",
+              "object_x_ztf_dr23_objects"
+            ]
+          }
         ]
       }
     ]

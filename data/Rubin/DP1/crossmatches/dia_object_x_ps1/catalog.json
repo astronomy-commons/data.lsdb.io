@@ -1,5 +1,5 @@
 {
-  "label": "Rubin DP1/crossmatches/dia_object_x_ps1",
+  "label": "Rubin/DP1/crossmatches/dia_object_x_ps1",
   "name": "Rubin Data Preview 1 (DP1) dia_object_x_ps1",
   "description": "Crossmatch results between Rubin Data Preview 1 DIA Objects and Pan-STARRS, in a single parquet file. It only contains object identifiers and separations, in arcseconds, so it is allowed to be public, as clarified in the community forum post below.",
   "urls": {

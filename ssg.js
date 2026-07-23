@@ -27,12 +27,12 @@ const collectLeaves = (items, basePath, parentHash = '') => {
 
 const leaves = [
   ...collectLeaves(catalogIndex, ''),
-  ...collectLeaves(rubinIndex, '/rubin'),
+  ...collectLeaves(rubinIndex, '/internal_rubin'),
 ];
 
 const rootPages = [
   { urlPath: '/', description: 'Browse public astronomy catalogs in the HATS format, including Gaia, ZTF, Rubin, Pan-STARRS, and more.' },
-  { urlPath: '/rubin', description: 'Browse Rubin catalogs in the HATS format.' },
+  { urlPath: '/internal_rubin', description: 'Browse Rubin catalogs in the HATS format.' },
 ];
 
 const truncate = (text, max = 155) => {
@@ -56,7 +56,7 @@ const template = readFileSync('./dist/index.html', 'utf-8');
 
 const getTitle = (urlPath) => {
   if (urlPath === '/') return 'LSDB';
-  if (urlPath === '/rubin') return 'Rubin Data — LSDB';
+  if (urlPath === '/internal_rubin') return 'Rubin Data — LSDB';
   const last = urlPath.split('/').at(-1);
   return `${decodeURIComponent(last).replaceAll('_', ' ')} — LSDB`;
 };

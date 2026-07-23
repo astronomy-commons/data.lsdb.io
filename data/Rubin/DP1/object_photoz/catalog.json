@@ -1,5 +1,5 @@
 {
-  "label": "Rubin DP1/object_photoz",
+  "label": "Rubin/DP1/object_photoz",
   "name": "Rubin Data Preview 1 (DP1) Object photoz",
   "description": "Photometric redshifts for Rubin Data Preview 1 Objects. This catalog contains the point estimates (mean, mode, median, 1-sigma and 2-sigma confidence intervals) of eight algorithms in the Redshift Assessment Infrastructure Layers (RAIL), on the DP1 object catalog with quality cuts in the ECDFS, EDFS, Rubin_SV_95_-25, and Rubin_SV_38_7 fields. The algorithms are Flexzboost, kNN, CMNN, DNF, TPz, BPz, GPz, and LePhare. It also includes probability density functions (PDF) in the nested format. The bookkeeping software used to produce the results is rail_projects. For more information on the dataset, please read the PZ science unit technote (SITCOMTN-154).",
   "other_urls": [

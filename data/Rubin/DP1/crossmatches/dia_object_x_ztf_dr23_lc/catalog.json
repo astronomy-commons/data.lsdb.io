@@ -1,5 +1,5 @@
 {
-  "label": "Rubin DP1/crossmatches/dia_object_x_ztf_dr23_lc",
+  "label": "Rubin/DP1/crossmatches/dia_object_x_ztf_dr23_lc",
   "name": "Rubin Data Preview 1 (DP1) dia_object_x_ztf_dr23_lc",
   "description": "Crossmatch results between Rubin Data Preview 1 DIA Objects and ZTF DR23 (lightcurves), in a single parquet file. It only contains object identifiers and separations, in arcseconds, so it is allowed to be public, as clarified in the community forum post below.",
   "urls": {

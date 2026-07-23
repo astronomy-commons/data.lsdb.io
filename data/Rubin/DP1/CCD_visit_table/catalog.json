@@ -1,5 +1,5 @@
 {
-  "label": "Rubin DP1/CCD visit table",
+  "label": "Rubin/DP1/CCD visit table",
   "name": "Rubin Data Preview 1 (DP1) CCD Visit Table",
   "description": "CCD Visit Table for Rubin Data Preview 1 as a single parquet file.",
   "urls": {

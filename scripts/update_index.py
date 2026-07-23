@@ -14,9 +14,10 @@ import os
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA = os.path.join(ROOT, "data")
 
-# Explicit catalog order within a group. Labels not listed here sort after those that are.
+# Explicit catalog order within a group (keyed by label path, e.g. "Group" or
+# "Group/Subgroup"). Labels not listed here sort after those that are.
 GROUP_CATALOG_ORDER = {
-    "Rubin DP1": [
+    "Rubin/DP1": [
         "object_collection",
         "object_collection (lite)",
         "object_photoz",
@@ -86,12 +87,23 @@ for index in (cat_index, rubin_index):
         sort_catalogs(group["catalogs"])
 
 # Apply explicit per-group catalog ordering, overriding the alphabetical sort above.
-for label, order in GROUP_CATALOG_ORDER.items():
-    if label in cat_index:
-        rank = {lbl: i for i, lbl in enumerate(order)}
-        cat_index[label]["catalogs"].sort(
-            key=lambda c: rank.get(entry_label(c), len(order))
+for path, order in GROUP_CATALOG_ORDER.items():
+    parts = path.split("/")
+    node = cat_index.get(parts[0])
+    for part in parts[1:]:
+        if node is None:
+            break
+        node = next(
+            (
+                c
+                for c in node["catalogs"]
+                if isinstance(c, dict) and c.get("label") == part
+            ),
+            None,
         )
+    if node is not None:
+        rank = {lbl: i for i, lbl in enumerate(order)}
+        node["catalogs"].sort(key=lambda c: rank.get(entry_label(c), len(order)))
 
 # Groups are listed alphabetically (case-insensitive), with no special treatment for any group.
 catalogs_index = sorted(cat_index.values(), key=lambda g: g["label"].casefold())
