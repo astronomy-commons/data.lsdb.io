@@ -27,7 +27,7 @@ export default function App() {
             <CatalogPage
               catalogs={catalogIndex}
               basePath='/'
-              defaultHash='Rubin/DP1/object_collection'
+              defaultHash='Rubin/DP2/object_collection'
             />
           }
         />
