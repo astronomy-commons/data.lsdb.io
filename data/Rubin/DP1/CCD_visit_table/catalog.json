@@ -1,0 +1,23 @@
+{
+  "label": "Rubin/DP1/CCD visit table",
+  "name": "Rubin Data Preview 1 (DP1) CCD Visit Table",
+  "description": "CCD Visit Table for Rubin Data Preview 1 as a single parquet file.",
+  "urls": {
+    "catalog": "https://data.lsdb.io/hats/dp1/ccd_visit.parquet"
+  },
+  "other_urls": [
+    {
+      "label": "Column description",
+      "url": "https://sdm-schemas.lsst.io/dp1.html#CcdVisit"
+    },
+    {
+      "label": "Rubin DP1 paper",
+      "url": "https://arxiv.org/abs/2603.23786"
+    }
+  ],
+  "metadata": {
+    "numRows": 16071,
+    "numColumns": 52,
+    "sizeOnDisk": "5.3 MiB"
+  }
+}

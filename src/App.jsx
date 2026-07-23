@@ -17,14 +17,17 @@ export default function App() {
   return (
     <ThemeProvider theme={theme}>
       <Routes>
-        <Route path='/rubin/*' element={<CatalogPage catalogs={rubinIndex} basePath='/rubin' />} />
+        <Route
+          path='/internal_rubin/*'
+          element={<CatalogPage catalogs={rubinIndex} basePath='/internal_rubin' />}
+        />
         <Route
           path='/*'
           element={
             <CatalogPage
               catalogs={catalogIndex}
               basePath='/'
-              defaultHash='Rubin_DP1/object_collection'
+              defaultHash='Rubin/DP2/object_collection'
             />
           }
         />
