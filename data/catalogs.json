@@ -106,6 +106,14 @@
             ]
           }
         ]
+      },
+      {
+        "label": "DP2",
+        "catalogs": [
+          "object_collection",
+          "object_photoz",
+          "dia_object_collection"
+        ]
       }
     ]
   },

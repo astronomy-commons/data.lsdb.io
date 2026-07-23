@@ -11,7 +11,8 @@
     "label": "DP2",
     "catalogs": [
       "dia_object_collection",
-      "object_collection"
+      "object_collection",
+      "object_photoz"
     ]
   },
   {

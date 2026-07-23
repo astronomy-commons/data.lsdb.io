@@ -26,6 +26,11 @@ GROUP_CATALOG_ORDER = {
         "CCD visit table",
         "crossmatches",
     ],
+    "Rubin/DP2": [
+        "object_collection",
+        "object_photoz",
+        "dia_object_collection",
+    ],
 }
 
 RUBIN_GROUPS = {"DP1", "DP2", "PPDB"}
