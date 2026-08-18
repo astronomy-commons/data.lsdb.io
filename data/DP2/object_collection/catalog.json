@@ -13,5 +13,11 @@
     "sizeOnDisk": "3.6 TiB",
     "hatsBuilder": "hats-import v0.10.0, hats v0.10.0"
   },
-  "badges": [{ "title": "Available only on USDF" }]
+  "badges": [{ "title": "Available only on USDF" }],
+  "notes": [
+    {
+      "title": "Additional columns",
+      "content": "<p>This catalog includes several columns added on top of the original Rubin data products:</p><ul><li>Magnitude and magnitude error columns converted from fluxes: <code>{band}_psfMag</code>, <code>{band}_kronMag</code>, and <code>{band}_cModelMag</code> for the u, g, r, i, z, y bands (object table), and nested column <code>objectForcedSource.psfMag</code>, each with a corresponding error column. The magnitude error is defined as half the difference between the magnitudes corresponding to Flux &plusmn; FluxErr.</li><li>Four new nested columns: <code>objectForcedSource.psfFluxErr_corrected</code>, <code>objectForcedSource.psfDiffFluxErr_corrected</code>, <code>objectForcedSource.psfFluxErr_corrected_flag</code>, and <code>objectForcedSource.psfDiffFluxErr_corrected_flag</code>, produced by a model trained to correct flux errors for non-variable objects so their reduced &chi;&sup2; is close to unity. These corrected values may be useful for light-curve fitting; the flag is set when the ratio between the original and corrected error is outside the [0.1, 50] interval (details in Malanchev et al., in prep.; source code on <a href=\"https://github.com/lincc-frameworks/uncle-val\">GitHub</a>).</li><li>Nested column <code>objectForcedSource.psfMagErr_corrected</code>, derived from <code>psfFluxErr_corrected</code> the same way the other magnitude errors are derived from flux errors.</li><li>Nested column <code>objectForcedSource.midpointMjdTai</code>, joined from the visit table for the corresponding visit.</li></ul><p>Some <code>float64</code> columns were downcast to <code>float32</code> to reduce catalog size. The <code>{band}_ra</code> and <code>{band}_dec</code> columns were downcast, which may cause precision loss when the float32 rounding error exceeds the corresponding <code>{band}_raErr</code>/<code>{band}_decErr</code>. Downcast columns: <code>exponential_dec, exponential_ra, g_dec, g_epoch, g_ra, i_dec, i_epoch, i_ra, r_dec, r_epoch, r_ra, sersic_dec, sersic_ra, u_dec, u_epoch, u_ra, y_dec, y_epoch, y_ra, z_dec, z_epoch, z_ra</code>.</p>"
+    }
+  ]
 }
