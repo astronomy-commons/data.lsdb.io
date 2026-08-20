@@ -4,7 +4,7 @@
   "description": "DRP/DP2 object_collection",
   "urls": { "catalog": "/sdf/data/rubin/shared/lsdb_commissioning/hats/dp2_rc/object_collection" },
   "other_urls": [
-    { "label": "Column descriptions", "url": "https://sdm-schemas.lsst.io/imsim.html" }
+    { "label": "Column descriptions", "url": "https://sdm-schemas.lsst.io/dp2.html" }
   ],
   "metadata": {
     "numRows": 786420720,
