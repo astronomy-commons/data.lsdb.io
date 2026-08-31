@@ -3,7 +3,7 @@
   "name": "GALEX Merged Catalog of Sources",
   "description": "The GALEX Merged Catalog of Sources (MCAT) is the source catalog produced by the Galaxy Evolution Explorer (GALEX), a NASA Small Explorer mission that surveyed the sky in two ultraviolet bands, far-UV (FUV, ~1350-1750 \u00c5) and near-UV (NUV, ~1750-2800 \u00c5). The MCAT combines detections from individual visits and provides ultraviolet photometry and source properties for hundreds of millions of objects across the GALEX imaging surveys.",
   "urls": {
-    "collection": "s3://stpubdata/mast/public/galex/hats/galex",
+    "collection": "s3://stpubdata/galex/public/hats/galex/",
     "point_density_map": "data/GALEX/GALEX_MCAT/point_density.webp"
   },
   "other_urls": [
