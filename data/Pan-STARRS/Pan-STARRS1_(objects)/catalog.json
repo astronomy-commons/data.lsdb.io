@@ -1,4 +1,5 @@
 {
+  "id": "pan_starrs1_objects",
   "label": "Pan-STARRS/Pan-STARRS1 (objects)",
   "name": "Pan-STARRS1 (objects)",
   "description": "Pan-STARRS is a system for wide-field astronomical imaging developed and operated by the Institute for Astronomy at the University of Hawaii. Pan-STARRS1 (PS1) is the first part of Pan-STARRS to be completed. The survey used a 1.8 meter telescope and its 1.4 Gigapixel camera to image the sky in five broadband filters (g, r, i, z, y). This catalog is a view over that survey and it includes over 10 billion objects.",

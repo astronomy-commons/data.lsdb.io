@@ -1,4 +1,5 @@
 {
+  "id": "s_plus_dr4_photozs",
   "label": "S-PLUS/S-PLUS DR4 (photozs)",
   "name": "S-PLUS DR4 (photozs)",
   "description": "Value-added catalog containing the single-point estimates (SPEs) of the photometric redshifts and probability distribution functions (PDFs) based on galaxy spectroscopy for all objects. Obtained using a Bayesian Mixture Density Network model.",

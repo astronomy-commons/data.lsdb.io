@@ -1,4 +1,5 @@
 {
+  "id": "pan_starrs1_detection",
   "label": "Pan-STARRS/Pan-STARRS1 (detection)",
   "name": "Pan-STARRS1 (detection)",
   "description": "Catalog of single epoch photometry of individual detections from a single exposure for the objects in the Pan-STARRS1 survey.",

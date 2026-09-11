@@ -1,4 +1,5 @@
 {
+  "id": "bailer_jones_20",
   "label": "Gaia/Bailer-Jones+20",
   "name": "Gaia EDR3 Distances (Bailer-Jones+20)",
   "description": "Bailer-Jones+20 is an auxiliary catalog providing 1.47 billion geometric and 1.35 billion photogeometric distances, together with asymmetric uncertainty measures, for objects in Gaia Early Data Release 3. LINCC Frameworks added ra and dec columns obtained from the Gaia DR3 source catalog.",

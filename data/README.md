@@ -6,6 +6,7 @@ Each catalog lives in `data/<Group>/<Catalog_Name>/catalog.json`. The `data/` di
 
 ```json
 {
+  "id": "catalog_name",
   "label": "Group/Catalog Name",
   "name": "Catalog Name",
   "description": "A description of the catalog.",
@@ -37,6 +38,7 @@ Each catalog lives in `data/<Group>/<Catalog_Name>/catalog.json`. The `data/` di
 
 | Field                     | Description                                                                                                     |
 | ------------------------- | --------------------------------------------------------------------------------------------------------------- |
+| `id`                      | Unique, permanent ID of the catalog: lowercase letters, digits and underscores. Don't change it once published. |
 | `label`                   | The part before `/` becomes the sidebar group. Use `"Group/Subgroup/Catalog Name"` for three levels.            |
 | `name`                    | Display name for the catalog.                                                                                   |
 | `description`             | Short description shown on the catalog page.                                                                    |

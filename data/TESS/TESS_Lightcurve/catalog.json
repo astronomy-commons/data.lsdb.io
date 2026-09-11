@@ -1,4 +1,5 @@
 {
+  "id": "tess_lightcurve",
   "label": "TESS/TESS Lightcurve",
   "name": "TESS Lightcurve",
   "description": "The Transiting Exoplanet Survey Satellite (TESS) is a NASA space mission designed to survey the sky for transiting exoplanets and variable astrophysical sources. TESS produces time-series photometric light curves, which are released separately for each observing sector. This catalog contains TESS light curve files indexed by their corresponding TESS Input Catalog (TIC) identifiers.",

@@ -1,4 +1,5 @@
 {
+  "id": "ztf_dr24_lightcurves",
   "label": "ZTF/ZTF DR24 (lightcurves)",
   "name": "Zwicky Transient Facility Data Release 24 (lightcurves)",
   "description": "Detailed light curve catalog for ZTF DR24 (objects).",

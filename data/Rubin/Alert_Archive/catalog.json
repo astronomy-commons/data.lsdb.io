@@ -1,4 +1,5 @@
 {
+  "id": "rubin_alert_archive",
   "label": "Rubin/Alert Archive",
   "name": "Alert Archive",
   "description": "Archive of Rubin Observatory alert packets, converted to HATS from the Rubin alert archive. Each row corresponds to an alert triggered by a Difference Image Analysis (DIA) source detection and contains the triggering DIA source, the associated DIA object, and nested previous DIA sources and forced sources. Image cutouts are not included.",

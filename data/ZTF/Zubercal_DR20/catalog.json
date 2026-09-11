@@ -1,4 +1,5 @@
 {
+  "id": "zubercal_dr20",
   "label": "ZTF/Zubercal DR20",
   "name": "ZTF Ubercalibration Data Release 20",
   "description": "Zubercal is a completely new set of photometry based on a detailed recalibration of ZTF science image-based PSF photometry.",

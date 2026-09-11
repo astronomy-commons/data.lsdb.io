@@ -1,4 +1,5 @@
 {
+  "id": "pan_starrs1_forced_mean_object",
   "label": "Pan-STARRS/Pan-STARRS1 (forced mean object)",
   "name": "Pan-STARRS1 (forced mean object)",
   "description": "Catalog of mean photometry forced at the position of detected objects in the Pan-STARRS1 survey. This table contains mean forced photometric measurements for objects detected in the PS1 survey.",

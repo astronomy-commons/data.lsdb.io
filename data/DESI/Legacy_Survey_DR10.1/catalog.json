@@ -1,4 +1,5 @@
 {
+  "id": "legacy_survey_dr10_1",
   "label": "DESI/Legacy Survey DR10.1",
   "name": "Legacy Survey Data Release 10.1",
   "description": "The DESI Legacy Survey is a large imaging survey designed to map the extragalactic sky in optical and infrared bands. The original surveys (MzLS, DECaLS, and BASS) covered about 14,000 square degrees in 'grz' with NEOWISE infrared data. Data Release 10 release expands the footprint to over 20,000 square degrees, and DR10.1 adds more DECam data from NOIRLab in 'griz', giving deeper coverage in the south. The HATS collection is a column-based concatenation of the main, extra, light-curve and photo-z catalogs.",

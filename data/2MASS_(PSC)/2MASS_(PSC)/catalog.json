@@ -1,4 +1,5 @@
 {
+  "id": "2mass_psc",
   "label": "2MASS (PSC)/2MASS (PSC)",
   "name": "2MASS Point Source Catalog",
   "description": "The Two Micron All-Sky Survey (2MASS) is an infrared survey of the whole sky by The University of Massachusetts and the Infrared Processing and Analysis Center (JPL / Caltech). This Point Source Release (PSC) contains accurate astrometry and photometric for over 470 million objects as observed from the northern 2MASS facility at Mt. Hopkins, Arizona, and the southern 2MASS facility at Cerro Tololo, Chile.",

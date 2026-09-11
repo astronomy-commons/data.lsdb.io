@@ -1,4 +1,5 @@
 {
+  "id": "delve_dr3_gold",
   "label": "DELVE/DELVE DR3 Gold (US-West, HTTP)",
   "name": "DELVE DR3 Gold",
   "description": "The DELVE DR3 catalog contains data from the DECam All Data Everywhere (DECADE) and DES DR2 processing at NCSA using the DES Data Management (DESDM) pipeline. It contains ~2.6 billion unique objects and covers ~20,000 deg² in all four bands (g, r, i, z) simultaneously.",
