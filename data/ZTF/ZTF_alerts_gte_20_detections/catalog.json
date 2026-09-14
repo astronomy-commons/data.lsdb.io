@@ -1,4 +1,5 @@
 {
+  "id": "ztf_alerts_20_detections",
   "label": "ZTF/ZTF alerts ≥ 20 detections",
   "name": "ZTF alerts ≥ 20 detections",
   "description": "Zwicky Transient Facility alert data. This dataset includes alerts produced from the beginning of the survey until September 13, 2023, with at least 20 detections across all bands. The data was provided by the ALeRCE alert broker.",

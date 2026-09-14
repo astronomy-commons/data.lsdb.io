@@ -1,4 +1,5 @@
 {
+  "id": "pan_starrs1_stack_object",
   "label": "Pan-STARRS/Pan-STARRS1 (stack object)",
   "name": "Pan-STARRS1 (stack object)",
   "description": "Catalog of objects detected in stacked (co-added) images from the Pan-STARRS1 survey. Stacking improves detection of faint sources by combining multiple exposures.",

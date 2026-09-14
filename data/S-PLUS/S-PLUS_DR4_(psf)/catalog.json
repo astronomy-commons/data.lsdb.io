@@ -1,4 +1,5 @@
 {
+  "id": "s_plus_dr4_psf",
   "label": "S-PLUS/S-PLUS DR4 (psf)",
   "name": "S-PLUS DR4 (psf)",
   "description": "Catalog with the PSF photometry for each of the 12 S-PLUS filters ('u', 'J0378', 'J0395', 'J0410', 'J0430', 'g', 'J0515', 'r', 'J0660', 'i', 'J0861', 'z').",

@@ -1,4 +1,5 @@
 {
+  "id": "hsc_pdr3_y",
   "label": "HSC/HSC PDR3 y",
   "name": "Hyper Supreme Camera Public Data Release 3 y-band",
   "description": "Hyper Suprime-Cam is a wide-field imaging camera mounted on the 8.2-meter Subaru Telescope. This catalog represents Public Data Release 3 forced photometry table for Wide survey fields in y passband. It covers ~670 square degrees with the depth of ~26 mag.",

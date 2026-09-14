@@ -1,4 +1,5 @@
 {
+  "id": "tns",
   "label": "TNS/TNS",
   "name": "Transient Name Server (TNS)",
   "description": "The Transient Name Server (TNS) is the International Astronomical Union (IAU) official registry for newly discovered astronomical transients. This catalog is updated daily.",

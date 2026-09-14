@@ -1,4 +1,5 @@
 {
+  "id": "ztf_dr22",
   "label": "ZTF/ZTF DR22",
   "name": "Zwicky Transient Facility Data Release 22 (light curves)",
   "description": "Metadata and light curves for ZTF DR22. Light curves are packed into list-arrays following the original schema.",

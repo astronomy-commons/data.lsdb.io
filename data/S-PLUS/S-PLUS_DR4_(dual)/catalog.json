@@ -1,4 +1,5 @@
 {
+  "id": "s_plus_dr4_dual",
   "label": "S-PLUS/S-PLUS DR4 (dual)",
   "name": "S-PLUS DR4 (dual)",
   "description": "The Southern Photometric Local Universe Survey (S-PLUS) is imaging ~9300 deg2 of the celestial sphere in 12 optical bands using a dedicated 0.8 m robotic telescope, the T80-South, at the Cerro Tololo Inter-american Observatory, Chile. The telescope is equipped with a 9.2k x 9.2k e2v detector with 10 (µ m) pixels, resulting in a field of view of 2 deg2 with a plate scale of 0.55 arcsec pixel-1. This data release includes 1629 fields, covering about 3000 square degrees of the southern sky, with the regions from previous DRs (1, 2 and 3) as well as new data from the Magellanic clouds, the disk of the Galaxy and some additional high galactic latitude fields. The data in this catalog is related to the dual mode photometry.",

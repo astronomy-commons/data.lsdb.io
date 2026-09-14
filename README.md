@@ -48,6 +48,7 @@ A catalog will belong to a group and (optionally) subgroups:
 
 ```json
 {
+  "id": "catalog_name",
   "label": "Group/<Subgroup>/Catalog Name",
   "name": "Catalog Name",
   "description": "A description of the catalog.",

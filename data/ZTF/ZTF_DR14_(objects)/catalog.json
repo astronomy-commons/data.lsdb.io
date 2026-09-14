@@ -1,4 +1,5 @@
 {
+  "id": "ztf_dr14_objects",
   "label": "ZTF/ZTF DR14 (objects)",
   "name": "Zwicky Transient Facility Data Release 14 (objects)",
   "description": "Comprehensive catalog released by the Zwicky Transient Facility with objects detected in the northern sky, crossmatched to Pan-STARRS objects. It does not include time-domain data.",

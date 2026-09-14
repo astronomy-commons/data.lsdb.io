@@ -1,4 +1,5 @@
 {
+  "id": "ztf_dr14_sources",
   "label": "ZTF/ZTF DR14 (sources)",
   "name": "Zwicky Transient Facility Data Release 14 (sources)",
   "description": "Detailed light curve catalog for ZTF DR14 (objects).",
