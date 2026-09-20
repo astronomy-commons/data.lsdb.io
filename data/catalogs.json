@@ -71,6 +71,12 @@
     ]
   },
   {
+    "label": "MACHO",
+    "catalogs": [
+      "MACHO"
+    ]
+  },
+  {
     "label": "Pan-STARRS",
     "catalogs": [
       "Pan-STARRS1 (detection)",
