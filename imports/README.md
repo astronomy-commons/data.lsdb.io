@@ -4,6 +4,7 @@ Add row AT THE TOP when you import something.
 
 | Catalog Name                                      | Date imported |
 | ------------------------------------------------- | ------------- |
+| [MACHO](./macho.import.ipynb)                     | 2026-09-16    |
 | [SkyMapper](./import.skymapper.ipynb)             | 2026-05-18    |
 | [SDSS](./reimport.sdss_dr7.ipynb)                 | 2026-05-14    |
 | [DES DR2](./DES_DR2_collection_import.ipynb)      | 2026-04-28    |

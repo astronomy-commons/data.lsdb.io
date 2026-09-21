@@ -1,0 +1,53 @@
+{
+  "id": "macho",
+  "label": "MACHO/MACHO",
+  "name": "MACHO Project",
+  "description": "The MACHO Project searched for gravitational microlensing by massive compact halo objects, monitoring the Large and Small Magellanic Clouds and the Galactic Bulge with the 1.27 m Great Melbourne Telescope at Mount Stromlo from 1992 to 1999. This catalog holds one row per star for the whole survey, combining positions and the variability statistics of the MACHO star statistics table with the full two-colour light curve, nested under the lc column.",
+  "urls": {
+    "collection": "https://data.lsdb.io/hats/macho",
+    "point_density_map": "data/MACHO/MACHO/point_density.webp"
+  },
+  "other_urls": [
+    {
+      "label": "Official release",
+      "url": "https://macho.nci.org.au/"
+    },
+    {
+      "label": "Column descriptions",
+      "url": "https://machotap.asvo.nci.org.au/ncitap/tap/tables"
+    },
+    {
+      "label": "Research paper",
+      "url": "https://ui.adsabs.harvard.edu/abs/2000ApJ...542..281A/abstract"
+    },
+    {
+      "label": "Photometry calibration",
+      "url": "https://ui.adsabs.harvard.edu/abs/1999PASP..111.1539A/abstract"
+    }
+  ],
+  "badges": [
+    {
+      "title": "US-West"
+    },
+    {
+      "title": "HTTP"
+    }
+  ],
+  "notes": [
+    {
+      "title": "Light Curves",
+      "content": "Light curves are in the <code>lc</code> column. Blue and red are observed simultaneously, so both bands share one epoch row. Magnitudes are instrumental; we added per-star Kron-Cousins <code>kv</code> and <code>kr</code> following Alcock+99."
+    },
+    {
+      "title": "Acknowledgments",
+      "content": "This paper utilizes public domain data obtained by the MACHO Project, jointly funded by the US Department of Energy through the University of California, Lawrence Livermore National Laboratory under contract No. W-7405-Eng-48, by the National Science Foundation through the Center for Particle Astrophysics of the University of California under cooperative agreement AST-8809616, and by the Mount Stromlo and Siding Spring Observatory, part of the Australian National University."
+    }
+  ],
+  "metadata": {
+    "numRows": 69173447,
+    "numColumns": 77,
+    "numPartitions": 3359,
+    "sizeOnDisk": "380.7 GiB",
+    "hatsBuilder": "hats-import v0.10.4, hats v0.10.4"
+  }
+}
