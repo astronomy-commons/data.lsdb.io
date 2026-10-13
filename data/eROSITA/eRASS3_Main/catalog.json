@@ -1,0 +1,40 @@
+{
+  "id": "erass3_main",
+  "label": "eROSITA/eRASS3 Main",
+  "name": "eROSITA-DE DR2 eRASS:3 Main",
+  "description": "The eROSITA space X-ray telescope, operated by the German eROSITA Consortium (eROSITA-DE), has released its second data set (DR2) from the SRG/eROSITA all-sky survey. The eRASS:3 main catalogue stacks the first three survey passes over the Western Galactic Hemisphere and contains 1,975,540 X-ray sources detected with eSASS in the 0.2-2.3 keV band (detection likelihood above 6), with ML fluxes, rates and counts in the main band and nine sub-bands, corrected positions with uncertainties, extent measurements, quality flags, and cross-identifications to eRASS1, the eRASS:3 hard catalogue, 5XMM, Chandra CSC 2.1 and ROSAT 2RXS. The default column set is the 40 identifier, position, extent, main-band and flag columns; all 250 columns are available with columns='all'.",
+  "urls": {
+    "collection": "https://data.lsdb.io/hats/erosita_dr2_erass3",
+    "slac_catalog": "http://slac.data.lsdb.io:10942/lsdb/erosita/erosita_dr2_erass3",
+    "point_density_map": "data/eROSITA/eRASS3_Main/point_density.webp"
+  },
+  "metadata": {
+    "numRows": 1975540,
+    "numColumns": 251,
+    "numPartitions": 44,
+    "sizeOnDisk": "1.9 GiB",
+    "hatsBuilder": "lsdb v0.10.4, hats v0.10.4"
+  },
+  "other_urls": [
+    {
+      "label": "Official release",
+      "url": "https://erosita.mpe.mpg.de/dr2"
+    },
+    {
+      "label": "Column descriptions",
+      "url": "https://erosita.mpe.mpg.de/dr2/AllSkySurveyData_dr2/Catalogues_dr2/RamosM_DR2/eRASS3_Main_v1.3.html"
+    },
+    {
+      "label": "DR2 catalogue listing (Ramos-Ceja et al. 2026, A&A accepted)",
+      "url": "https://erosita.mpe.mpg.de/dr2/AllSkySurveyData_dr2/Catalogues_dr2/"
+    }
+  ],
+  "badges": [
+    {
+      "title": "US-West"
+    },
+    {
+      "title": "HTTP"
+    }
+  ]
+}
