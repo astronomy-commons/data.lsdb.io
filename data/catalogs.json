@@ -32,9 +32,10 @@
     ]
   },
   {
-    "label": "eRASS1 Main",
+    "label": "eROSITA",
     "catalogs": [
-      "eRASS1 Main"
+      "eRASS1 Main",
+      "eRASS3 Main"
     ]
   },
   {
