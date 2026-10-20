@@ -26,10 +26,10 @@
     }
   ],
   "metadata": {
-    "numRows": 15297345,
+    "numRows": 16466969,
     "numColumns": 9,
-    "numPartitions": 219,
-    "sizeOnDisk": "13.8 GiB",
-    "hatsBuilder": "lsdb v0.10.4, hats v0.10.4"
+    "numPartitions": 227,
+    "sizeOnDisk": "14.4 GiB",
+    "hatsBuilder": "lsdb v0.11.0, hats v0.11.0"
   }
 }
