@@ -15,6 +15,13 @@
     "sizeOnDisk": "258.0 GiB",
     "hatsBuilder": "hats-import v0.7.1.dev4+g91d6b7dc5, hats v0.7.1"
   },
+  "notes": [
+    {
+      "title": "Known issue: shifted columns (2026-10-21)",
+      "content": "<p>Only the first 83 columns, <code>_healpix_29</code> and <code>designation</code> through <code>w4cc_map_str</code>, are correct. These include positions, proper motions, profile-fit magnitudes and the contamination flags.</p><p>The catalog has an extra column, <code>use_src</code>, that is not in the AllWISE release. From <code>use_src</code> onward, each column has a wrong value. DO NOT USE THESE COLUMNS. This also applies to the <code>allwise_5arcs</code> margin catalog.</p><p>We are working on a fix. Details are in <a href=\"https://github.com/astronomy-commons/lsdb/issues/1660\">lsdb#1660</a>.</p>",
+      "type": "warning"
+    }
+  ],
   "other_urls": [
     {
       "label": "Official release",
