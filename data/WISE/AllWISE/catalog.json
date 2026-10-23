@@ -2,23 +2,24 @@
   "id": "allwise",
   "label": "WISE/AllWISE",
   "name": "AllWISE",
-  "description": "AllWISE is an all-sky survey by the Palomar Observatory Schmidt, the European Southern Observatory Schmidt, and the United Kingdom Schmidt, the InfraRed Astronomical Satellite, and the Two Micron All Sky Survey. It contains accurate positions, apparent motion measurements, four-band fluxes and flux variability statistics for over 747 million objects detected on the coadded Atlas Images.",
+  "description": "The AllWISE Source Catalog: 747 million mid-infrared sources from the WISE cryogenic and NEOWISE post-cryogenic surveys (2010-2011), with positions, apparent motions, W1-W4 photometry (3.4-22 micron), variability statistics and 2MASS associations.",
   "urls": {
     "catalog": "https://data.lsdb.io/hats/wise/allwise",
     "slac_catalog": "http://slac.data.lsdb.io:10942/lsdb/wise/allwise",
-    "point_density_map": "data/WISE/AllWISE/point_density.webp"
+    "point_density_map": "data/WISE/AllWISE/point_density.webp",
+    "collection": "https://data.lsdb.io/hats/wise/allwise"
   },
   "metadata": {
     "numRows": 747634026,
-    "numColumns": 299,
-    "numPartitions": 768,
-    "sizeOnDisk": "258.0 GiB",
-    "hatsBuilder": "hats-import v0.7.1.dev4+g91d6b7dc5, hats v0.7.1"
+    "numColumns": 298,
+    "numPartitions": 1071,
+    "sizeOnDisk": "232.5 GiB",
+    "hatsBuilder": "hats-import v0.11.1, hats v0.11.1"
   },
   "notes": [
     {
-      "title": "Known issue: shifted columns (2026-10-21)",
-      "content": "<p>Only the first 83 columns, <code>_healpix_29</code> and <code>designation</code> through <code>w4cc_map_str</code>, are correct. These include positions, proper motions, profile-fit magnitudes and the contamination flags.</p><p>The catalog has an extra column, <code>use_src</code>, that is not in the AllWISE release. From <code>use_src</code> onward, each column has a wrong value. DO NOT USE THESE COLUMNS. This also applies to the <code>allwise_5arcs</code> margin catalog.</p><p>We are working on a fix. Details are in <a href=\"https://github.com/astronomy-commons/lsdb/issues/1660\">lsdb#1660</a>.</p>",
+      "title": "Columns were wrong until October 23, 2026",
+      "content": "<p>Until October 23, 2026, the columns from <code>use_src</code> onward held the next column's value. The catalog was re-imported on October 23, 2026, and all columns are now correct. Details are in <a href=\"https://github.com/astronomy-commons/lsdb/issues/1660\">lsdb#1660</a>.</p>",
       "type": "warning"
     }
   ],
