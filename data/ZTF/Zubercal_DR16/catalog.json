@@ -14,6 +14,12 @@
     "sizeOnDisk": "10.6 TiB",
     "hatsBuilder": "hipscat_import v0.0.4.dev123+g32f8d9b hats-importer conversion v0.3.6.dev27+g22796ca"
   },
+  "notes": [
+    {
+      "content": "This dataset is deprecated and will be removed from data.lsdb.io soon. Please migrate to <b>ZTF/Zubercal DR20</b>.",
+      "type": "warning"
+    }
+  ],
   "other_urls": [
     {
       "label": "Official release",
