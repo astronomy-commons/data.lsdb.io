@@ -6,14 +6,15 @@
   "urls": {
     "catalog": "https://data.lsdb.io/hats/delve/delve_dr2",
     "slac_catalog": "http://slac.data.lsdb.io:10942/lsdb/delve/delve_dr2",
-    "point_density_map": "data/DELVE/DELVE_DR2_(US-West,_HTTP)/point_density.webp"
+    "point_density_map": "data/DELVE/DELVE_DR2_(US-West,_HTTP)/point_density.webp",
+    "collection": "https://data.lsdb.io/hats/delve/delve_dr2"
   },
   "metadata": {
     "numRows": 2500247752,
-    "numColumns": 120,
+    "numColumns": 117,
     "numPartitions": 2129,
-    "sizeOnDisk": "835.2 GiB",
-    "hatsBuilder": "hats-import v0.7.1 reimport hats-import v0.4.4"
+    "sizeOnDisk": "502.8 GiB",
+    "hatsBuilder": "hats-import v0.11.2.dev1+g871ca33fa, hats v0.11.1"
   },
   "other_urls": [
     {
@@ -68,5 +69,12 @@
     "WAVG_MAG_PSF_I",
     "WAVG_MAG_PSF_R",
     "WAVG_MAG_PSF_Z"
+  ],
+  "notes": [
+    {
+      "title": "Re-import 2026-10",
+      "content": "Re-encoded with hats-import 0.11: Parquet page index, ZSTD-15, margin rebuilt, new QUICK_OBJECT_ID index table. The all-null Norder/Dir/Npix data columns of the 2025 build (lsdb#1568) are gone; rows and values unchanged.",
+      "type": "info"
+    }
   ]
 }
