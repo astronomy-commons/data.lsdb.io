@@ -4,6 +4,7 @@ Add row AT THE TOP when you import something.
 
 | Catalog Name                                      | Date imported |
 | ------------------------------------------------- | ------------- |
+| [eRASS3 Main (re-import)](./reimport.erass3.ipynb) · [config](./reimport.erass3.catalog.toml) | 2026-10-26    |
 | [MACHO](./macho.import.ipynb)                     | 2026-09-16    |
 | [SkyMapper](./import.skymapper.ipynb)             | 2026-05-18    |
 | [SDSS](./reimport.sdss_dr7.ipynb)                 | 2026-05-14    |

@@ -10,10 +10,10 @@
   },
   "metadata": {
     "numRows": 1975540,
-    "numColumns": 251,
+    "numColumns": 250,
     "numPartitions": 44,
-    "sizeOnDisk": "1.9 GiB",
-    "hatsBuilder": "lsdb v0.10.4, hats v0.10.4"
+    "sizeOnDisk": "1.1 GiB",
+    "hatsBuilder": "hats-import v0.11.2.dev1+g871ca33fa, hats v0.11.1"
   },
   "other_urls": [
     {
