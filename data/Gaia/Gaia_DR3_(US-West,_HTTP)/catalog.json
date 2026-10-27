@@ -5,7 +5,7 @@
   "description": "Gaia Data Release 3 (GAIA_SOURCE table) is a comprehensive catalog released by the European Space Agency (ESA) as part of the Gaia mission, which aims to create a detailed three-dimensional map of our galaxy, the Milky Way. Released in June 2022, Gaia DR3 provides highly precise astrometric data (positions, distances, and motions) for nearly 1.8 billion stars, along with detailed photometric and spectroscopic information.",
   "urls": {
     "collection": "https://data.lsdb.io/hats/gaia_dr3",
-    "slac_catalog": "http://slac.data.lsdb.io:10942/lsdb/gaia_dr3",
+    "slac_catalog": "http://slac.data.lsdb.io:10942/lsdb/gaia/gaia_dr3",
     "point_density_map": "data/Gaia/Gaia_DR3_(US-West,_HTTP)/point_density.webp"
   },
   "other_urls": [
@@ -23,11 +23,11 @@
     }
   ],
   "metadata": {
-    "numRows": 1812731847,
+    "numRows": 1811709771,
     "numColumns": 152,
     "numPartitions": 2016,
-    "sizeOnDisk": "712.8 GiB",
-    "hatsBuilder": "hats-import v0.6.0"
+    "sizeOnDisk": "457.4 GiB",
+    "hatsBuilder": "hats-import v0.11.2.dev1+g871ca33fa, hats v0.11.1"
   },
   "badges": [
     {
@@ -64,5 +64,12 @@
     "ref_epoch",
     "solution_id",
     "source_id"
+  ],
+  "notes": [
+    {
+      "title": "Duplicate rows removed (2026-10 re-import)",
+      "content": "The 2025-06 build held one ESA source file three times (1,022,076 duplicate rows, data.lsdb.io#65). This re-import has 1,811,709,771 rows, the ESA count; the margins and the source_id index were rebuilt from it. Files are ZSTD-15 with a Parquet page index.",
+      "type": "info"
+    }
   ]
 }
