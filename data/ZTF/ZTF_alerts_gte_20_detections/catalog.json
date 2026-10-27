@@ -5,14 +5,16 @@
   "description": "Zwicky Transient Facility alert data. This dataset includes alerts produced from the beginning of the survey until September 13, 2023, with at least 20 detections across all bands. The data was provided by the ALeRCE alert broker.",
   "urls": {
     "catalog": "https://data.lsdb.io/hats/alerce",
-    "point_density_map": "data/ZTF/ZTF_alerts_gte_20_detections/point_density.webp"
+    "point_density_map": "data/ZTF/ZTF_alerts_gte_20_detections/point_density.webp",
+    "collection": "https://data.lsdb.io/hats/alerce",
+    "slac_catalog": "http://slac.data.lsdb.io:10942/lsdb/ztf/alerce"
   },
   "metadata": {
     "numRows": 1825339,
     "numColumns": 6,
     "numPartitions": 113,
-    "sizeOnDisk": "20.7 GiB",
-    "hatsBuilder": "lsdb v0.7.3, hats v0.7.3"
+    "sizeOnDisk": "15.7 GiB",
+    "hatsBuilder": "hats-import v0.11.2.dev1+g871ca33fa, hats v0.11.1"
   },
   "other_urls": [
     {
@@ -48,5 +50,12 @@
     "lc_sigmapsf_corr_ext",
     "mean_dec",
     "mean_ra"
+  ],
+  "notes": [
+    {
+      "title": "Re-import 2026-10",
+      "content": "Re-encoded with hats-import 0.11: rows sorted by _healpix_29 inside partitions, Parquet page index, ZSTD-15, margin and oid index rebuilt. Rows and values unchanged.",
+      "type": "info"
+    }
   ]
 }
