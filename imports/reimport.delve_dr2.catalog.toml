@@ -1,0 +1,190 @@
+# catalog.toml — ONE file per import run. Every template in this skill reads it; a run is reproducible from
+# this file alone. Copy it into the work directory, fill it during the decision interview, keep it with the run.
+# Values marked (interview) are decided with the user; everything else has a safe default.
+
+[run]
+survey = "delve"   # (interview) short lowercase survey name; used in directory and catalog names
+release = "dr2"   # (interview) release tag, lowercase
+work_dir = "."   # scripts, logs, notebook, NOTES.md, runlog.jsonl; a relative path is taken from the directory holding this file ("." = that directory)
+raw_dir = "/sdf/data/rubin/user/ncaplar/hats-publish/delve_dr2_reimport_2026-10/raw_unused"   # downloads; relative = from work_dir; "" -> $HATS_PUBLISH_RAW_ROOT/<survey>/raw_<release>
+build_root = "/sdf/data/rubin/cosmicdata/lsdb/delve/reimport_2026-10"   # where the collection is built; relative = from work_dir; "" -> $HATS_PUBLISH_BUILD_ROOT
+route = "reimport"   # (interview) "hats-import" | "small" | "reimport"  (small = import_small.py, lsdb.from_dataframe: < 1e6 rows and < 1 GB;
+                                    # reimport = repartition [run].reimport_from with [partitioning]; [columns].sort is NOT applied (the source's _healpix_29 is reused);
+                                    # the source's properties are kept unless restated in [properties])
+reimport_from = "/sdf/data/rubin/cosmicdata/lsdb/delve/delve_dr2"   # route "reimport": existing HATS catalog or collection root whose partition files are the input
+reimport_of = "/sdf/data/rubin/cosmicdata/lsdb/delve/delve_dr2"   # (interview, informational) path or URL of the HATS version being replaced; compare_versions.py --old takes it
+expect_differences = false   # (interview) true when this version FIXES reimport_of (wrong values, columns or types): compare_versions
+                                    # then reports those differences as expected (exit 4) and fails only on different rows or ids
+expect_removed_rows = false         # (interview) true when this version REMOVES rows of reimport_of on purpose (duplicate rows, rows without coordinates): compare_versions reports ids only in the old copy as expected (exit 4)
+
+[source]
+urls = []   # files to download into raw_dir (https only)
+files = []   # or local files / globs already on disk; relative entries are taken from work_dir; indexed formats: the index files
+format = "parquet"   # fits | csv | ecsv | parquet | indexed_csv | indexed_parquet
+data_model_url = ""                 # column description page, saved next to the data
+expected_files = 0   # number of data files the archive publishes (indexed formats: files listed in the index files); 0 = unknown; the input-size pass refuses to start on a mismatch
+expected_total_rows = 0   # rows that will be IN THE CATALOG (source rows minus rows dropped by the coordinate filter); 0 = unknown; hats-import stops on mismatch
+sha256 = {}                         # filename -> digest; filled by the acquire step
+
+[source.companions]                 # (interview) row-parallel FITS files that complete each main file (same rows, same order)
+files = []                          # [{ dir = "../extra", suffix = "-ex" }]: companion = <main dir>/<dir>/<main stem><suffix>.fits
+key_columns = []                    # columns that must be identical in every file, chunk by chunk (e.g. ["OBJ_ID"] or ["FIELD_ID", "OBJ_ID"])
+
+[source.positions_from]             # (interview) only for tables WITHOUT coordinates: positions are copied from a reference HATS
+catalog = ""                        # collection root (or catalog) that has an index on `id`; "" = the table has its own ra/dec
+id = ""                             # id column present in the source table and in the reference catalog
+ra = "ra"                           # reference columns copied into the source under [columns].ra / [columns].dec
+dec = "dec"                         # attach_positions.py writes <work_dir>/positions/*.parquet; the import then reads those
+
+[reader]                            # options for hats-import's file readers (see reference/import.md)
+chunksize = 500000
+hdu = 1                             # fits only
+column_names = []                   # fits/parquet/indexed_parquet: keep-list (fits: wins over skip_column_names); csv: the column names of a header-less file
+skip_column_names = []              # fits: drop-list
+type_map = {}                       # csv: column -> dtype (required when a data model exists); for many columns delete this line and add a [reader.type_map] table at the end of the file
+schema_file = ""                    # parquet file giving names/types for csv or unequal-schema inputs; relative = from work_dir
+flatten_tensors = true              # fits multi-dimensional columns -> fixed-length lists
+drop_rows_without_coordinates = false   # drop rows with NaN or out-of-range ra/dec (the count is reported and reconciled in verification)
+strip_strings = false               # strip leading and trailing blanks from string columns: leading blanks, and any padding the reader leaves (FitsReader already drops FITS trailing blanks); applied identically in verification
+csv_kwargs = {}                     # extra pandas.read_csv arguments, e.g. { sep = "|", comment = "#" }; compression = "gzip" is added for .gz inputs
+ecsv_header = false                 # csv with an ECSV header (archive bulk exports with an ECSV header): scalar types and array columns ("[v1,v2,...]" -> list columns) come from the header
+derive = ""                         # FITS: "file.py:function" in the work dir adding columns per chunk (function(get, input_file) -> {name: array}); "" = none
+pack_nested = { name = "", columns = [] }   # FITS: pack list columns matching these fnmatch patterns into one nested (struct-of-lists) column; name "" = none
+conform_schema = ""                 # any format: a Parquet file (e.g. a _common_metadata) whose schema every chunk is given after the [columns] rules: missing columns become all-null, the others are cast; a column not in it is an error; relative = from work_dir; "" = off
+
+[columns]
+ra = "RA"   # (interview)
+dec = "DEC"   # (interview)
+id = ["QUICK_OBJECT_ID"]   # (interview) survey id column(s); a composite key is a list
+default = ["QUICK_OBJECT_ID", "RA", "DEC", "MAG_PSF_G", "MAGERR_PSF_G", "MAG_PSF_R", "MAGERR_PSF_R", "MAG_PSF_I", "MAGERR_PSF_I", "MAG_PSF_Z", "MAGERR_PSF_Z", "MAG_AUTO_G", "MAG_AUTO_R", "MAG_AUTO_I", "MAG_AUTO_Z", "EXTENDED_CLASS_G", "EXTENDED_CLASS_R", "EXTENDED_CLASS_I", "EXTENDED_CLASS_Z", "FLAGS_G", "FLAGS_R", "FLAGS_I", "FLAGS_Z"]   # (interview) hats_cols_default; must exist in the schema; nested as "frame.subcol"
+sort = ""   # hats-import sort_columns (comma-separated string); "" = spatial order only; not applied on route "reimport"
+drop = []   # (interview) columns not imported
+rename = {}                         # (interview) old -> new
+cast = {}                           # (interview) column -> dtype (numpy or pandas names, e.g. { flux = "float32", n_obs = "Int32" }); never cast ra/dec
+nested_time_series = false          # (interview, informational) true = one row per object with nested detections; the layout is built outside these templates
+
+[names]                             # (interview) see reference/properties.md "naming"
+collection = "delve_dr2"   # collection directory; obs_collection of the collection
+catalog = "delve_dr2"   # main catalog directory; obs_collection of the catalog
+public_name = "delve/delve_dr2"   # URL path on the web host: <HATS_PUBLISH_WEB_URL>/<public_name>; may be nested in a group directory
+                                    # ("wise/allwise"); the data copy stays at <survey>/<collection>, only the web link is nested
+
+[partitioning]                      # (interview) see reference/import.md "partitioning"
+target_file_mb = [200, 800]         # the sizing rule in MB (10^6 bytes); estimate_threshold.py derives pixel_threshold from it
+pixel_threshold = 2500000   # rows per partition; 0 = take the estimate
+byte_pixel_threshold = 0            # bytes per partition; non-zero overrides pixel_threshold
+highest_order = 7
+lowest_order = 0
+constant_order = -1                 # >= 0 forces one order (sparse catalogs); ignores thresholds
+drop_empty_siblings = true
+row_groups = { strategy = "subtile_order_delta", value = 1 }   # or { strategy = "num_rows", value = 200000 } or { strategy = "single" }; the small route applies num_rows only
+skymap_alt_orders = [2, 4, 6]
+
+[nested]                            # (interview) optional nested product: join per-object list columns from a reference HATS by id
+catalog = ""                        # reference HATS (collection root) whose rows carry the list columns; "" = no nested product
+id = ""                             # join column present in both catalogs (positions must agree: the join is spatial)
+columns = []                        # columns taken from the reference (scalars and lists)
+list_columns = []                   # subset packed into the nested column with lsdb nest_lists (pyarrow list dtypes)
+name = "lightcurve"                 # name of the nested column
+output = ""                         # collection name written next to the flat one (attach_nested.py)
+pixel_threshold = 0                 # rows per partition for the nested product (0 = [partitioning].pixel_threshold); size it by bytes, see reference/import.md
+
+[margins]                           # (interview)
+default_arcsec = 5   # 10 for optical/IR, 30 for X-ray/radio; integer when integral; 0 = no default margin (tests only)
+extra_arcsec = []   # e.g. [300] for astrometric reference catalogs (named _5arcmin by hats-import)
+
+[index]                             # (interview)
+columns = ["QUICK_OBJECT_ID"]   # one index table per entry; each entry is a column name
+
+[properties]                        # (interview) see reference/properties.md; empty strings are not written (route "reimport": the source's value is kept)
+obs_regime = "Optical"                     # Radio | Millimeter | Infrared | Optical | UV | EUV | X-ray | Gamma-ray
+hats_frame = "equatorial"           # equatorial | galactic | ecliptic
+hats_coordinate_epoch = ""          # e.g. "J2016.0"
+obs_title = "DELVE DR2 main catalog"
+obs_description = "The DECam Local Volume Exploration Survey Data Release 2 (DELVE DR2) combines new DECam observations with archival DECam data from the Dark Energy Survey, the DECam Legacy Survey, and other DECam community programs to study dwarf satellite galaxies over a wide range of luminosities and environments. It consists of ~160,000 exposures that cover >21,000 deg^2 of the high Galactic latitude (|b| > 10 deg) sky in four broadband optical/near-infrared filters (g, r, i, z), with point-source and automatic aperture photometry for ~2.5 billion astronomical sources."
+bib_reference = "Drlica-Wagner, A., et al. 2022, ApJS, 261, 38"
+bib_reference_url = "https://doi.org/10.3847/1538-4365/ac78eb"
+obs_ack = "This project used public archival data from the DECam Local Volume Exploration Survey (DELVE)."
+obs_copyright = ""                  # terms of the original data
+obs_copyright_url = ""
+hats_copyright = ""                 # terms of this HATS product
+prov_progenitor = "DELVE DR2 HATS catalog built 2025-02 (hats-import 0.4.4) with its 2025-11 margin; raw release files no longer available; re-encoded 2026-10 with hats-import 0.11"
+creator_did = "ivo://data.lsdb/uw/delve_dr2"
+publisher_id = ""
+hats_creator = ""
+t_min = 0.0                         # MJD; 0.0 = not written
+t_max = 0.0
+data_ucd = ""
+extra = {}                          # any other key -> value
+
+[writer]
+use_dictionary = [   # choose_encoding.py 2026-10-24: best 0.681x, hats default 0.689x of 1 input file(s); BSS on 83/91 floats
+    "CCDNUM_G", "CCDNUM_I", "CCDNUM_R", "CCDNUM_Z", "Dir", "EXPNUM_G", "EXPNUM_I", "EXPNUM_R", "EXPNUM_Z",
+    "EXPTIME_G", "EXPTIME_I", "EXPTIME_R", "EXPTIME_Z", "EXTENDED_CLASS_G", "EXTENDED_CLASS_I", "EXTENDED_CLASS_R",
+    "EXTENDED_CLASS_Z", "FLAGS_G", "FLAGS_I", "FLAGS_R", "FLAGS_Z", "HPX2048", "NEPOCHS_G", "NEPOCHS_I",
+    "NEPOCHS_R", "NEPOCHS_Z", "Norder", "Npix", "QUICK_OBJECT_ID", "T_EFF_G", "T_EFF_I", "T_EFF_R", "T_EFF_Z",
+    "WAVG_FLAGS_G", "WAVG_FLAGS_I", "WAVG_FLAGS_R", "WAVG_FLAGS_Z"
+]
+                                    # ZSTD 15, page index, statistics, BYTE_STREAM_SPLIT floats, DELTA_BINARY_PACKED _healpix_29,
+                                    # dictionary on the rest. Leave the overrides unset for a standard run.
+# compression = "zstd"
+# compression_level = 15
+# use_dictionary = ["COL"]          # only these columns get a dictionary (an empty list is ignored, not "none")
+# column_encoding = { COL = "PLAIN" }  # per-leaf encoding overrides, Parquet path ("A.list.element")
+create_metadata = true              # dataset/_metadata (all row-group footers in one file); false when it would pass Parquet's 4 GiB footer limit (~10^5 row groups x a few hundred columns)
+row_group_size = 100000             # choose_encoding.py 2026-10-24: rows per row group; replaces [partitioning].row_groups
+
+[dask]                              # (interview) see reference/import.md "resources"
+n_workers = 32
+threads_per_worker = 1
+memory_limit = "6GB"   # per worker ("16GB", "16G", "15GiB", "500MB", or "auto" = node memory, or HATS_PUBLISH_MAX_MEM_GB when set, / n_workers); >= 1.5x the largest FITS input (one worker holds a whole FITS file while mapping/splitting) and >= ~5x a partition on disk (margin stage); the import refuses to start otherwise
+                                    # shared-node caps: n_workers x threads_per_worker <= pinned CPUs; HATS_PUBLISH_MAX_MEM_GB lowers n_workers first, then memory_limit
+tmp_dir = ""                        # COLD: large shared disk for shards; "" -> <build_root>/tmp
+dask_tmp = "/lscratch/ncaplar/delve_dr2_reimport_dask"   # HOT: local disk for worker spill
+resume_tmp = ""                     # keep empty: hats-import 0.11.0 margin markers break when this differs from tmp_dir
+max_cpus = 0   # 0 = HATS_PUBLISH_MAX_CPUS or no pinning; otherwise pin to this many physical cores (one logical CPU each; shared nodes)
+
+[ancillary]
+thumbnail_rows_per_partition = 10   # random rows per partition; capped by thumbnail_max_rows and the threshold
+thumbnail_max_rows = 10000
+skymap_png = true
+partition_info_png = true
+readme = true
+index_html = true
+
+[verify]
+value_level = true                  # run_verify.sh skips the source-vs-HATS notebook when false
+all_pairs_max_rows = 20000000       # above this the margin test runs on a 1 M-row random sample
+
+[hosting]                           # (interview) target keys are defined by the site file (CONFIG.md)
+targets = ["web", "mirror"]   # the first target is the primary copy (hats_status main), the others are mirrors
+web_link_name = ""                  # "" -> names.public_name
+autoindex_description = ""          # "" -> properties.obs_title
+version = "2026-10"                        # (interview) short version label of this copy, e.g. a date "2026-10": the copy goes to
+                                    # <survey>/<collection>_<version> and <survey>/<collection> becomes a symlink to it;
+                                    # "" = legacy layout (the copy is written at <survey>/<collection> itself)
+
+[site]                              # (interview) data.lsdb.io page (see reference/publishing.md)
+group = "DELVE"
+name = "DELVE DR2 (US-West, HTTP)"
+display_name = "DELVE DR2"
+id = "delve_dr2"   # permanent; lowercase letters, digits, underscores
+description = "The DECam Local Volume Exploration Survey Data Release 2 (DELVE DR2) combines new DECam observations with archival DECam data from the Dark Energy Survey, the DECam Legacy Survey, and other DECam community programs to study dwarf satellite galaxies over a wide range of luminosities and environments. It consists of ~160,000 exposures that cover >21,000 deg^2 of the high Galactic latitude (|b| > 10 deg) sky in four broadband optical/near-infrared filters (g, r, i, z), with point-source and automatic aperture photometry for ~2.5 billion astronomical sources."
+badges = ["US-West", "HTTP"]
+other_urls = [
+  { label = "Official release", url = "https://datalab.noirlab.edu/delve/index.php" },
+  { label = "Column descriptions", url = "https://datalab.noirlab.edu/delve/index.php" },
+  { label = "Research paper", url = "https://arxiv.org/abs/2203.16565" },
+]
+notes = [
+  { title = "Re-import 2026-10", content = "Re-encoded with hats-import 0.11: Parquet page index, ZSTD-15, margin rebuilt, new QUICK_OBJECT_ID index table. The all-null Norder/Dir/Npix data columns of the 2025 build (lsdb#1568) are gone; rows and values unchanged.", type = "info" },
+]                          # [{ title = "", content = "", type = "info" | "warning" }]
+
+[registry]
+authority = "ivo://data.lsdb/uw"     # IVOID prefix the registry assigns (<authority>/<id>); registry_entry.py warns when the generator disagrees
+mirrors = [{ status = "mirror", url = "http://slac.data.lsdb.io:10942/lsdb/delve/delve_dr2" }]
+
+[versions]                          # minimum library versions; templates refuse to run below these
+hats = "0.11.1"
+lsdb = "0.11.1"
+hats_import = "0.11.1"
