@@ -270,7 +270,7 @@ other_urls = [
   { label = "Column descriptions", url = "https://outerspace.stsci.edu/display/TESS/TIC+v8.2+and+CTL+v8.xx+Data+Release+Notes" },
   { label = "Research paper", url = "https://ui.adsabs.harvard.edu/abs/2021arXiv210804778P/abstract" },
 ]
-notes = [{ title = "Re-import 2026-10", content = "Re-encoded with hats-import 0.11: Parquet page index, ZSTD-15, ID index table. The starchareFlag column, typed null in the 2025-11 build, now carries its string values.", type = "info" }]                          # [{ title = "", content = "", type = "info" | "warning" }]
+notes = [{ title = "Re-import 2026-10", content = "Re-encoded with hats-import 0.11: Parquet page index, ZSTD-15, ID index table. The starchareFlag column is typed string instead of the Parquet null type of the 2025-11 build; it is unused in TIC v8.2 and empty in every row.", type = "info" }]                          # [{ title = "", content = "", type = "info" | "warning" }]
 
 [registry]
 authority = "ivo://data.lsdb/uw"     # IVOID prefix the registry assigns (<authority>/<id>); registry_entry.py warns when the generator disagrees
