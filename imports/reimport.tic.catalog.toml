@@ -1,0 +1,409 @@
+# catalog.toml — ONE file per import run. Every template in this skill reads it; a run is reproducible from
+# this file alone. Copy it into the work directory, fill it during the decision interview, keep it with the run.
+# Values marked (interview) are decided with the user; everything else has a safe default.
+
+[run]
+survey = "tess"   # (interview) short lowercase survey name; used in directory and catalog names
+release = "tic_v82"   # (interview) release tag, lowercase
+work_dir = "."   # scripts, logs, notebook, NOTES.md, runlog.jsonl; a relative path is taken from the directory holding this file ("." = that directory)
+raw_dir = "/sdf/data/rubin/cosmicdata/lsdb/test_data_transfer/hats-publish/tic/raw"   # downloads; relative = from work_dir; "" -> $HATS_PUBLISH_RAW_ROOT/<survey>/raw_<release>
+build_root = "/sdf/data/rubin/cosmicdata/lsdb/tess/reimport_2026-10"   # where the collection is built; relative = from work_dir; "" -> $HATS_PUBLISH_BUILD_ROOT
+route = "reimport"   # (interview) "hats-import" | "small" | "reimport"  (small = import_small.py, lsdb.from_dataframe: < 1e6 rows and < 1 GB;
+                                    # reimport = repartition [run].reimport_from with [partitioning]; [columns].sort is NOT applied (the source's _healpix_29 is reused);
+                                    # the source's properties are kept unless restated in [properties])
+reimport_from = "/sdf/data/rubin/cosmicdata/lsdb/test_data_transfer/hats-publish/tic/reimport_2026-10/tic_v82_reimport"   # route "reimport": existing HATS catalog or collection root whose partition files are the input
+reimport_of = "/sdf/data/rubin/cosmicdata/lsdb/tic"   # (interview, informational) path or URL of the HATS version being replaced; compare_versions.py --old takes it
+expect_differences = true   # (interview) true when this version FIXES reimport_of (wrong values, columns or types): compare_versions
+                                    # then reports those differences as expected (exit 4) and fails only on different rows or ids
+expect_removed_rows = false         # (interview) true when this version REMOVES rows of reimport_of on purpose (duplicate rows, rows without coordinates): compare_versions reports ids only in the old copy as expected (exit 4)
+
+[source]
+urls = []   # files to download into raw_dir (https only)
+files = [
+  "/sdf/data/rubin/cosmicdata/lsdb/test_data_transfer/hats-publish/tic/raw/tic_dec00_00N__02_00N.csv.gz",
+  "/sdf/data/rubin/cosmicdata/lsdb/test_data_transfer/hats-publish/tic/raw/tic_dec02_00N__04_00N.csv.gz",
+  "/sdf/data/rubin/cosmicdata/lsdb/test_data_transfer/hats-publish/tic/raw/tic_dec02_00S__00_00N.csv.gz",
+  "/sdf/data/rubin/cosmicdata/lsdb/test_data_transfer/hats-publish/tic/raw/tic_dec04_00N__06_00N.csv.gz",
+  "/sdf/data/rubin/cosmicdata/lsdb/test_data_transfer/hats-publish/tic/raw/tic_dec04_00S__02_00S.csv.gz",
+  "/sdf/data/rubin/cosmicdata/lsdb/test_data_transfer/hats-publish/tic/raw/tic_dec06_00N__08_00N.csv.gz",
+  "/sdf/data/rubin/cosmicdata/lsdb/test_data_transfer/hats-publish/tic/raw/tic_dec06_00S__04_00S.csv.gz",
+  "/sdf/data/rubin/cosmicdata/lsdb/test_data_transfer/hats-publish/tic/raw/tic_dec08_00N__10_00N.csv.gz",
+  "/sdf/data/rubin/cosmicdata/lsdb/test_data_transfer/hats-publish/tic/raw/tic_dec08_00S__06_00S.csv.gz",
+  "/sdf/data/rubin/cosmicdata/lsdb/test_data_transfer/hats-publish/tic/raw/tic_dec10_00N__12_00N.csv.gz",
+  "/sdf/data/rubin/cosmicdata/lsdb/test_data_transfer/hats-publish/tic/raw/tic_dec10_00S__08_00S.csv.gz",
+  "/sdf/data/rubin/cosmicdata/lsdb/test_data_transfer/hats-publish/tic/raw/tic_dec12_00N__14_00N.csv.gz",
+  "/sdf/data/rubin/cosmicdata/lsdb/test_data_transfer/hats-publish/tic/raw/tic_dec12_00S__10_00S.csv.gz",
+  "/sdf/data/rubin/cosmicdata/lsdb/test_data_transfer/hats-publish/tic/raw/tic_dec14_00N__16_00N.csv.gz",
+  "/sdf/data/rubin/cosmicdata/lsdb/test_data_transfer/hats-publish/tic/raw/tic_dec14_00S__12_00S.csv.gz",
+  "/sdf/data/rubin/cosmicdata/lsdb/test_data_transfer/hats-publish/tic/raw/tic_dec16_00N__18_00N.csv.gz",
+  "/sdf/data/rubin/cosmicdata/lsdb/test_data_transfer/hats-publish/tic/raw/tic_dec16_00S__14_00S.csv.gz",
+  "/sdf/data/rubin/cosmicdata/lsdb/test_data_transfer/hats-publish/tic/raw/tic_dec18_00N__20_00N.csv.gz",
+  "/sdf/data/rubin/cosmicdata/lsdb/test_data_transfer/hats-publish/tic/raw/tic_dec18_00S__16_00S.csv.gz",
+  "/sdf/data/rubin/cosmicdata/lsdb/test_data_transfer/hats-publish/tic/raw/tic_dec20_00N__22_00N.csv.gz",
+  "/sdf/data/rubin/cosmicdata/lsdb/test_data_transfer/hats-publish/tic/raw/tic_dec20_00S__18_00S.csv.gz",
+  "/sdf/data/rubin/cosmicdata/lsdb/test_data_transfer/hats-publish/tic/raw/tic_dec22_00N__24_00N.csv.gz",
+  "/sdf/data/rubin/cosmicdata/lsdb/test_data_transfer/hats-publish/tic/raw/tic_dec22_00S__20_00S.csv.gz",
+  "/sdf/data/rubin/cosmicdata/lsdb/test_data_transfer/hats-publish/tic/raw/tic_dec24_00N__26_00N.csv.gz",
+  "/sdf/data/rubin/cosmicdata/lsdb/test_data_transfer/hats-publish/tic/raw/tic_dec24_00S__22_00S.csv.gz",
+  "/sdf/data/rubin/cosmicdata/lsdb/test_data_transfer/hats-publish/tic/raw/tic_dec26_00N__28_00N.csv.gz",
+  "/sdf/data/rubin/cosmicdata/lsdb/test_data_transfer/hats-publish/tic/raw/tic_dec26_00S__24_00S.csv.gz",
+  "/sdf/data/rubin/cosmicdata/lsdb/test_data_transfer/hats-publish/tic/raw/tic_dec28_00N__30_00N.csv.gz",
+  "/sdf/data/rubin/cosmicdata/lsdb/test_data_transfer/hats-publish/tic/raw/tic_dec28_00S__26_00S.csv.gz",
+  "/sdf/data/rubin/cosmicdata/lsdb/test_data_transfer/hats-publish/tic/raw/tic_dec30_00N__32_00N.csv.gz",
+  "/sdf/data/rubin/cosmicdata/lsdb/test_data_transfer/hats-publish/tic/raw/tic_dec30_00S__28_00S.csv.gz",
+  "/sdf/data/rubin/cosmicdata/lsdb/test_data_transfer/hats-publish/tic/raw/tic_dec32_00N__34_00N.csv.gz",
+  "/sdf/data/rubin/cosmicdata/lsdb/test_data_transfer/hats-publish/tic/raw/tic_dec32_00S__30_00S.csv.gz",
+  "/sdf/data/rubin/cosmicdata/lsdb/test_data_transfer/hats-publish/tic/raw/tic_dec34_00N__36_00N.csv.gz",
+  "/sdf/data/rubin/cosmicdata/lsdb/test_data_transfer/hats-publish/tic/raw/tic_dec34_00S__32_00S.csv.gz",
+  "/sdf/data/rubin/cosmicdata/lsdb/test_data_transfer/hats-publish/tic/raw/tic_dec36_00N__38_00N.csv.gz",
+  "/sdf/data/rubin/cosmicdata/lsdb/test_data_transfer/hats-publish/tic/raw/tic_dec36_00S__34_00S.csv.gz",
+  "/sdf/data/rubin/cosmicdata/lsdb/test_data_transfer/hats-publish/tic/raw/tic_dec38_00N__40_00N.csv.gz",
+  "/sdf/data/rubin/cosmicdata/lsdb/test_data_transfer/hats-publish/tic/raw/tic_dec38_00S__36_00S.csv.gz",
+  "/sdf/data/rubin/cosmicdata/lsdb/test_data_transfer/hats-publish/tic/raw/tic_dec40_00N__42_00N.csv.gz",
+  "/sdf/data/rubin/cosmicdata/lsdb/test_data_transfer/hats-publish/tic/raw/tic_dec40_00S__38_00S.csv.gz",
+  "/sdf/data/rubin/cosmicdata/lsdb/test_data_transfer/hats-publish/tic/raw/tic_dec42_00N__44_00N.csv.gz",
+  "/sdf/data/rubin/cosmicdata/lsdb/test_data_transfer/hats-publish/tic/raw/tic_dec42_00S__40_00S.csv.gz",
+  "/sdf/data/rubin/cosmicdata/lsdb/test_data_transfer/hats-publish/tic/raw/tic_dec44_00N__46_00N.csv.gz",
+  "/sdf/data/rubin/cosmicdata/lsdb/test_data_transfer/hats-publish/tic/raw/tic_dec44_00S__42_00S.csv.gz",
+  "/sdf/data/rubin/cosmicdata/lsdb/test_data_transfer/hats-publish/tic/raw/tic_dec46_00N__48_00N.csv.gz",
+  "/sdf/data/rubin/cosmicdata/lsdb/test_data_transfer/hats-publish/tic/raw/tic_dec46_00S__44_00S.csv.gz",
+  "/sdf/data/rubin/cosmicdata/lsdb/test_data_transfer/hats-publish/tic/raw/tic_dec48_00N__50_00N.csv.gz",
+  "/sdf/data/rubin/cosmicdata/lsdb/test_data_transfer/hats-publish/tic/raw/tic_dec48_00S__46_00S.csv.gz",
+  "/sdf/data/rubin/cosmicdata/lsdb/test_data_transfer/hats-publish/tic/raw/tic_dec50_00N__52_00N.csv.gz",
+  "/sdf/data/rubin/cosmicdata/lsdb/test_data_transfer/hats-publish/tic/raw/tic_dec50_00S__48_00S.csv.gz",
+  "/sdf/data/rubin/cosmicdata/lsdb/test_data_transfer/hats-publish/tic/raw/tic_dec52_00N__54_00N.csv.gz",
+  "/sdf/data/rubin/cosmicdata/lsdb/test_data_transfer/hats-publish/tic/raw/tic_dec52_00S__50_00S.csv.gz",
+  "/sdf/data/rubin/cosmicdata/lsdb/test_data_transfer/hats-publish/tic/raw/tic_dec54_00N__56_00N.csv.gz",
+  "/sdf/data/rubin/cosmicdata/lsdb/test_data_transfer/hats-publish/tic/raw/tic_dec54_00S__52_00S.csv.gz",
+  "/sdf/data/rubin/cosmicdata/lsdb/test_data_transfer/hats-publish/tic/raw/tic_dec56_00N__58_00N.csv.gz",
+  "/sdf/data/rubin/cosmicdata/lsdb/test_data_transfer/hats-publish/tic/raw/tic_dec56_00S__54_00S.csv.gz",
+  "/sdf/data/rubin/cosmicdata/lsdb/test_data_transfer/hats-publish/tic/raw/tic_dec58_00N__60_00N.csv.gz",
+  "/sdf/data/rubin/cosmicdata/lsdb/test_data_transfer/hats-publish/tic/raw/tic_dec58_00S__56_00S.csv.gz",
+  "/sdf/data/rubin/cosmicdata/lsdb/test_data_transfer/hats-publish/tic/raw/tic_dec60_00N__62_00N.csv.gz",
+  "/sdf/data/rubin/cosmicdata/lsdb/test_data_transfer/hats-publish/tic/raw/tic_dec60_00S__58_00S.csv.gz",
+  "/sdf/data/rubin/cosmicdata/lsdb/test_data_transfer/hats-publish/tic/raw/tic_dec62_00N__64_00N.csv.gz",
+  "/sdf/data/rubin/cosmicdata/lsdb/test_data_transfer/hats-publish/tic/raw/tic_dec62_00S__60_00S.csv.gz",
+  "/sdf/data/rubin/cosmicdata/lsdb/test_data_transfer/hats-publish/tic/raw/tic_dec64_00N__66_00N.csv.gz",
+  "/sdf/data/rubin/cosmicdata/lsdb/test_data_transfer/hats-publish/tic/raw/tic_dec64_00S__62_00S.csv.gz",
+  "/sdf/data/rubin/cosmicdata/lsdb/test_data_transfer/hats-publish/tic/raw/tic_dec66_00N__68_00N.csv.gz",
+  "/sdf/data/rubin/cosmicdata/lsdb/test_data_transfer/hats-publish/tic/raw/tic_dec66_00S__64_00S.csv.gz",
+  "/sdf/data/rubin/cosmicdata/lsdb/test_data_transfer/hats-publish/tic/raw/tic_dec68_00N__70_00N.csv.gz",
+  "/sdf/data/rubin/cosmicdata/lsdb/test_data_transfer/hats-publish/tic/raw/tic_dec68_00S__66_00S.csv.gz",
+  "/sdf/data/rubin/cosmicdata/lsdb/test_data_transfer/hats-publish/tic/raw/tic_dec70_00N__72_00N.csv.gz",
+  "/sdf/data/rubin/cosmicdata/lsdb/test_data_transfer/hats-publish/tic/raw/tic_dec70_00S__68_00S.csv.gz",
+  "/sdf/data/rubin/cosmicdata/lsdb/test_data_transfer/hats-publish/tic/raw/tic_dec72_00N__74_00N.csv.gz",
+  "/sdf/data/rubin/cosmicdata/lsdb/test_data_transfer/hats-publish/tic/raw/tic_dec72_00S__70_00S.csv.gz",
+  "/sdf/data/rubin/cosmicdata/lsdb/test_data_transfer/hats-publish/tic/raw/tic_dec74_00N__76_00N.csv.gz",
+  "/sdf/data/rubin/cosmicdata/lsdb/test_data_transfer/hats-publish/tic/raw/tic_dec74_00S__72_00S.csv.gz",
+  "/sdf/data/rubin/cosmicdata/lsdb/test_data_transfer/hats-publish/tic/raw/tic_dec76_00N__78_00N.csv.gz",
+  "/sdf/data/rubin/cosmicdata/lsdb/test_data_transfer/hats-publish/tic/raw/tic_dec76_00S__74_00S.csv.gz",
+  "/sdf/data/rubin/cosmicdata/lsdb/test_data_transfer/hats-publish/tic/raw/tic_dec78_00N__80_00N.csv.gz",
+  "/sdf/data/rubin/cosmicdata/lsdb/test_data_transfer/hats-publish/tic/raw/tic_dec78_00S__76_00S.csv.gz",
+  "/sdf/data/rubin/cosmicdata/lsdb/test_data_transfer/hats-publish/tic/raw/tic_dec80_00N__82_00N.csv.gz",
+  "/sdf/data/rubin/cosmicdata/lsdb/test_data_transfer/hats-publish/tic/raw/tic_dec80_00S__78_00S.csv.gz",
+  "/sdf/data/rubin/cosmicdata/lsdb/test_data_transfer/hats-publish/tic/raw/tic_dec82_00N__84_00N.csv.gz",
+  "/sdf/data/rubin/cosmicdata/lsdb/test_data_transfer/hats-publish/tic/raw/tic_dec82_00S__80_00S.csv.gz",
+  "/sdf/data/rubin/cosmicdata/lsdb/test_data_transfer/hats-publish/tic/raw/tic_dec84_00N__86_00N.csv.gz",
+  "/sdf/data/rubin/cosmicdata/lsdb/test_data_transfer/hats-publish/tic/raw/tic_dec84_00S__82_00S.csv.gz",
+  "/sdf/data/rubin/cosmicdata/lsdb/test_data_transfer/hats-publish/tic/raw/tic_dec86_00N__88_00N.csv.gz",
+  "/sdf/data/rubin/cosmicdata/lsdb/test_data_transfer/hats-publish/tic/raw/tic_dec86_00S__84_00S.csv.gz",
+  "/sdf/data/rubin/cosmicdata/lsdb/test_data_transfer/hats-publish/tic/raw/tic_dec88_00N__90_00N.csv.gz",
+  "/sdf/data/rubin/cosmicdata/lsdb/test_data_transfer/hats-publish/tic/raw/tic_dec88_00S__86_00S.csv.gz",
+  "/sdf/data/rubin/cosmicdata/lsdb/test_data_transfer/hats-publish/tic/raw/tic_dec90_00S__88_00S.csv.gz",
+]   # or local files / globs already on disk; relative entries are taken from work_dir; indexed formats: the index files
+format = "csv"   # fits | csv | ecsv | parquet | indexed_csv | indexed_parquet
+data_model_url = "https://outerspace.stsci.edu/display/TESS/TIC+v8.2+and+CTL+v8.xx+Data+Release+Notes"                 # column description page, saved next to the data
+expected_files = 90   # number of data files the archive publishes (indexed formats: files listed in the index files); 0 = unknown; the input-size pass refuses to start on a mismatch
+expected_total_rows = 1727987580   # rows that will be IN THE CATALOG (source rows minus rows dropped by the coordinate filter); 0 = unknown; hats-import stops on mismatch
+sha256 = {}                         # filename -> digest; filled by the acquire step
+
+[source.companions]                 # (interview) row-parallel FITS files that complete each main file (same rows, same order)
+files = []                          # [{ dir = "../extra", suffix = "-ex" }]: companion = <main dir>/<dir>/<main stem><suffix>.fits
+key_columns = []                    # columns that must be identical in every file, chunk by chunk (e.g. ["OBJ_ID"] or ["FIELD_ID", "OBJ_ID"])
+
+[source.positions_from]             # (interview) only for tables WITHOUT coordinates: positions are copied from a reference HATS
+catalog = ""                        # collection root (or catalog) that has an index on `id`; "" = the table has its own ra/dec
+id = ""                             # id column present in the source table and in the reference catalog
+ra = "ra"                           # reference columns copied into the source under [columns].ra / [columns].dec
+dec = "dec"                         # attach_positions.py writes <work_dir>/positions/*.parquet; the import then reads those
+
+[reader]                            # options for hats-import's file readers (see reference/import.md)
+chunksize = 250000
+hdu = 1                             # fits only
+column_names = ["ID", "version", "HIP", "TYC", "UCAC", "TWOMASS", "SDSS", "ALLWISE", "GAIA", "APASS", "KIC", "objType", "typeSrc", "ra", "dec", "POSflag", "pmRA", "e_pmRA", "pmDEC", "e_pmDEC", "PMflag", "plx", "e_plx", "PARflag", "gallong", "gallat", "eclong", "eclat", "Bmag", "e_Bmag", "Vmag", "e_Vmag", "umag", "e_umag", "gmag", "e_gmag", "rmag", "e_rmag", "imag", "e_imag", "zmag", "e_zmag", "Jmag", "e_Jmag", "Hmag", "e_Hmag", "Kmag", "e_Kmag", "TWOMflag", "prox", "w1mag", "e_w1mag", "w2mag", "e_w2mag", "w3mag", "e_w3mag", "w4mag", "e_w4mag", "GAIAmag", "e_GAIAmag", "Tmag", "e_Tmag", "TESSflag", "SPFlag", "Teff", "e_Teff", "logg", "e_logg", "MH", "e_MH", "rad", "e_rad", "mass", "e_mass", "rho", "e_rho", "lumclass", "lum", "e_lum", "d", "e_d", "ebv", "e_ebv", "numcont", "contratio", "disposition", "duplicate_id", "priority", "eneg_EBV", "epos_EBV", "EBVflag", "eneg_Mass", "epos_Mass", "eneg_Rad", "epos_Rad", "eneg_rho", "epos_rho", "eneg_logg", "epos_logg", "eneg_lum", "epos_lum", "eneg_dist", "epos_dist", "distflag", "eneg_Teff", "epos_Teff", "TeffFlag", "gaiabp", "e_gaiabp", "gaiarp", "e_gaiarp", "gaiaqflag", "starchareFlag", "VmagFlag", "BmagFlag", "splists", "e_RA", "e_Dec", "RA_orig", "Dec_orig", "e_RA_orig", "e_Dec_orig", "raddflag", "wdflag", "objID"]                   # fits/parquet/indexed_parquet: keep-list (fits: wins over skip_column_names); csv: the column names of a header-less file
+skip_column_names = []              # fits: drop-list
+schema_file = ""                    # parquet file giving names/types for csv or unequal-schema inputs; relative = from work_dir
+flatten_tensors = true              # fits multi-dimensional columns -> fixed-length lists
+drop_rows_without_coordinates = true   # drop rows with NaN or out-of-range ra/dec (the count is reported and reconciled in verification)
+strip_strings = false               # strip leading and trailing blanks from string columns: leading blanks, and any padding the reader leaves (FitsReader already drops FITS trailing blanks); applied identically in verification
+csv_kwargs = {}                     # extra pandas.read_csv arguments, e.g. { sep = "|", comment = "#" }; compression = "gzip" is added for .gz inputs
+ecsv_header = false                 # csv with an ECSV header (archive bulk exports with an ECSV header): scalar types and array columns ("[v1,v2,...]" -> list columns) come from the header
+derive = ""                         # FITS: "file.py:function" in the work dir adding columns per chunk (function(get, input_file) -> {name: array}); "" = none
+pack_nested = { name = "", columns = [] }   # FITS: pack list columns matching these fnmatch patterns into one nested (struct-of-lists) column; name "" = none
+conform_schema = ""                 # any format: a Parquet file (e.g. a _common_metadata) whose schema every chunk is given after the [columns] rules: missing columns become all-null, the others are cast; a column not in it is an error; relative = from work_dir; "" = off
+
+[columns]
+ra = "ra"   # (interview)
+dec = "dec"   # (interview)
+id = ["ID"]   # (interview) survey id column(s); a composite key is a list
+default = ["ID", "ra", "dec", "pmRA", "pmDEC", "plx", "Tmag", "e_Tmag", "Teff", "logg", "rad", "mass", "GAIA", "objType"]   # (interview) hats_cols_default; must exist in the schema; nested as "frame.subcol"
+sort = ""   # hats-import sort_columns (comma-separated string); "" = spatial order only; not applied on route "reimport"
+drop = []   # (interview) columns not imported
+rename = {}                         # (interview) old -> new
+cast = {}                           # (interview) column -> dtype (numpy or pandas names, e.g. { flux = "float32", n_obs = "Int32" }); never cast ra/dec
+nested_time_series = false          # (interview, informational) true = one row per object with nested detections; the layout is built outside these templates
+
+[names]                             # (interview) see reference/properties.md "naming"
+collection = "tic"   # collection directory; obs_collection of the collection
+catalog = "tic"   # main catalog directory; obs_collection of the catalog
+public_name = "tess/tic"   # URL path on the web host: <HATS_PUBLISH_WEB_URL>/<public_name>; may be nested in a group directory
+                                    # ("wise/allwise"); the data copy stays at <survey>/<collection>, only the web link is nested
+
+[partitioning]                      # (interview) see reference/import.md "partitioning"
+target_file_mb = [200, 800]         # the sizing rule in MB (10^6 bytes); estimate_threshold.py derives pixel_threshold from it
+pixel_threshold = 2000000   # rows per partition; 0 = take the estimate
+byte_pixel_threshold = 0            # bytes per partition; non-zero overrides pixel_threshold
+highest_order = 6
+lowest_order = 0
+constant_order = -1                 # >= 0 forces one order (sparse catalogs); ignores thresholds
+drop_empty_siblings = true
+row_groups = { strategy = "subtile_order_delta", value = 1 }   # or { strategy = "num_rows", value = 200000 } or { strategy = "single" }; the small route applies num_rows only
+skymap_alt_orders = [2, 4, 6]
+
+[nested]                            # (interview) optional nested product: join per-object list columns from a reference HATS by id
+catalog = ""                        # reference HATS (collection root) whose rows carry the list columns; "" = no nested product
+id = ""                             # join column present in both catalogs (positions must agree: the join is spatial)
+columns = []                        # columns taken from the reference (scalars and lists)
+list_columns = []                   # subset packed into the nested column with lsdb nest_lists (pyarrow list dtypes)
+name = "lightcurve"                 # name of the nested column
+output = ""                         # collection name written next to the flat one (attach_nested.py)
+pixel_threshold = 0                 # rows per partition for the nested product (0 = [partitioning].pixel_threshold); size it by bytes, see reference/import.md
+
+[margins]                           # (interview)
+default_arcsec = 5   # 10 for optical/IR, 30 for X-ray/radio; integer when integral; 0 = no default margin (tests only)
+extra_arcsec = []   # e.g. [300] for astrometric reference catalogs (named _5arcmin by hats-import)
+
+[index]                             # (interview)
+columns = ["ID"]   # one index table per entry; each entry is a column name
+
+[properties]                        # (interview) see reference/properties.md; empty strings are not written (route "reimport": the source's value is kept)
+obs_regime = "Optical"                     # Radio | Millimeter | Infrared | Optical | UV | EUV | X-ray | Gamma-ray
+hats_frame = "equatorial"           # equatorial | galactic | ecliptic
+hats_coordinate_epoch = ""          # e.g. "J2016.0"
+obs_title = "TESS Input Catalog v8.2"
+obs_description = "TESS Input Catalog version 8.2 (TIC-8.2): 1,727,987,580 stellar and extended sources with positions, proper motions, parallaxes, compiled photometry (B, V, ugriz, JHK, W1-W4, Gaia G/BP/RP, TESS T) and stellar parameters, as released by MAST. All 125 columns of the release. HATS collection with a 5 arcsec margin and an ID index."
+bib_reference = "Stassun, K. G., et al. 2019, AJ, 158, 138; Paegert, M., et al. 2021, arXiv:2108.04778"
+bib_reference_url = "https://doi.org/10.3847/1538-3881/ab3467"
+obs_ack = "This research has made use of the TESS Input Catalog (TIC), hosted by the Mikulski Archive for Space Telescopes (MAST)."
+obs_copyright = ""                  # terms of the original data
+obs_copyright_url = ""
+hats_copyright = ""                 # terms of this HATS product
+prov_progenitor = "https://archive.stsci.edu/missions/tess/catalogs/tic_v82/ (90 csv.gz files); re-encoded from the 2026-10-18 hats-import 0.11.0 build"
+creator_did = "ivo://data.lsdb/uw/tic_v8_2"                    # IVOID as the registry assigns it, e.g. "ivo://<authority>/<site>/mysurvey_dr1"
+publisher_id = ""
+hats_creator = ""
+t_min = 0.0                         # MJD; 0.0 = not written
+t_max = 0.0
+data_ucd = ""
+extra = {}                          # any other key -> value
+
+[writer]
+use_dictionary = [   # choose_encoding.py 2026-10-24: best 0.988x, hats default 1.242x of 1 input file(s); BSS on 38/91 floats
+    "ALLWISE", "APASS", "Bmag", "BmagFlag", "EBVflag", "GAIA", "GAIAmag", "HIP", "Hmag", "ID", "Jmag", "KIC",
+    "Kmag", "MH", "PARflag", "PMflag", "POSflag", "SDSS", "SPFlag", "TESSflag", "TWOMASS", "TWOMflag", "TYC",
+    "Teff", "TeffFlag", "Tmag", "UCAC", "Vmag", "VmagFlag", "d", "disposition", "distflag", "duplicate_id",
+    "e_Bmag", "e_GAIAmag", "e_Hmag", "e_Jmag", "e_Kmag", "e_MH", "e_Teff", "e_Tmag", "e_Vmag", "e_d", "e_ebv",
+    "e_gaiabp", "e_gaiarp", "e_pmDEC", "e_pmRA", "e_w1mag", "e_w2mag", "e_w3mag", "e_w4mag", "ebv", "eneg_EBV",
+    "eneg_Teff", "eneg_dist", "epos_EBV", "epos_Teff", "epos_dist", "gaiabp", "gaiaqflag", "gaiarp", "gmag",
+    "imag", "logg", "lumclass", "mass", "numcont", "objID", "objType", "plx", "pmDEC", "pmRA", "raddflag", "rho",
+    "rmag", "splists", "starchareFlag", "typeSrc", "umag", "version", "w1mag", "w2mag", "w3mag", "w4mag", "wdflag",
+    "zmag"
+]
+                                    # ZSTD 15, page index, statistics, BYTE_STREAM_SPLIT floats, DELTA_BINARY_PACKED _healpix_29,
+                                    # dictionary on the rest. Leave the overrides unset for a standard run.
+# compression = "zstd"
+# compression_level = 15
+# use_dictionary = ["COL"]          # only these columns get a dictionary (an empty list is ignored, not "none")
+# column_encoding = { COL = "PLAIN" }  # per-leaf encoding overrides, Parquet path ("A.list.element")
+create_metadata = true              # dataset/_metadata (all row-group footers in one file); false when it would pass Parquet's 4 GiB footer limit (~10^5 row groups x a few hundred columns)
+row_group_size = 250000             # choose_encoding.py 2026-10-24: rows per row group; replaces [partitioning].row_groups
+
+[dask]                              # (interview) see reference/import.md "resources"
+n_workers = 32
+threads_per_worker = 1
+memory_limit = "6GB"   # per worker ("16GB", "16G", "15GiB", "500MB", or "auto" = node memory, or HATS_PUBLISH_MAX_MEM_GB when set, / n_workers); >= 1.5x the largest FITS input (one worker holds a whole FITS file while mapping/splitting) and >= ~5x a partition on disk (margin stage); the import refuses to start otherwise
+                                    # shared-node caps: n_workers x threads_per_worker <= pinned CPUs; HATS_PUBLISH_MAX_MEM_GB lowers n_workers first, then memory_limit
+tmp_dir = ""                        # COLD: large shared disk for shards; "" -> <build_root>/tmp
+dask_tmp = "/lscratch/ncaplar/tic_reimport_dask"   # HOT: local disk for worker spill
+resume_tmp = ""                     # keep empty: hats-import 0.11.0 margin markers break when this differs from tmp_dir
+max_cpus = 0   # 0 = HATS_PUBLISH_MAX_CPUS or no pinning; otherwise pin to this many physical cores (one logical CPU each; shared nodes)
+
+[ancillary]
+thumbnail_rows_per_partition = 10   # random rows per partition; capped by thumbnail_max_rows and the threshold
+thumbnail_max_rows = 10000
+skymap_png = true
+partition_info_png = true
+readme = true
+index_html = true
+
+[verify]
+value_level = true                  # run_verify.sh skips the source-vs-HATS notebook when false
+all_pairs_max_rows = 20000000       # above this the margin test runs on a 1 M-row random sample
+
+[hosting]                           # (interview) target keys are defined by the site file (CONFIG.md)
+targets = ["web", "mirror"]   # the first target is the primary copy (hats_status main), the others are mirrors
+web_link_name = ""                  # "" -> names.public_name
+autoindex_description = ""          # "" -> properties.obs_title
+version = "2026-10"                 # (interview) short version label of this copy, e.g. a date "2026-10": the copy goes to
+                                    # <survey>/<collection>_<version> and <survey>/<collection> becomes a symlink to it;
+                                    # "" = legacy layout (the copy is written at <survey>/<collection> itself)
+
+[site]                              # (interview) data.lsdb.io page (see reference/publishing.md)
+group = "TESS"
+name = "TIC (US-West, HTTP)"
+display_name = "TESS Input Catalog v8.2"
+id = "tic_v8_2"   # permanent; lowercase letters, digits, underscores
+description = "The TESS Input Catalog (TIC) is a compiled catalog of stellar parameters for every optically persistent, stationary object in the sky. The TIC is used to help identify two-minute cadence target selection for the TESS mission, and to calculate physical and observational properties of planet candidates. It is for use by both the TESS science team and the public, and it is periodically updated---the current version is TIC-8.2. TIC-8.2 uses the GAIA DR2 catalog as a base and merges a large number of other photometric catalogs, including 2MASS, UCAC4, APASS, SDSS, WISE, etc. There are roughly 1.7 billion stellar and extended sources in the TIC, containing compiled magnitudes including B, V, u, g, r, i, z, J, H, K, W1-W4, and G. This version was released in 2021."
+badges = ["US-West", "HTTP"]                         # (interview) page badges, e.g. a hosting-region label and "HTTP"
+other_urls = [
+  { label = "Official release", url = "https://tess.mit.edu/science/tess-input-catalogue/" },
+  { label = "Column descriptions", url = "https://outerspace.stsci.edu/display/TESS/TIC+v8.2+and+CTL+v8.xx+Data+Release+Notes" },
+  { label = "Research paper", url = "https://ui.adsabs.harvard.edu/abs/2021arXiv210804778P/abstract" },
+]
+notes = [{ title = "Re-import 2026-10", content = "Re-encoded with hats-import 0.11: Parquet page index, ZSTD-15, ID index table. The starchareFlag column, typed null in the 2025-11 build, now carries its string values.", type = "info" }]                          # [{ title = "", content = "", type = "info" | "warning" }]
+
+[registry]
+authority = "ivo://data.lsdb/uw"     # IVOID prefix the registry assigns (<authority>/<id>); registry_entry.py warns when the generator disagrees
+mirrors = [{ status = "mirror", url = "http://slac.data.lsdb.io:10942/lsdb/tess/tic" }]                        # informational: other copies of this catalog, [{ status = "mirror", url = "" }]
+
+[versions]                          # minimum library versions; templates refuse to run below these
+hats = "0.11.1"
+lsdb = "0.11.1"
+hats_import = "0.11.1"
+
+[reader.type_map]
+ID = "Int64"
+version = "str"
+HIP = "Int32"
+TYC = "str"
+UCAC = "str"
+TWOMASS = "str"
+SDSS = "Int64"
+ALLWISE = "str"
+GAIA = "str"
+APASS = "str"
+KIC = "Int32"
+objType = "str"
+typeSrc = "str"
+ra = "float64"
+dec = "float64"
+POSflag = "str"
+pmRA = "float64"
+e_pmRA = "float64"
+pmDEC = "float64"
+e_pmDEC = "float64"
+PMflag = "str"
+plx = "float64"
+e_plx = "float64"
+PARflag = "str"
+gallong = "float64"
+gallat = "float64"
+eclong = "float64"
+eclat = "float64"
+Bmag = "float64"
+e_Bmag = "float64"
+Vmag = "float64"
+e_Vmag = "float64"
+umag = "float64"
+e_umag = "float64"
+gmag = "float64"
+e_gmag = "float64"
+rmag = "float64"
+e_rmag = "float64"
+imag = "float64"
+e_imag = "float64"
+zmag = "float64"
+e_zmag = "float64"
+Jmag = "float64"
+e_Jmag = "float64"
+Hmag = "float64"
+e_Hmag = "float64"
+Kmag = "float64"
+e_Kmag = "float64"
+TWOMflag = "str"
+prox = "float64"
+w1mag = "float64"
+e_w1mag = "float64"
+w2mag = "float64"
+e_w2mag = "float64"
+w3mag = "float64"
+e_w3mag = "float64"
+w4mag = "float64"
+e_w4mag = "float64"
+GAIAmag = "float64"
+e_GAIAmag = "float64"
+Tmag = "float64"
+e_Tmag = "float64"
+TESSflag = "str"
+SPFlag = "str"
+Teff = "float64"
+e_Teff = "float64"
+logg = "float64"
+e_logg = "float64"
+MH = "float64"
+e_MH = "float64"
+rad = "float64"
+e_rad = "float64"
+mass = "float64"
+e_mass = "float64"
+rho = "float64"
+e_rho = "float64"
+lumclass = "str"
+lum = "float64"
+e_lum = "float64"
+d = "float64"
+e_d = "float64"
+ebv = "float64"
+e_ebv = "float64"
+numcont = "Int32"
+contratio = "float64"
+disposition = "str"
+duplicate_id = "Int64"
+priority = "float64"
+eneg_EBV = "float64"
+epos_EBV = "float64"
+EBVflag = "str"
+eneg_Mass = "float64"
+epos_Mass = "float64"
+eneg_Rad = "float64"
+epos_Rad = "float64"
+eneg_rho = "float64"
+epos_rho = "float64"
+eneg_logg = "float64"
+epos_logg = "float64"
+eneg_lum = "float64"
+epos_lum = "float64"
+eneg_dist = "float64"
+epos_dist = "float64"
+distflag = "str"
+eneg_Teff = "float64"
+epos_Teff = "float64"
+TeffFlag = "str"
+gaiabp = "float64"
+e_gaiabp = "float64"
+gaiarp = "float64"
+e_gaiarp = "float64"
+gaiaqflag = "Int32"
+starchareFlag = "str"
+VmagFlag = "str"
+BmagFlag = "str"
+splists = "str"
+e_RA = "float64"
+e_Dec = "float64"
+RA_orig = "float64"
+Dec_orig = "float64"
+e_RA_orig = "float64"
+e_Dec_orig = "float64"
+raddflag = "Int32"
+wdflag = "Int32"
+objID = "Int64"
