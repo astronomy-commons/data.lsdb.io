@@ -62,13 +62,19 @@
     ]
   },
   {
-    "label": "HSC",
+    "label": "HSC (Hubble)",
     "catalogs": [
-      "HSC PDR3 g",
-      "HSC PDR3 i",
-      "HSC PDR3 r",
-      "HSC PDR3 y",
-      "HSC PDR3 z"
+      "HSC (Hubble) v3"
+    ]
+  },
+  {
+    "label": "HSC (Subaru)",
+    "catalogs": [
+      "HSC (Subaru) PDR3 g",
+      "HSC (Subaru) PDR3 i",
+      "HSC (Subaru) PDR3 r",
+      "HSC (Subaru) PDR3 y",
+      "HSC (Subaru) PDR3 z"
     ]
   },
   {

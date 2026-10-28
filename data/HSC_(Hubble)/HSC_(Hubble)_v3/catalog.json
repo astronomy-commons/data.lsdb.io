@@ -1,0 +1,41 @@
+{
+    "id": "hsc_hubble_v3",
+    "label": "HSC (Hubble)/HSC (Hubble) v3",
+    "name": "Hubble Source Catalog v3",
+    "description": "The Hubble Source Catalog (HSC) is designed to optimize science from the Hubble Space Telescope by combining the tens of thousands of visit-based source lists in the Hubble Legacy Archive (HLA) into a single catalog. Version 3 was released on July 5, 2018 and includes many improvements in the photometry and astrometry along with a significant increase in the number of objects and measurements.",
+    "urls": {
+        "collection": "s3://stpubdata/mast/public/hsc/hats/hsc_v3/",
+        "point_density_map": "data/HSC_(Hubble)/HSC_(Hubble)_v3/point_density.webp"
+    },
+    "other_urls": [
+        {
+            "label": "Official release",
+            "url": "https://outerspace.stsci.edu/spaces/HSC/pages/421462968/Hubble+Source+Catalog+V3"
+        },
+        {
+            "label": "Research paper",
+            "url": "https://scixplorer.org/abs/2016AJ....151..134W/abstract"
+        }
+    ],
+    "notes": [
+        {
+            "title": "Acknowledgments",
+            "content": "The HSC is based on data from the Hubble Legacy Archive (HLA). Refereed publications making use of the HSC should therefore include this footnote in the acknowledgements:<blockquote>Based on observations made with the NASA/ESA Hubble Space Telescope, and obtained from the Hubble Legacy Archive, which is a collaboration between the Space Telescope Science Institute (STScI/NASA), the Space Telescope European Coordinating Facility (ST-ECF/ESAC/ESA) and the Canadian Astronomy Data Centre (CADC/NRC/CSA).</blockquote>Authors are also asked to acknowledge the \"Hubble Source Catalog\" in the text of the paper, and consider a reference to the <a href=\"https://scixplorer.org/abs/2016AJ....151..134W/abstract\">Whitmore et al. (2016)</a> paper describing the HSC."
+        }
+    ],
+    "badges": [
+        {
+            "title": "US-East"
+        },
+        {
+            "title": "S3"
+        }
+    ],
+    "metadata": {
+        "numRows": 239054483,
+        "numColumns": 28,
+        "numPartitions": 161,
+        "sizeOnDisk": "9.0 GiB",
+        "hatsBuilder": "hats-import v0.9.2, hats v0.9.2"
+    }
+}
