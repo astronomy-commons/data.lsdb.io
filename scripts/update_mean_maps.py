@@ -56,6 +56,11 @@ def run(dirs=None):
             atomic_json_write(catalog_json_path, catalog_data)
             updated["label"].append(label)
             updated["column count"].append(len(column_files))
+        elif "column_mean_maps" in catalog_data:
+            catalog_data.pop("column_mean_maps")
+            atomic_json_write(catalog_json_path, catalog_data)
+            updated["label"].append(label)
+            updated["column count"].append(len(column_files))
 
     print_report(
         [
