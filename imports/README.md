@@ -4,7 +4,7 @@ Add row AT THE TOP when you import something.
 
 | Catalog Name                                      | Date imported |
 | ------------------------------------------------- | ------------- |
-| [DESI DR1 zcat (re-import)](./reimport.desi_dr1_zcat.ipynb) · [config](./reimport.desi_dr1_zcat.catalog.toml) | 2026-10-27    |
+| [DESI DR1 zcat (re-import)](./reimport.desi_dr1_zcat.ipynb) · [config](./reimport.desi_dr1_zcat.catalog.toml) · [identity check](./identity.desi_dr1_zcat.ipynb) | 2026-10-27    |
 | [eRASS3 Main (re-import)](./reimport.erass3.ipynb) · [config](./reimport.erass3.catalog.toml) | 2026-10-26    |
 | [MACHO](./macho.import.ipynb)                     | 2026-09-16    |
 | [SkyMapper](./import.skymapper.ipynb)             | 2026-05-18    |
