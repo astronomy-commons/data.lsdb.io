@@ -28,7 +28,9 @@
     "catalogs": [
       "DESI DR1 z-catalog (US-East, S3)",
       "DESI DR1 z-catalog (US-West, HTTP)",
-      "Legacy Survey DR10.1"
+      "Legacy Survey DR10.1",
+      "Legacy Survey DR11.0 North",
+      "Legacy Survey DR11.0 South"
     ]
   },
   {
