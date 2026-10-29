@@ -1,0 +1,53 @@
+{
+  "id": "legacy_survey_dr11_0_south",
+  "label": "DESI/Legacy Survey DR11.0 South",
+  "name": "Legacy Survey Data Release 11.0, Southern Region",
+  "description": "The DESI Legacy Imaging Surveys map the extragalactic sky in optical bands, with unWISE forced photometry in W1-W4 through NEOWISE-Reactivation year 11. This catalog covers the DR11 southern region (Dec < 32.375 deg or south of the Galactic plane) with Tractor sources from DECam 'griz' imaging (DECaLS, DES, DELVE, DeROSITAS and other public DECam data). Each row joins the standard sweeps files with the extra, light curve and photo-z sweeps files. The default column set is the 130 columns of the standard sweeps; all 217 columns are available with columns='all'.",
+  "urls": {
+    "collection": "http://slac.data.lsdb.io:10942/lsdb/legacysurvey_dr11.0_south",
+    "point_density_map": "data/DESI/Legacy_Survey_DR11.0_South/point_density.webp"
+  },
+  "other_urls": [
+    {
+      "label": "Legacy Survey DR11.0 North",
+      "url": "https://data.lsdb.io/DESI/Legacy_Survey_DR11.0_North"
+    },
+    {
+      "label": "Official release",
+      "url": "https://www.legacysurvey.org/dr11/description/"
+    },
+    {
+      "label": "Column descriptions",
+      "url": "https://www.legacysurvey.org/dr11/files/#sweep-catalogs-region-sweep"
+    },
+    {
+      "label": "Research paper",
+      "url": "https://ui.adsabs.harvard.edu/abs/2019AJ....157..168D/abstract"
+    }
+  ],
+  "notes": [
+    {
+      "title": "Combining with the northern region",
+      "content": "<p>The DR11 northern region (BASS/MzLS) is a separate catalog: <a href=\"/DESI/Legacy_Survey_DR11.0_North\">Legacy Survey DR11.0 North</a>. Combine both with LSDB:</p><p><code>lsdb.open_catalog(\"http://slac.data.lsdb.io:10942/lsdb/legacysurvey_dr11.0_south\").concat(lsdb.open_catalog(\"http://slac.data.lsdb.io:10942/lsdb/legacysurvey_dr11.0_north\"))</code></p><p>Where the two regions' footprints overlap, the same object may appear in both catalogs.</p>"
+    },
+    {
+      "title": "Acknowledgments",
+      "content": "Publications using these data must include the Legacy Surveys acknowledgment, see https://www.legacysurvey.org/acknowledgment/"
+    }
+  ],
+  "badges": [
+    {
+      "title": "US-West"
+    },
+    {
+      "title": "HTTP"
+    }
+  ],
+  "metadata": {
+    "numRows": 3561828221,
+    "numColumns": 217,
+    "numPartitions": 79302,
+    "sizeOnDisk": "4.9 TiB",
+    "hatsBuilder": "hats-import v0.11.1.dev17+ge77cfea4f, hats v0.11.1.dev35+geff01979b"
+  }
+}
