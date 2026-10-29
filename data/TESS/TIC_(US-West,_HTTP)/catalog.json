@@ -5,15 +5,15 @@
   "description": "The TESS Input Catalog (TIC) is a compiled catalog of stellar parameters for every optically persistent, stationary object in the sky. The TIC is used to help identify two-minute cadence target selection for the TESS mission, and to calculate physical and observational properties of planet candidates. It is for use by both the TESS science team and the public, and it is periodically updated---the current version is TIC-8.2. TIC-8.2 uses the GAIA DR2 catalog as a base and merges a large number of other photometric catalogs, including 2MASS, UCAC4, APASS, SDSS, WISE, etc. There are roughly 1.7 billion stellar and extended sources in the TIC, containing compiled magnitudes including B, V, u, g, r, i, z, J, H, K, W1-W4, and G. This version was released in 2021.",
   "urls": {
     "collection": "https://data.lsdb.io/hats/tess/tic",
-    "slac_catalog": "http://slac.data.lsdb.io:10942/lsdb/tic",
+    "slac_catalog": "http://slac.data.lsdb.io:10942/lsdb/tess/tic",
     "point_density_map": "data/TESS/TIC_(US-West,_HTTP)/point_density.webp"
   },
   "metadata": {
     "numRows": 1727987580,
     "numColumns": 125,
-    "numPartitions": 1578,
-    "sizeOnDisk": "396.6 GiB",
-    "hatsBuilder": "hats-import v0.7.1.dev4+g91d6b7dc5, hats v0.7.1"
+    "numPartitions": 1920,
+    "sizeOnDisk": "332.0 GiB",
+    "hatsBuilder": "hats-import v0.11.2.dev1+g871ca33fa, hats v0.11.1"
   },
   "other_urls": [
     {
@@ -52,5 +52,12 @@
     "pmDEC",
     "pmRA",
     "ra"
+  ],
+  "notes": [
+    {
+      "title": "Re-import 2026-10",
+      "content": "Re-encoded with hats-import 0.11: Parquet page index, ZSTD-15, ID index table. The starchareFlag column is typed string instead of the Parquet null type of the 2025-11 build; it is unused in TIC v8.2 and empty in every row.",
+      "type": "info"
+    }
   ]
 }
