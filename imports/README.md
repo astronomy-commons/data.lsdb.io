@@ -4,7 +4,7 @@ Add row AT THE TOP when you import something.
 
 | Catalog Name                                      | Date imported |
 | ------------------------------------------------- | ------------- |
-| [Gaia DR3 (re-import)](./reimport.gaia_dr3.ipynb) · [config](./reimport.gaia_dr3.catalog.toml) | 2026-10-27    |
+| [Gaia DR3 (re-import)](./reimport.gaia_dr3.ipynb) · [config](./reimport.gaia_dr3.catalog.toml) · [identity check](./identity.gaia_dr3.ipynb) | 2026-10-27    |
 | [eRASS3 Main (re-import)](./reimport.erass3.ipynb) · [config](./reimport.erass3.catalog.toml) | 2026-10-26    |
 | [MACHO](./macho.import.ipynb)                     | 2026-09-16    |
 | [SkyMapper](./import.skymapper.ipynb)             | 2026-05-18    |
