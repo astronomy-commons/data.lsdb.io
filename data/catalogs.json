@@ -151,8 +151,7 @@
   {
     "label": "SkyMapper",
     "catalogs": [
-      "SkyMapper DR4",
-      "SkyMapper Photometry"
+      "SkyMapper DR4"
     ]
   },
   {
