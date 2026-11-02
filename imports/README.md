@@ -6,7 +6,7 @@ Add row AT THE TOP when you import something.
 | ------------------------------------------------- | ------------- |
 | [Legacy Survey DR11.0 North & South](./legacysurvey_dr11.ipynb) | 2026-10-23    |
 | [eRASS3 Main (re-import)](./reimport.erass3.ipynb) · [config](./reimport.erass3.catalog.toml) | 2026-10-26    |
-| [MACHO](./macho.import.ipynb)                     | 2026-09-16    |
+| [MACHO](./macho.import.ipynb)                     | 2026-11-01    |
 | [SkyMapper](./import.skymapper.ipynb)             | 2026-05-18    |
 | [SDSS](./reimport.sdss_dr7.ipynb)                 | 2026-05-14    |
 | [DES DR2](./DES_DR2_collection_import.ipynb)      | 2026-04-28    |

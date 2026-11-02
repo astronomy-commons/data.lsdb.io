@@ -36,7 +36,7 @@
   "notes": [
     {
       "title": "Light Curves",
-      "content": "Light curves are in the <code>lc</code> column. Blue and red are observed simultaneously, so both bands share one epoch row. Magnitudes are instrumental; we added per-star Kron-Cousins <code>kv</code> and <code>kr</code> following Alcock+99."
+      "content": "Light curves are in the <code>lc</code> column. Blue and red are observed simultaneously, so both bands share one epoch row. Magnitudes are instrumental; we added Kron-Cousins <code>kv</code> and <code>kr</code> following Alcock+99, both per star and per detection (<code>lc.kv</code>, <code>lc.kr</code>, using the star's median color)."
     },
     {
       "title": "Acknowledgments",
@@ -44,10 +44,10 @@
     }
   ],
   "metadata": {
-    "numRows": 69173447,
+    "numRows": 75464048,
     "numColumns": 77,
-    "numPartitions": 3359,
-    "sizeOnDisk": "380.7 GiB",
-    "hatsBuilder": "hats-import v0.10.4, hats v0.10.4"
+    "numPartitions": 3711,
+    "sizeOnDisk": "522.2 GiB",
+    "hatsBuilder": "hats-import v0.11.1, hats v0.11.1"
   }
 }
