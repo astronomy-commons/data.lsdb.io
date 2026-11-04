@@ -5,7 +5,8 @@
   "description": "Archive of Rubin Observatory alert packets, converted to HATS from the Rubin alert archive. Each row corresponds to an alert triggered by a Difference Image Analysis (DIA) source detection and contains the triggering DIA source, the associated DIA object, and nested previous DIA sources and forced sources. Image cutouts are not included.",
   "urls": {
     "catalog": "https://data.lsdb.io/hats/rubin_alert_archive",
-    "point_density_map": "data/Rubin/Alert_Archive/point_density.webp"
+    "point_density_map": "data/Rubin/Alert_Archive/point_density.webp",
+    "slac_catalog": "http://slac.data.lsdb.io:10942/lsdb/rubin_alert_archive"
   },
   "other_urls": [
     {
@@ -13,8 +14,8 @@
       "url": "https://sdm-schemas.lsst.io/apdb.html"
     },
     {
-      "label": "Generation notebook",
-      "url": "https://github.com/lincc-frameworks/notebooks_lf/blob/main/sprints/2026/07_01/alert_archive.ipynb"
+      "label": "Alert archive pipeline documentation",
+      "url": "https://alert-archive.readthedocs.io/en/latest/index.html"
     }
   ],
   "badges": [
@@ -25,11 +26,10 @@
       "title": "HTTP"
     }
   ],
-  "metadata": {
-    "numRows": 16466969,
-    "numColumns": 9,
-    "numPartitions": 227,
-    "sizeOnDisk": "14.4 GiB",
-    "hatsBuilder": "lsdb v0.11.0, hats v0.11.0"
-  }
+  "notes": [
+    {
+      "title": "What is available",
+      "content": "The Rubin Alert Archive in HATS is currently served from two locations, <code>slac.data.lsdb.io</code> and <code>data.lsdb.io</code>. The catalog hosted from SLAC is updated nightly with the latest alerts issued by Rubin's alert production. The catalog hosted from <code>data.lsdb.io</code> contains the alerts until July 14, 2026, and is currently frozen in time."
+    }
+  ]
 }
