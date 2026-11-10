@@ -1,12 +1,11 @@
 {
-  "id": "euclid_q1",
-  "label": "Euclid Q1/Euclid Q1 (UW)",
+  "id": "euclid_q1_ipac",
+  "label": "Euclid/Euclid Q1/Euclid Q1 (IPAC)",
   "name": "Euclid Quick Data Release 1",
   "description": "Euclid is a space-based survey observatory launched by the European Space Agency (ESA) in July 2023, which aims to map the large-scale structure of the Universe to better understand dark energy and dark matter. The first Quick Data Release (Q1) covers 63 square degrees of the sky and including observations of 26 million galaxies.",
   "urls": {
-    "collection": "https://data.lsdb.io/hats/euclid_q1",
-    "slac_catalog": "http://slac.data.lsdb.io:10942/lsdb/euclid_q1",
-    "point_density_map": "data/Euclid_Q1/Euclid_Q1_(UW)/point_density.webp"
+    "collection": "s3://nasa-irsa-euclid-q1/contributed/q1/merged_objects/hats",
+    "point_density_map": "data/Euclid/Euclid_Q1/Euclid_Q1_(IPAC)/point_density.webp"
   },
   "other_urls": [
     {
@@ -23,30 +22,27 @@
     }
   ],
   "metadata": {
-    "numRows": 29767806,
-    "numColumns": 472,
-    "numPartitions": 85,
-    "sizeOnDisk": "22.1 GiB",
-    "hatsBuilder": "hats-import v0.4.4"
+    "numRows": 29953430,
+    "numColumns": 1593,
+    "numPartitions": 114,
+    "sizeOnDisk": "400.0 GiB",
+    "hatsBuilder": "irsa-parquet 20250629"
   },
   "badges": [
     {
-      "title": "US-West"
+      "title": "US-East"
     },
     {
-      "title": "HTTP"
+      "title": "S3"
     }
   ],
   "column_mean_maps": [
-    "DECLINATION",
-    "ELLIPTICITY",
-    "FLUXERR_H_TEMPLFIT",
-    "FLUXERR_J_TEMPLFIT",
-    "FLUXERR_Y_TEMPLFIT",
-    "FLUX_H_TEMPLFIT",
-    "FLUX_J_TEMPLFIT",
-    "FLUX_Y_TEMPLFIT",
-    "KRON_RADIUS",
-    "RIGHT_ASCENSION"
+    "class_phz_classification",
+    "dec",
+    "mer_flux_h_templfit",
+    "mer_fluxerr_h_templfit",
+    "object_id",
+    "phz_phz_median",
+    "ra"
   ]
 }
