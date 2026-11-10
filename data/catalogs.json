@@ -41,10 +41,21 @@
     ]
   },
   {
-    "label": "Euclid Q1",
+    "label": "Euclid",
     "catalogs": [
-      "Euclid Q1 (IPAC)",
-      "Euclid Q1 (UW)"
+      {
+        "label": "Euclid DR1",
+        "catalogs": [
+          "Euclid DR1 (IPAC)"
+        ]
+      },
+      {
+        "label": "Euclid Q1",
+        "catalogs": [
+          "Euclid Q1 (IPAC)",
+          "Euclid Q1 (UW)"
+        ]
+      }
     ]
   },
   {
