@@ -13,6 +13,10 @@
       "url": "https://www.cosmos.esa.int/web/euclid/euclid-dr1"
     },
     {
+      "label": "IRSA tutorial",
+      "url": "https://caltech-ipac.github.io/irsa-tutorials/euclid-dr1-hats-intro/"
+    },
+    {
       "label": "IRSA README",
       "url": "https://nasa-irsa-euclid-dr1.s3.amazonaws.com/contributed/dr1/hats/reformatted_catalogs/spectro_z_spe_qso_candidates_wide/README.txt"
     }
