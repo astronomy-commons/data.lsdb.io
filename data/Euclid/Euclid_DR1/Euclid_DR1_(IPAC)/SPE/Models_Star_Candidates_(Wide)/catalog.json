@@ -1,0 +1,35 @@
+{
+  "id": "euclid_dr1_ipac_spectro_model_spe_star_models_wide",
+  "label": "Euclid/Euclid DR1/Euclid DR1 (IPAC)/SPE/Models Star Candidates (Wide)",
+  "name": "Euclid DR1 SPE Models Star Candidates - Wide",
+  "description": "Euclid is a space-based survey observatory launched by the European Space Agency (ESA) in July 2023, which aims to map the large-scale structure of the Universe to better understand dark energy and dark matter. The first stage of Data Release 1 (DR1 Foundation) was released on 12 November 2026. This is the DR1 table spectro_model_spe_star_models_wide from the SPE (spectroscopic redshifts and spectral features) products, with 293,768,741 rows, converted to HATS by IRSA.",
+  "urls": {
+    "collection": "s3://nasa-irsa-euclid-dr1/contributed/dr1/hats/reformatted_catalogs/spectro_model_spe_star_models_wide",
+    "point_density_map": "data/Euclid/Euclid_DR1/Euclid_DR1_(IPAC)/SPE/Models_Star_Candidates_(Wide)/point_density.webp"
+  },
+  "other_urls": [
+    {
+      "label": "Official release",
+      "url": "https://www.cosmos.esa.int/web/euclid/euclid-dr1"
+    },
+    {
+      "label": "IRSA README",
+      "url": "https://nasa-irsa-euclid-dr1.s3.amazonaws.com/contributed/dr1/hats/reformatted_catalogs/spectro_model_spe_star_models_wide/README.txt"
+    }
+  ],
+  "badges": [
+    {
+      "title": "US-East"
+    },
+    {
+      "title": "S3"
+    }
+  ],
+  "metadata": {
+    "numRows": 293768741,
+    "numColumns": 18,
+    "numPartitions": 18,
+    "sizeOnDisk": "12.4 GiB",
+    "hatsBuilder": "irsa-parquet"
+  }
+}
