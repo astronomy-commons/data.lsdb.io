@@ -46,7 +46,88 @@
       {
         "label": "Euclid DR1",
         "catalogs": [
-          "Euclid DR1 (IPAC)"
+          {
+            "label": "Euclid DR1 (IPAC)",
+            "catalogs": [
+              {
+                "label": "MER",
+                "catalogs": [
+                  "Catalogue (Deep Survey)",
+                  "Catalogue (Wide Survey)",
+                  "Cutouts (Deep Survey)",
+                  "Cutouts (Wide Survey)",
+                  "Morphology (Deep Survey)",
+                  "Morphology (Wide Survey)",
+                  "Photometry (Deep Survey)"
+                ]
+              },
+              {
+                "label": "PHZ",
+                "catalogs": [
+                  "Classification (Deep Survey)",
+                  "Classification (Wide)",
+                  "Galaxy SED (Wide)",
+                  "NIR Physical Parameters (Deep Survey)",
+                  "NIR Physical Parameters (Wide)",
+                  "Photo-z (Deep Survey)",
+                  "Physical Parameters (Deep Survey)",
+                  "Physical Parameters (Wide)",
+                  "QSO Physical Parameters (Deep Survey)",
+                  "QSO Physical Parameters (Wide)",
+                  "Star SED (Wide)",
+                  "Star Template (Deep Survey)",
+                  "Star Template (Wide)"
+                ]
+              },
+              {
+                "label": "SIR",
+                "catalogs": [
+                  "Combined Spectra"
+                ]
+              },
+              {
+                "label": "SPE",
+                "catalogs": [
+                  "Lines (Deep)",
+                  "Lines (Wide Survey)",
+                  "Lines (Wide)",
+                  "Lines Atomic Indices (Deep)",
+                  "Lines Atomic Indices (Wide Survey)",
+                  "Lines Atomic Indices (Wide)",
+                  "Lines Continuum Features (Deep)",
+                  "Lines Continuum Features (Wide Survey)",
+                  "Lines Continuum Features (Wide)",
+                  "Lines Molecular Indices (Deep)",
+                  "Lines Molecular Indices (Wide Survey)",
+                  "Lines Molecular Indices (Wide)",
+                  "Models Galaxy Candidates (Deep)",
+                  "Models Galaxy Candidates (Wide Survey)",
+                  "Models Galaxy Candidates (Wide)",
+                  "Models QSO Candidates (Deep)",
+                  "Models QSO Candidates (Wide Survey)",
+                  "Models QSO Candidates (Wide)",
+                  "Models Star Candidates (Deep)",
+                  "Models Star Candidates (Wide Survey)",
+                  "Models Star Candidates (Wide)",
+                  "Redshift Classification (Deep)",
+                  "Redshift Classification (Wide Survey)",
+                  "Redshift Classification (Wide)",
+                  "Redshift Galaxy Candidates (Deep)",
+                  "Redshift Galaxy Candidates (Wide Survey)",
+                  "Redshift Galaxy Candidates (Wide)",
+                  "Redshift QSO Candidates (Deep)",
+                  "Redshift QSO Candidates (Wide Survey)",
+                  "Redshift QSO Candidates (Wide)",
+                  "Redshift Quality (Deep)",
+                  "Redshift Quality (Wide Survey)",
+                  "Redshift Quality (Wide)",
+                  "Redshift Star Candidates (Deep)",
+                  "Redshift Star Candidates (Wide Survey)",
+                  "Redshift Star Candidates (Wide)"
+                ]
+              }
+            ]
+          }
         ]
       },
       {
