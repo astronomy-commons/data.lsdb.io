@@ -142,7 +142,7 @@ export const ReadHatsSection = ({ protocol, command, slacCommand, hideTitle = fa
   );
 };
 
-export const DownloadSection = ({ protocol, command, hideTitle = false }) => {
+export const DownloadSection = ({ protocol, command, slacCommand, hideTitle = false }) => {
   const type = protocol == 's3' ? 'S3' : 'wget';
   return (
     <div>
@@ -153,6 +153,12 @@ export const DownloadSection = ({ protocol, command, hideTitle = false }) => {
       )}
       {getAdditionalDownloadInfo(protocol)}
       <CodeBlock command={command} is_python={false} />
+      {slacCommand && (
+        <div className='slac-alt'>
+          <p className='code-caption'>Or download the same catalog from SLAC:</p>
+          <CodeBlock command={slacCommand} is_python={false} />
+        </div>
+      )}
     </div>
   );
 };
