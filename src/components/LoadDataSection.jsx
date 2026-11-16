@@ -218,12 +218,28 @@ const _formatPathArguments = (url, extra_args) => {
   return [path, ...extra_args].join(', ');
 };
 
+/**
+ * Builds the wget command that recursively downloads a catalog served over HTTP(S).
+ *
+ * Flags:
+ *   -e robots=off          Ignore robots.txt.
+ *   -r                     Download recursively.
+ *   -np                    Never ascend to the parent directory.
+ *   -nH                    No top-level directory named after the host.
+ *   --cut-dirs=N           Drop the first N path components locally.
+ *   -c                     Resume partial downloads, skip complete files.
+ *   --trust-server-names   Name files after redirect targets, so directories are not saved as files.
+ *   --reject-regex '\?C='  Skip the sorting links of directory listings.
+ *   -R "index.html*"       Delete directory listing pages after use.
+ *   -l 0                   No recursion depth limit.
+ *   -q --show-progress     Print only a progress bar per file.
+ */
 const getWgetCommand = (catalog_url) => {
   const path = new URL(catalog_url).pathname;
   const directories = path.split('/').filter((segment) => segment !== '');
   const cutDirsFlag = directories.length > 1 ? `--cut-dirs=${directories.length - 1}` : '';
   const wgetUrl = catalog_url.endsWith('/') ? catalog_url : `${catalog_url}/`;
-  return `wget -e robots=off -r -np -nH ${cutDirsFlag} -c -R "index.html*" -l 0 ${wgetUrl}`;
+  return `wget -e robots=off -r -np -nH ${cutDirsFlag} -c --trust-server-names --reject-regex '\\?C=' -R "index.html*" -l 0 -q --show-progress ${wgetUrl}`;
 };
 
 const getS3CpCommand = (catalog_url) => {
