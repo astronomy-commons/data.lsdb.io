@@ -49,11 +49,13 @@ const LoadingSection = ({
   margin_catalog,
   slac_margin_catalog,
   protocol,
+  slac_protocol,
   displayDownload,
 }) => {
   const readCommand = getReadCommand(main_url, margin_catalog);
   const slacReadCommand = getReadCommand(slac_url, slac_margin_catalog);
   const downloadCommand = getDownloadCommand(protocol, main_url);
+  const slacDownloadCommand = getDownloadCommand(slac_protocol, slac_url);
 
   const loader = readCommand?.includes('.parquet') ? 'Pandas' : 'LSDB';
   const downloadLabel = protocol === 's3' ? 'Download with S3' : 'Download with wget';
@@ -84,7 +86,12 @@ const LoadingSection = ({
             />
           )}
           {hasDownload && (
-            <DownloadSection protocol={protocol} command={downloadCommand} hideTitle />
+            <DownloadSection
+              protocol={protocol}
+              command={downloadCommand}
+              slacCommand={slacDownloadCommand}
+              hideTitle
+            />
           )}
         </div>
       </div>
@@ -117,7 +124,12 @@ const LoadingSection = ({
           />
         )}
         {activeTab === 'download' && (
-          <DownloadSection protocol={protocol} command={downloadCommand} hideTitle />
+          <DownloadSection
+            protocol={protocol}
+            command={downloadCommand}
+            slacCommand={slacDownloadCommand}
+            hideTitle
+          />
         )}
       </div>
     </div>
@@ -152,6 +164,7 @@ export default function CatalogTab({ catalog_info, skymapPath }) {
   } = urls;
   const main_url = catalog || collection;
   const protocol = getProtocol(main_url);
+  const slac_protocol = getProtocol(slac_catalog);
 
   return (
     <div className='catalog-detail'>
@@ -178,6 +191,7 @@ export default function CatalogTab({ catalog_info, skymapPath }) {
           margin_catalog={margin_catalog}
           slac_margin_catalog={slac_margin_catalog}
           protocol={protocol}
+          slac_protocol={slac_protocol}
           displayDownload={displayDownload}
         />
       )}
