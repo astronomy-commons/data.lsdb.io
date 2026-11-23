@@ -28,8 +28,9 @@
   ],
   "notes": [
     {
-      "title": "What is available",
-      "content": "The Rubin Alert Archive in HATS is currently served from two locations, <code>slac.data.lsdb.io</code> and <code>data.lsdb.io</code>. The catalog hosted from SLAC is updated nightly with the latest alerts issued by Rubin's alert production. The catalog hosted from <code>data.lsdb.io</code> contains the alerts until July 14, 2026, and is currently frozen in time."
+      "title": "Required dependencies",
+      "content": "Minimum required version of lsdb and hats is 0.11.2.",
+      "type": "warning"
     }
   ]
 }
