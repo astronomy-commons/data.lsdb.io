@@ -1,0 +1,38 @@
+# Publishing a release deploys it.
+#
+# The live site is built from the `production` branch: the server checks that
+# branch every minute and deploys when it moves. This workflow moves it, to
+# the commit a release was made from, whenever a release is published.
+#
+# The push is a fast-forward and never forced. If `production` has a commit
+# the release does not contain (a fix made directly there, say), the push is
+# refused, this run fails and nothing is deployed; merge `production` back
+# into `main` and release again.
+name: Release to production
+
+on:
+  release:
+    types: [published]
+
+permissions:
+  contents: write
+
+concurrency: release-to-production
+
+jobs:
+  promote:
+    name: Move production to the release
+    # A pre-release is published without going live.
+    if: ${{ !github.event.release.prerelease }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.release.tag_name }}
+          fetch-depth: 0
+
+      - name: Fast-forward production
+        run: |
+          echo "Release ${{ github.event.release.tag_name }} is at $(git rev-parse HEAD)"
+          git push origin "HEAD:refs/heads/production"
