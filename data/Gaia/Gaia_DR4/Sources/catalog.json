@@ -1,0 +1,20 @@
+{
+  "id": "gaia_dr4_sources",
+  "label": "Gaia/Gaia DR4/Sources",
+  "name": "Gaia DR4 Sources",
+  "description": "Gaia Data Release 4 is the fourth data release of the European Space Agency (ESA) Gaia mission. It is released on 2 December 2026, 12:00 CET. This page is for the source tables. LINCC Frameworks will convert Gaia DR4 to HATS in three stages: sources, then lightcurves, then spectra.",
+  "skip_connectivity_check": "Placeholder: no HATS catalog published yet",
+  "other_urls": [
+    {
+      "label": "Official release",
+      "url": "https://www.cosmos.esa.int/web/gaia/dr4"
+    }
+  ],
+  "notes": [
+    {
+      "title": "Coming soon",
+      "content": "<p>The HATS version is not available yet. Sources are imported first, before lightcurves and spectra. We will import these ESA tables:</p><table><thead><tr><th>ESA tables</th><th>Rows</th><th>ESA size</th></tr></thead><tbody><tr><td><code>gaia_source</code></td><td>2.00B</td><td>586 GB</td></tr><tr><td><code>all_source_astrometry</code>, <code>_photometry</code>, <code>_flags</code></td><td>2.79B</td><td>1.4 TB</td></tr><tr><td><code>dr3_neighbourhood</code> (DR3 to DR4 id map)</td><td>2.45B</td><td>29 GB</td></tr></tbody></table><p>Expected availability:</p><table><thead><tr><th>Location</th><th>Expected</th></tr></thead><tbody><tr><td>data.lsdb.io (US-West, HTTP)</td><td>2 December 2026</td></tr><tr><td>STScI S3 bucket (US-East)</td><td>early January 2027</td></tr></tbody></table><p>Catalogs appear as each import finishes, sources first.</p>",
+      "type": "info"
+    }
+  ]
+}

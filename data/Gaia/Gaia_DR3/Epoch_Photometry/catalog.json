@@ -1,11 +1,11 @@
 {
   "id": "gaia_dr3_epoch_photometry",
-  "label": "Gaia/Gaia DR3 Epoch Photometry",
+  "label": "Gaia/Gaia DR3/Epoch Photometry",
   "name": "Gaia DR3 Epoch Photometry",
   "description": "The Gaia DR3 Epoch Photometry catalog contains the individual photometric measurements (light curves) in the G, BP, and RP bands for a selected subset of approximately 11.7 million sources. While the main Gaia catalog provides time-averaged values, this dataset includes the time-series data used for variability analysis, covering variable stars, transients, and quasars. The version of the catalog presented here packs all time-domain data into the 'epoch_photometry' column.",
   "urls": {
     "collection": "https://data.lsdb.io/hats/gaia_dr3_epoch_phot",
-    "point_density_map": "data/Gaia/Gaia_DR3_Epoch_Photometry/point_density.webp"
+    "point_density_map": "data/Gaia/Gaia_DR3/Epoch_Photometry/point_density.webp"
   },
   "metadata": {
     "numRows": 11754237,
