@@ -1,0 +1,20 @@
+{
+  "id": "gaia_dr4_spectra",
+  "label": "Gaia/Gaia DR4/Spectra",
+  "name": "Gaia DR4 Spectra",
+  "description": "Gaia Data Release 4 is the fourth data release of the European Space Agency (ESA) Gaia mission. It is released on 2 December 2026, 12:00 CET. This page is for the mean spectra. LINCC Frameworks will convert Gaia DR4 to HATS in three stages: sources, then lightcurves, then spectra.",
+  "skip_connectivity_check": "Placeholder: no HATS catalog published yet",
+  "other_urls": [
+    {
+      "label": "Official release",
+      "url": "https://www.cosmos.esa.int/web/gaia/dr4"
+    }
+  ],
+  "notes": [
+    {
+      "title": "Coming soon",
+      "content": "<p>The HATS version is not available yet. Spectra are imported third, after sources and lightcurves. We will import these ESA tables:</p><table><thead><tr><th>ESA tables</th><th>Rows</th><th>ESA size</th></tr></thead><tbody><tr><td><code>xp_continuous_mean_spectrum</code></td><td>1.8B</td><td>22 TB</td></tr><tr><td><code>rvs_mean_spectrum</code></td><td></td><td></td></tr></tbody></table><p>Expected availability:</p><table><thead><tr><th>Location</th><th>Expected</th></tr></thead><tbody><tr><td>data.lsdb.io (US-West, HTTP)</td><td>7 December 2026</td></tr></tbody></table><p>Catalogs appear as each import finishes, sources first.</p>",
+      "type": "info"
+    }
+  ]
+}

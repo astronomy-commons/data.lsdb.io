@@ -31,6 +31,11 @@ GROUP_CATALOG_ORDER = {
         "object_photoz",
         "dia_object_collection",
     ],
+    "Gaia/Gaia DR4": [
+        "Sources",
+        "Lightcurves",
+        "Spectra",
+    ],
 }
 
 RUBIN_GROUPS = {"DP1", "DP2", "PPDB"}

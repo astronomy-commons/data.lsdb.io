@@ -138,11 +138,24 @@
   {
     "label": "Gaia",
     "catalogs": [
-      "Bailer-Jones+20",
-      "Gaia DR3 (Europe, HTTP)",
-      "Gaia DR3 (US-East, S3)",
-      "Gaia DR3 (US-West, HTTP)",
-      "Gaia DR3 Epoch Photometry"
+      {
+        "label": "Gaia DR3",
+        "catalogs": [
+          "Bailer-Jones+20",
+          "Epoch Photometry",
+          "Europe, HTTP",
+          "US-East, S3",
+          "US-West, HTTP"
+        ]
+      },
+      {
+        "label": "Gaia DR4",
+        "catalogs": [
+          "Sources",
+          "Lightcurves",
+          "Spectra"
+        ]
+      }
     ]
   },
   {

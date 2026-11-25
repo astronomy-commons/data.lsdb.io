@@ -436,6 +436,18 @@ h6 {
   gap: 8px;
 }
 
+.notes table {
+  border-collapse: collapse;
+  margin: 8px 0;
+}
+
+.notes th,
+.notes td {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  padding: 4px 10px;
+  text-align: left;
+}
+
 .s3-info,
 .s3-warning {
   margin-bottom: 8px;
